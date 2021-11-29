@@ -1,0 +1,18 @@
+import pathlib  #標準ライブラリ
+import openpyxl #外部ライブラリ
+import csv      #標準ライブラリ
+import os       #標準ライブラリ
+
+
+os.chdir('.\\python\wrk')
+wrk_dir = os.getcwd()
+print(wrk_dir)
+
+path = pathlib.Path(wrk_dir)
+for pass_obj in path.iterdir():
+    if pass_obj.match("*.xls*"):
+        wb = openpyxl.load_workbook(pass_obj)
+
+print(type(wb))
+print(pass_obj)
+print(wb.sheetnames)

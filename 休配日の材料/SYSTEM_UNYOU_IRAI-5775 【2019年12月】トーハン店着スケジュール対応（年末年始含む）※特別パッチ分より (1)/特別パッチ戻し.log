@@ -1,0 +1,2345 @@
+
+[2020-01-08 11:10:51.001] 
+[2020-01-08 11:10:51.001] [2020/01/08 11:10:50 p_dakameya@ompkgfl001 ~]$ 
+[2020-01-08 11:10:56.535] [2020/01/08 11:10:56 p_dakameya@ompkgfl001 ~]$ uname -n
+[2020-01-08 11:10:58.405] ompkgfl001
+[2020-01-08 11:10:58.405] [2020/01/08 11:10:58 p_dakameya@ompkgfl001 ~]$ 
+[2020-01-08 11:10:59.319] [2020/01/08 11:10:59 p_dakameya@ompkgfl001 ~]$ 
+[2020-01-08 11:10:59.538] [2020/01/08 11:10:59 p_dakameya@ompkgfl001 ~]$ ssh ompsgbb001
+[2020-01-08 11:11:09.691] p_dakameya@ompsgbb001's password: 
+[2020-01-08 11:11:17.340] Permission denied, please try again.
+[2020-01-08 11:11:17.340] p_dakameya@ompsgbb001's password: 
+[2020-01-08 11:11:23.754] Last login: Tue Dec 24 15:24:57 2019 from ompkgfl001.omni7andi.local
+[2020-01-08 11:11:23.926] [2020/01/08 11:11:23 p_dakameya@ompsgbb001 ~]$ 
+[2020-01-08 11:11:24.379] [2020/01/08 11:11:24 p_dakameya@ompsgbb001 ~]$ 
+[2020-01-08 11:11:24.535] [2020/01/08 11:11:24 p_dakameya@ompsgbb001 ~]$ 
+[2020-01-08 11:11:24.645] [2020/01/08 11:11:24 p_dakameya@ompsgbb001 ~]$ 
+[2020-01-08 11:11:24.770] [2020/01/08 11:11:24 p_dakameya@ompsgbb001 ~]$ su - jp1user01
+[2020-01-08 11:11:31.398] パスワード:
+[2020-01-08 11:11:39.568] [2020/01/08 11:11:39 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:11:40.115] [2020/01/08 11:11:39 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:11:40.255] [2020/01/08 11:11:40 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:11:40.396] [2020/01/08 11:11:40 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:11:40.567] [2020/01/08 11:11:40 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:11:40.770] [2020/01/08 11:11:40 jp1user01@ompsgbb001 ~]$ crontab -l
+[2020-01-08 11:11:55.123] #2カテ別受注実績日次
+[2020-01-08 11:11:55.123] 00 10 * * * /opt/batch/2cate_syukei/2kate_syukei.sh > /opt/batch/2cate_syukei/log/2kate_syukei.log
+[2020-01-08 11:11:55.123] 
+[2020-01-08 11:11:55.123] ##アフィリエイト実績報告
+[2020-01-08 11:11:55.123] 00 08 * * * /opt/batch/Affi/sh/J_OSG0200_01.sh  >> /log/batch/affi.log
+[2020-01-08 11:11:55.123] 
+[2020-01-08 11:11:55.123] ##店舗端末アウトバウンドリスト抽出
+[2020-01-08 11:11:55.123] #15 08 * * * /opt/batch/outbound_shop_order/run_check_outbound_shop_order.sh
+[2020-01-08 11:11:55.123] 
+[2020-01-08 11:11:55.123] ##予約受注生成残一覧報告
+[2020-01-08 11:11:55.123] 00 11 * * * /opt/batch/reserve/sh/JNR_OMU_003.sh >> /log/batch/reserve.log
+[2020-01-08 11:11:55.123] 
+[2020-01-08 11:11:55.123] ##在庫受注実績報告
+[2020-01-08 11:11:55.123] 20 07 * * * sh /opt/batch/zaiko_result/sh/JNR_OMU_004.sh >> /log/batch/zaiko_result.log
+[2020-01-08 11:11:55.123] 
+[2020-01-08 11:11:55.123] ##日別単品動向
+[2020-01-08 11:11:55.123] 00 02 * * * sh /opt/batch/product/sh/JNR_OMU_005.sh >> /log/batch/product.log
+[2020-01-08 11:11:55.123] 
+[2020-01-08 11:11:55.123] ##SEJ納品予定データチェック
+[2020-01-08 11:11:55.123] 45 07 * * * /opt/batch/check_arvshparng_info/run_check_arvshparng_info.sh
+[2020-01-08 11:11:55.123] 
+[2020-01-08 11:11:55.123] ##SEJ納品数10注文以上店舗リスト
+[2020-01-08 11:11:55.123] 58 07 * * 1,5 /opt/batch/mss_dlv_shp_lst/run_mss_dlv_shp_lst.sh
+[2020-01-08 11:11:55.123] 
+[2020-01-08 11:11:55.123] ##SQLスケジュール起動
+[2020-01-08 11:11:55.123] 10 06 31 08 * /opt/batch/exec_scheduled_sql/run_exec_scheduled_sql.sh
+[2020-01-08 11:11:55.138] 00 09 01 09 * /opt/batch/exec_scheduled_sql/run_exec_scheduled_sql.sh
+[2020-01-08 11:11:55.138] 00 11 15 11 * /opt/batch/exec_scheduled_sql/run_exec_scheduled_sql.sh
+[2020-01-08 11:11:55.138] 00 11 17 11 * /opt/batch/exec_scheduled_sql/run_exec_scheduled_sql.sh
+[2020-01-08 11:11:55.138] 
+[2020-01-08 11:11:55.138] ##SQLスケジュール起動_2(同日で別SQLを実行させるため用)
+[2020-01-08 11:11:55.138] #30 06 31 12 * /opt/batch/exec_scheduled_sql_2/run_exec_scheduled_sql_2.sh
+[2020-01-08 11:11:55.138] ##SQLスケジュール起動_5
+[2020-01-08 11:11:55.138] #30 05 * 12 * sh /opt/batch/exec_scheduled_sql_5/run_exec_scheduled_sql_5.sh
+[2020-01-08 11:11:55.138] 
+[2020-01-08 11:11:55.138] ##お届けカレンダー補正
+[2020-01-08 11:11:55.138] 00 22 * * * /opt/batch/mdfy_thn_clndr/run_mdfy_thn_clndr.sh
+[2020-01-08 11:11:55.138] 30 22 * * * /opt/batch/mdfy_thn_clndr_SP/run_mdfy_thn_clndr_SP.sh
+[2020-01-08 11:11:55.138] ##予約在庫状態修正
+[2020-01-08 11:11:55.138] 30 22 * * * /opt/batch/mdfy_thn_resv_stock/run_mdfy_thn_resv_stock.sh
+[2020-01-08 11:11:55.138] ##包装設定グループマスタ更新
+[2020-01-08 11:11:55.138] 00 08 19 03 * /opt/batch/exec_scheduled_sql_2/run_exec_scheduled_sql_2.sh
+[2020-01-08 11:11:55.138] 
+[2020-01-08 11:11:55.138] ##受取前管理票メール送信
+[2020-01-08 11:11:55.138] 10 08 * * * sh /opt/batch/uketorimae_7ns/sh/OMN_APR.sh > /opt/batch/uketorimae_7ns/log/OMN_APR.log
+[2020-01-08 11:11:55.138] 
+[2020-01-08 11:11:55.138] #注文ステータス：010チェック
+[2020-01-08 11:11:55.154] #03 06 * * * /opt/batch/ord_sta_010/run_ord_sta_010.sh
+[2020-01-08 11:11:55.154] #リアル在庫エラー件数チェック
+[2020-01-08 11:11:55.154] #01 06 * * * /opt/batch/real_stock_err/run_real_stock_err.sh
+[2020-01-08 11:11:55.154] 
+[2020-01-08 11:11:55.154] #前払い欠品チェック
+[2020-01-08 11:11:55.154] 00 09 * * 3 sh /opt/batch/chk_stckout_prpd_prd/run_chk_stckout_prpd_prd.sh
+[2020-01-08 11:11:55.154] 
+[2020-01-08 11:11:55.154] #SMSチャネル別受注実績報告
+[2020-01-08 11:11:55.154] 20 08 * * * sh /opt/batch/send_sms/sh/send_sms.sh > /log/batch/send_sms.log
+[2020-01-08 11:11:55.154] 
+[2020-01-08 11:11:55.154] ##日次_返金対象リスト抽出
+[2020-01-08 11:11:55.154] #25 08 * * * sh /opt/batch/refundTargetList/sh/OMN_refundTargetList.sh > /opt/batch/refundTargetList/log/log.txt
+[2020-01-08 11:11:55.154] 
+[2020-01-08 11:11:55.154] ##オムニ7トップ抽出(日別)
+[2020-01-08 11:11:55.154] 45 08 * * * sh /opt/batch/extractionOmni7Top/sh/OMN_extractionOmni7Top.sh > /opt/batch/extractionOmni7Top/log/log.txt
+[2020-01-08 11:11:55.154] 
+[2020-01-08 11:11:55.154] ##不正ログイン確認(CAFIS Brain)
+[2020-01-08 11:11:55.154] 00 09 * * * sh /opt/batch/cafisBrainFraudLogin/sh/fraudLogin.sh 17 > /opt/batch/cafisBrainFraudLogin/log/log.txt
+[2020-01-08 11:11:55.154] 00 13 * * * sh /opt/batch/cafisBrainFraudLogin/sh/fraudLogin.sh 09 > /opt/batch/cafisBrainFraudLogin/log/log.txt
+[2020-01-08 11:11:55.154] 00 17 * * * sh /opt/batch/cafisBrainFraudLogin/sh/fraudLogin.sh 13 > /opt/batch/cafisBrainFraudLogin/log/log.txt
+[2020-01-08 11:11:55.170] 
+[2020-01-08 11:11:55.170] ##不正ログイン確認マージ版(CAFIS Brain)
+[2020-01-08 11:11:55.170] 30 17 * * * sh /opt/batch/cafisBrainFraudLogin2/sh/fraudLogin.sh 17 > /opt/batch/cafisBrainFraudLogin2/log/log.txt
+[2020-01-08 11:11:55.170] 
+[2020-01-08 11:11:55.170] ##不正取引(CAFIS Brain)
+[2020-01-08 11:11:55.170] 35 08 * * * sh /opt/batch/chk_cafis_fraud_transaction/run_chk_cafis_fraud_transaction.sh SS LoFt
+[2020-01-08 11:11:55.170] 35 09 * * * sh /opt/batch/chk_cafis_fraud_transaction/run_chk_cafis_fraud_transaction.sh 7NS
+[2020-01-08 11:11:55.170] 35 10 * * * sh /opt/batch/chk_cafis_fraud_transaction/run_chk_cafis_fraud_transaction.sh IY
+[2020-01-08 11:11:55.170] 35 12 * * * sh /opt/batch/chk_cafis_fraud_transaction/run_chk_cafis_fraud_transaction.sh 7NS SS LoFt
+[2020-01-08 11:11:55.170] 35 14 * * * sh /opt/batch/chk_cafis_fraud_transaction/run_chk_cafis_fraud_transaction.sh 7NS
+[2020-01-08 11:11:55.170] 35 16 * * * sh /opt/batch/chk_cafis_fraud_transaction/run_chk_cafis_fraud_transaction.sh 7NS SS LoFt
+[2020-01-08 11:11:55.170] 
+[2020-01-08 11:11:55.170] #郵送による口座振替登録の不備発生時の対応 (週次)
+[2020-01-08 11:11:55.170] 57 10 * * 1 sh /opt/batch/chk_account_incomplete/run_chk_account_incomplete.sh 0
+[2020-01-08 11:11:55.170] 
+[2020-01-08 11:11:55.170] #郵送による口座振替登録の不備発生時の対応 (月次) 8月まで
+[2020-01-08 11:11:55.170] 47 10 30 4,6,9,11 * sh /opt/batch/chk_account_incomplete/run_chk_account_incomplete.sh 1
+[2020-01-08 11:11:55.170] 47 10 31 1,3,5,7,8,10,12 * sh /opt/batch/chk_account_incomplete/run_chk_account_incomplete.sh 1
+[2020-01-08 11:11:55.170] #2019年は2月28日まで
+[2020-01-08 11:11:55.170] 47 10 28 2 * sh /opt/batch/chk_account_incomplete/run_chk_account_incomplete.sh 1
+[2020-01-08 11:11:55.170] 
+[2020-01-08 11:11:55.170] # 週別COMBお勧め商品データ抽出
+[2020-01-08 11:11:55.170] 00 09 * * 5 sh /opt/batch/extract_recommend_item/run_extract_recommend_item.sh
+[2020-01-08 11:11:55.170] 
+[2020-01-08 11:11:55.170] # 日別COMBお勧め商品データ抽出
+[2020-01-08 11:11:55.170] 03 09 * * * sh /opt/batch/extract_recommend_item_daily/run_extract_recommend_item_daily.sh
+[2020-01-08 11:11:55.170] 
+[2020-01-08 11:11:55.170] # COMB限定７ネットショッピング受注状況
+[2020-01-08 11:11:55.170] 30 09 * * * sh /opt/batch/comb_order_7ns_daily/run_comb_order_7ns_daily.sh
+[2020-01-08 11:11:55.170] 
+[2020-01-08 11:11:55.170] # 特集データ送信
+[2020-01-08 11:11:55.170] 30 08 * * * sh /opt/batch/tokushuu_jisseki/run_tokushuu_jisseki.sh
+[2020-01-08 11:11:55.170] 
+[2020-01-08 11:11:55.170] # 7NS報酬率0％設定、報酬発生停止処理について
+[2020-01-08 11:11:55.170] 00 21 15 * * sh /opt/batch/update_af_0per_user/run_update_af_0per_user.sh
+[2020-01-08 11:11:55.185] 
+[2020-01-08 11:11:55.185] #21 17 * * * sh /opt/batch/big_query_select/sh/shell_20170301/t_order.sh > /opt/batch/big_query_select/bq.log
+[2020-01-08 11:11:55.185] 
+[2020-01-08 11:11:55.185] #SSリアルタイム在庫連携エラーチェック
+[2020-01-08 11:11:55.185] 05 08,13 * * * sh /opt/batch/chk_rltm_stck_err/run_chk_rltm_stck_err.sh
+[2020-01-08 11:11:55.185] 
+[2020-01-08 11:11:55.185] #予約在庫差異修正
+[2020-01-08 11:11:55.185] 53 * * * * sh /opt/batch/rcvry_rsv_stck/run_rcvry_rsv_stck.sh
+[2020-01-08 11:11:55.185] 
+[2020-01-08 11:11:55.185] ##代表バリエーションコードチェック
+[2020-01-08 11:11:55.185] 30 01 * * * sh /opt/batch/chk_variation/run_chk_variation.sh
+[2020-01-08 11:11:55.185] 
+[2020-01-08 11:11:55.185] # 二次開発以降の接客端末データ抽出
+[2020-01-08 11:11:55.185] #00 09 * * 5 sh /opt/batch/chk_customer_service_terminal_result/run_chk_customer_service_terminal_result.sh
+[2020-01-08 11:11:55.185] 
+[2020-01-08 11:11:55.185] ##COMB_顧客管理台帳抽出
+[2020-01-08 11:11:55.185] #00 07 * * 5 sh /opt/batch/comb_customer_list/run_comb_customer_list.sh
+[2020-01-08 11:11:55.185] 
+[2020-01-08 11:11:55.185] ##都道府県別活動会員数のご報告
+[2020-01-08 11:11:55.185] 00 10 1 * * sh /opt/batch/chk_member_ah/run_chk_member_ah.sh
+[2020-01-08 11:11:55.185] 
+[2020-01-08 11:11:55.185] #［日次］雑誌お取置き　検証データ抽出依頼
+[2020-01-08 11:11:55.185] 55 06 * * * sh /opt/batch/output_csv_tool/job_run.sh reserve_magazine_daily
+[2020-01-08 11:11:55.185] 
+[2020-01-08 11:11:55.185] #【週次】雑誌取り置き検証データ
+[2020-01-08 11:11:55.216] 30 06 * * 1 sh /opt/batch/output_csv_tool/job_run.sh reserve_magazine_weekly
+[2020-01-08 11:11:55.216] 
+[2020-01-08 11:11:55.216] #雑誌お取置きサービスの注文データ抽出
+[2020-01-08 11:11:55.216] #00 08 * * * sh /opt/batch/magazine_order_list/run_magazine_order_list.sh
+[2020-01-08 11:11:55.216] 
+[2020-01-08 11:11:55.216] #「SEJギフト」受注_週次データ抽出
+[2020-01-08 11:11:55.216] 50 06 * * 1 sh /opt/batch/sejgift/run_sejgift.sh
+[2020-01-08 11:11:55.216] 
+[2020-01-08 11:11:55.216] #「大相撲カレンダー」SEJ受注実績
+[2020-01-08 11:11:55.216] #00 08 * * 5 sh /opt/batch/comb_order_sej/run_comb_order_sej.sh
+[2020-01-08 11:11:55.216] 
+[2020-01-08 11:11:55.216] #「大相撲カレンダー」SEJ受注実績②
+[2020-01-08 11:11:55.216] #01 08 * * 5 sh /opt/batch/comb_order_sej_2/run_comb_order_sej.sh
+[2020-01-08 11:11:55.216] 
+[2020-01-08 11:11:55.216] #【月次】雑誌取り置き検証データ
+[2020-01-08 11:11:55.216] 00 07 01 * * sh /opt/batch/output_csv_tool/job_run.sh reserve_magazine_monthly
+[2020-01-08 11:11:55.216] 
+[2020-01-08 11:11:55.216] #雑誌お取置きサービス返送登録検証
+[2020-01-08 11:11:55.216] 20 06 * * 1 sh /opt/batch/reserve_magazine_mihikitori/run_reserve_magazine_mihikitori.sh
+[2020-01-08 11:11:55.216] 
+[2020-01-08 11:11:55.216] 00 00 26 12 * /opt/batch/exec_scheduled_sql/run_exec_scheduled_sql.sh
+[2020-01-08 11:11:55.216] 
+[2020-01-08 11:11:55.216] #COMBお知らせ情報抽出
+[2020-01-08 11:11:55.216] 10 12 * * * sh /opt/batch/send_tnpo_osrse/run_send_tnpo_osrse.sh
+[2020-01-08 11:11:55.216] 
+[2020-01-08 11:11:55.216] ##決済停止
+[2020-01-08 11:11:55.216] 00 01 13 02 * /opt/batch/exec_scheduled_sql_2/run_exec_scheduled_sql_2.sh
+[2020-01-08 11:11:55.216] 
+[2020-01-08 11:11:55.216] ##決済戻し
+[2020-01-08 11:11:55.216] 00 05 13 02 * /opt/batch/exec_scheduled_sql_3/run_exec_scheduled_sql_3.sh
+[2020-01-08 11:11:55.216] 
+[2020-01-08 11:11:55.216] ##OMNI_UNYOU_IRAI-5393 「現金受取サービス」開始に向けた問い合わせの件
+[2020-01-08 11:11:55.216] 30 14 * * * /opt/batch/cash_receipt_service/run_cash_receipt_service.sh
+[2020-01-08 11:11:55.216] 
+[2020-01-08 11:11:55.216] ##7NS RMA未受領リスト抽出
+[2020-01-08 11:11:55.216] 00 11 * * 1 /opt/batch/send_7ns_rmareport/sh/OMN_Send7nsRmaReport.sh > /opt/batch/send_7ns_rmareport/log/log.txt
+[2020-01-08 11:11:55.216] 
+[2020-01-08 11:11:55.216] #GoogleHome(SMS)データ抽出依頼
+[2020-01-08 11:11:55.216] 00 08 * * 4 sh /opt/batch/googlehome_sms/run_googlehome_sms.sh
+[2020-01-08 11:11:55.216] 
+[2020-01-08 11:11:55.216] #OMNI_UNYOU_IRAI-6080_出荷済注文リスト抽出
+[2020-01-08 11:11:55.216] 03 14 * * * sh /opt/batch/shipped_order_list/run_shipped_order_list.sh
+[2020-01-08 11:11:55.216] 
+[2020-01-08 11:11:55.216] #IRAI-3218 古い注文の基幹へのキャンセルデーターの連携
+[2020-01-08 11:11:55.216] 55 10 * * * sh /opt/batch/send_ord_upd_list/run_send_ord_upd_list.sh
+[2020-01-08 11:11:55.216] 
+[2020-01-08 11:11:55.216] #外部配信リスト監視
+[2020-01-08 11:11:55.216] 05 20 * * * sh /opt/batch/chk_external_distribution_list/run_chk_external_distribution_list.sh
+[2020-01-08 11:11:55.216] 
+[2020-01-08 11:11:55.216] ##2カテ経由実績内訳
+[2020-01-08 11:11:55.248] 00 12 * * 1 sh /opt/batch/7ns_secondclass_ctgry_order/run_7ns_secondclass_ctgry_order.sh
+[2020-01-08 11:11:55.248] 
+[2020-01-08 11:11:55.248] #引取期限切注文抽出
+[2020-01-08 11:11:55.248] 55 07 * * * sh /opt/batch/send_order_not_received/run_send_order_not_received.sh
+[2020-01-08 11:11:55.248] 
+[2020-01-08 11:11:55.248] #レビュー削除対象取得
+[2020-01-08 11:11:55.248] 00 05 01 * * sh /opt/batch/chkDeleteReview/sh/job_run.sh
+[2020-01-08 11:11:55.248] 
+[2020-01-08 11:11:55.248] #1カテ経由注文実績取得
+[2020-01-08 11:11:55.248] 00 12 * * * sh /opt/batch/first_ctgry_performance/run_first_ctgry_performance.sh
+[2020-01-08 11:11:55.248] 
+[2020-01-08 11:11:55.248] #nanacoポイント利用分・付与分の抽出依頼
+[2020-01-08 11:11:55.248] 30 09 01 * * sh /opt/batch/mthly_nanaco_aggr/run_mthly_nanaco_aggr.sh
+[2020-01-08 11:11:55.248] 
+[2020-01-08 11:11:55.248] #Yahooの請求書発行データ
+[2020-01-08 11:11:55.248] 10 09 01 * * sh /opt/batch/yahooIssueInvoice/sh/job_run.sh
+[2020-01-08 11:11:55.248] 
+[2020-01-08 11:11:55.248] #YahooID購入商品のリスト
+[2020-01-08 11:11:55.248] 20 09 01 * * sh /opt/batch/yid_purchase_products/run_yid_purchase_products.sh
+[2020-01-08 11:11:55.248] 
+[2020-01-08 11:11:55.248] #A8、バリューコマースの受注商品 抽出
+[2020-01-08 11:11:55.248] 10 10 01 * * sh /opt/batch/sel_a8_valuecommerce_rel_data/run_sel_a8_valuecommerce_rel_data.sh
+[2020-01-08 11:11:55.248] 
+[2020-01-08 11:11:55.248] #SYSTEM_UNYOU_IRAI-707
+[2020-01-08 11:11:55.248] 30 17 * * * sh /opt/batch/output_csv_tool/job_run.sh system_unyou_irai_707
+[2020-01-08 11:11:55.248] 
+[2020-01-08 11:11:55.248] #2カテ棚落ちチェック結果取得
+[2020-01-08 11:11:55.263] 45 08 * * * sh /opt/batch/2ct_shelfslip_data/sh/run_2ct_shelfslip_data.sh day
+[2020-01-08 11:11:55.263] 00 09 * * 1 sh /opt/batch/2ct_shelfslip_data/sh/run_2ct_shelfslip_data.sh week
+[2020-01-08 11:11:55.263] 
+[2020-01-08 11:11:55.263] #アフィリエイター審査用データ抽出
+[2020-01-08 11:11:55.263] 00 09 * * 1-5 sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh aff
+[2020-01-08 11:11:55.263] 
+[2020-01-08 11:11:55.263] #crm_sys_ope_87
+[2020-01-08 11:11:55.263] 30 * * * * sh /opt/batch/crm_sys_ope_87/run_crm_sys_ope_87.sh
+[2020-01-08 11:11:55.263] 50 * * * * sh /opt/batch/crm_sys_ope_87/run_crm_sys_ope_87.sh
+[2020-01-08 11:11:55.263] 
+[2020-01-08 11:11:55.263] #決済返金対象リスト
+[2020-01-08 11:11:55.263] 30 08 * * * /opt/batch/output_csv_tool/job_run.sh refundable_list
+[2020-01-08 11:11:55.263] 
+[2020-01-08 11:11:55.263] #ZETA処理確認
+[2020-01-08 11:11:55.263] 00 09,15,21 * * * /usr/bin/perl /opt/batch/send_report/send_mail.pl
+[2020-01-08 11:11:55.263] 
+[2020-01-08 11:11:55.263] #BIインポートファイル件数チェック
+[2020-01-08 11:11:55.263] #15 08 * * * sh /opt/batch/number_of_import_to_bi/run_number_of_import_to_bi.sh
+[2020-01-08 11:11:55.263] 
+[2020-01-08 11:11:55.263] #SEJ店舗受取払い電文変更エラー
+[2020-01-08 11:11:55.263] 00 11 * * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh denbun
+[2020-01-08 11:11:55.263] 
+[2020-01-08 11:11:55.263] #クレジットカード登録状況チェック
+[2020-01-08 11:11:55.263] #00 08,14,18 * * * sh /opt/batch/diplist_check/sh/diplist_check.sh Credit
+[2020-01-08 11:11:55.295] 
+[2020-01-08 11:11:55.295] #追跡対象DIプリントチェック
+[2020-01-08 11:11:55.295] 00 08 * * * sh /opt/batch/diplist_check/sh/diplist_check.sh Chase
+[2020-01-08 11:11:55.295] 
+[2020-01-08 11:11:55.295] #CRM_SYS_OPE-105
+[2020-01-08 11:11:55.295] #00,30 * * * * sh /opt/batch/CRM_SYS_OPE-105/run_CRM_SYS_OPE-105.sh
+[2020-01-08 11:11:55.295] 
+[2020-01-08 11:11:55.295] #開発依頼
+[2020-01-08 11:11:55.295] 55 08 * * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh zeta_item_chk
+[2020-01-08 11:11:55.295] 
+[2020-01-08 11:11:55.295] #CRM_SYS_OPE-105確認
+[2020-01-08 11:11:55.295] #00 10 * * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh OPE-105
+[2020-01-08 11:11:55.295] 
+[2020-01-08 11:11:55.295] #マタニティ登録実績
+[2020-01-08 11:11:55.295] 45 07 * * 1 /opt/batch/maternity_result/sh/run_maternity_result.sh
+[2020-01-08 11:11:55.295] 
+[2020-01-08 11:11:55.295] #クレジット決済一部欠品
+[2020-01-08 11:11:55.295] 00 11 * * 4 sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh Authori_Error_Check
+[2020-01-08 11:11:55.295] 
+[2020-01-08 11:11:55.295] #店舗引き取りのステータスのデータ抽出
+[2020-01-08 11:11:55.295] 00 10 * * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh Storepickup
+[2020-01-08 11:11:55.295] 
+[2020-01-08 11:11:55.295] #ZETAリカバリ
+[2020-01-08 11:11:55.295] 00 16 * * * sh /opt/batch/rcv_zeta/rcv_zeta.sh
+[2020-01-08 11:11:55.295] 00,30 0-15,17-23 * * * sh /opt/batch/rcv_zeta2/rcv_zeta.sh
+[2020-01-08 11:11:55.295] 
+[2020-01-08 11:11:55.295] #雑誌取置_決済要求エラー結果抽出ツール
+[2020-01-08 11:11:55.295] 05 7 * * * sh /opt/batch/magazine_alert_correspondence/sh/magazine_alert_correspondence.sh
+[2020-01-08 11:11:55.310] 
+[2020-01-08 11:11:55.310] #トランザクションメールの監視
+[2020-01-08 11:11:55.310] 50 * * * * sh /opt/batch/check_snddat_table/sh/check_snddat_table.sh check.sql 1000
+[2020-01-08 11:11:55.310] 
+[2020-01-08 11:11:55.310] #雑誌お取置きサービスの注文データ抽出
+[2020-01-08 11:11:55.310] 00 10 * * 6 sh /opt/batch/output_csv_tool/job_run.sh magazine_order_list
+[2020-01-08 11:11:55.310] 
+[2020-01-08 11:11:55.310] #SYSTEM_UNYOU_IRAI-843
+[2020-01-08 11:11:55.310] 45 6 * * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh RPJ_IRAI-843
+[2020-01-08 11:11:55.310] 00 13,18 * * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh RPJ_IRAI-843
+[2020-01-08 11:11:55.310] 
+[2020-01-08 11:11:55.310] #受注速報毎時
+[2020-01-08 11:11:55.310] 05 01 * * * sh /opt/batch/output_html_tool/sh/output_html_tool.sh orderList
+[2020-01-08 11:11:55.310] 01 00,02-23 * * * sh /opt/batch/output_html_tool/sh/output_html_tool.sh orderList
+[2020-01-08 11:11:55.310] 
+[2020-01-08 11:11:55.310] #PVUU速報毎時
+[2020-01-08 11:11:55.310] 53 00-22 * * * sh /opt/batch/output_html_tool/sh/output_html_tool.sh PVUU
+[2020-01-08 11:11:55.310] 59 23 * * * sh /opt/batch/output_html_tool/sh/output_html_tool.sh PVUU
+[2020-01-08 11:11:55.310] 
+[2020-01-08 11:11:55.310] #PVUU日次実績
+[2020-01-08 11:11:55.310] 00 03 * * * sh /opt/batch/output_html_tool/sh/output_html_tool.sh PVUU_day
+[2020-01-08 11:11:55.310] 
+[2020-01-08 11:11:55.310] #郵便番号チェック
+[2020-01-08 11:11:55.310] 00 15 01 * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh addrchk
+[2020-01-08 11:11:55.326] 
+[2020-01-08 11:11:55.326] #オムニモールチェック
+[2020-01-08 11:11:55.326] 00 15 31 * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh OMNIMALL_CHK
+[2020-01-08 11:11:55.326] 
+[2020-01-08 11:11:55.326] #2018-19福袋
+[2020-01-08 11:11:55.326] #30 7,9 29,30,31 12 * sh  /opt/batch/fukubukuro/job_run.sh today
+[2020-01-08 11:11:55.326] #30 5 29,30,31 12 * sh  /opt/batch/fukubukuro/job_run.sh yday
+[2020-01-08 11:11:55.326] #30 5 1 1 * sh /opt/batch/fukubukuro/job_run.sh yday
+[2020-01-08 11:11:55.326] 
+[2020-01-08 11:11:55.326] #キャッシュクリアによる不整合チェック(SYSTEM_UNYOU_IRAI-843)
+[2020-01-08 11:11:55.326] #00 06 * * * sh /opt/batch/cache_error_check/sh/cache_error_check.sh
+[2020-01-08 11:11:55.326] 
+[2020-01-08 11:11:55.326] #template
+[2020-01-08 11:11:55.326] #00 02 13 01 * sh /opt/batch/tsuhoson/template/sh/template.sh > /opt/batch/tsuhoson/template/log/`date "+\%Y\%m\%d\%H\%M\%S"`.log 2>&1
+[2020-01-08 11:11:55.326] 
+[2020-01-08 11:11:55.326] #nanacoポイント付与結果警告終了予報
+[2020-01-08 11:11:55.326] 00 09 * * * sh /opt/batch/tsuhoson/nanaco_null_omni/sh/nanaco_null_omni.sh
+[2020-01-08 11:11:55.326] 
+[2020-01-08 11:11:55.326] #住所コードマスタ抽出
+[2020-01-08 11:11:55.326] 00 11 1 * * sh /opt/batch/output_csv_tool/job_run.sh t_addr_cd_mst_1
+[2020-01-08 11:11:55.326] 01 11 1 * * sh /opt/batch/output_csv_tool/job_run.sh t_addr_cd_mst_2
+[2020-01-08 11:11:55.326] 02 11 1 * * sh /opt/batch/output_csv_tool/job_run.sh t_addr_cd_mst_3
+[2020-01-08 11:11:55.341] 03 11 1 * * sh /opt/batch/output_csv_tool/job_run.sh t_addr_cd_mst_4
+[2020-01-08 11:11:55.341] 
+[2020-01-08 11:11:55.341] #CRM_SYS_OPE-293 会員情報連携の生年月日が未来日付の対応
+[2020-01-08 11:11:55.341] #00 12 * * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh mirai_birth_not2807
+[2020-01-08 11:11:55.341] 
+[2020-01-08 11:11:55.341] #誕生日が未来日の会員(11時から17時)
+[2020-01-08 11:11:55.341] #00 11-17 * * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh mirai_birth_everyhour
+[2020-01-08 11:11:55.341] 
+[2020-01-08 11:11:55.341] #誕生日が未来日の会員(前日17時から翌10時)
+[2020-01-08 11:11:55.341] #00 10 * * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh mirai_birth_day
+[2020-01-08 11:11:55.341] 
+[2020-01-08 11:11:55.341] #YahooID購入商品のリスト(エクセル版)
+[2020-01-08 11:11:55.341] 20 09 01 * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh yid_purchase_products
+[2020-01-08 11:11:55.341] 
+[2020-01-08 11:11:55.341] #誕生日時刻混入_検知
+[2020-01-08 11:11:55.341] #30 09 * * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh bday_mixing_time
+[2020-01-08 11:11:55.341] 
+[2020-01-08 11:11:55.341] #開発依頼 - 会員登録日nullチェック(CRMSYSOPE-272)
+[2020-01-08 11:11:55.341] 50 08 * * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh cmn_mmbr_null_check
+[2020-01-08 11:11:55.341] 
+[2020-01-08 11:11:55.341] #クレジットカード登録状況チェック
+[2020-01-08 11:11:55.341] 00 08 * * * sh /opt/batch/tsuhoson/creditcard_check_backbatch/sh/join.sh 08 > /opt/batch/tsuhoson/creditcard_check_backbatch/log/`date "+\%Y\%m\%d\%H\%M\%S"`.log 2>&1
+[2020-01-08 11:11:55.357] 00 14 * * * sh /opt/batch/tsuhoson/creditcard_check_backbatch/sh/join.sh 14 > /opt/batch/tsuhoson/creditcard_check_backbatch/log/`date "+\%Y\%m\%d\%H\%M\%S"`.log 2>&1
+[2020-01-08 11:11:55.357] 00 18 * * * sh /opt/batch/tsuhoson/creditcard_check_backbatch/sh/join.sh 18 > /opt/batch/tsuhoson/creditcard_check_backbatch/log/`date "+\%Y\%m\%d\%H\%M\%S"`.log 2>&1
+[2020-01-08 11:11:55.357] 
+[2020-01-08 11:11:55.357] #SYSTEM_UNYOU_IRAI-3554 3月20％還元CPnanacoギフト利用実績抽出依頼
+[2020-01-08 11:11:55.357] #00 05 * * 01 sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh 20CP_Gift_Use_Check
+[2020-01-08 11:11:55.357] 
+[2020-01-08 11:11:55.357] #外部ID遮断漏れのネガ立て
+[2020-01-08 11:11:55.357] 10 22 * * * sh /opt/batch/update_mmbr_nega/run_update_mmbr_nega.sh
+[2020-01-08 11:11:55.357] 45 23 * * * sh /opt/batch/update_mmbr_nega/run_update_mmbr_nega.sh
+[2020-01-08 11:11:55.357] 
+[2020-01-08 11:11:55.357] #パスワードリセット後の会員情報取得の自動化
+[2020-01-08 11:11:55.357] 01 * * * * sh /opt/batch/output_csv_tool/job_run.sh 7pay_pwd_chk
+[2020-01-08 11:11:55.357] 
+[2020-01-08 11:11:55.357] #パスワードリセット後の会員情報取得の自動化
+[2020-01-08 11:11:55.373] #01 * * * * sh /opt/batch/output_csv_tool/job_run.sh 7pay_pwd_chk_1
+[2020-01-08 11:11:55.373] 
+[2020-01-08 11:11:55.373] #パスワードリマインダー配信会員数
+[2020-01-08 11:11:55.373] 03 * * * * sh /opt/batch/output_csv_tool/job_run.sh password_reminder_snd_cnt
+[2020-01-08 11:11:55.373] 
+[2020-01-08 11:11:55.373] #パスワードリセット後の会員情報取得(累計版)の自動化
+[2020-01-08 11:11:55.373] #01 * * * * sh /opt/batch/output_csv_tool/job_run.sh 7pay_pwd_chk_total
+[2020-01-08 11:11:55.373] 01 0 * * * sh /opt/batch/output_csv_tool/job_run.sh 7pay_pwd_chk_total
+[2020-01-08 11:11:55.373] 
+[2020-01-08 11:11:55.373] #退会者数の集計(試行中)
+[2020-01-08 11:11:55.373] #14 6 * * * /opt/batch/output_csv_tool/job_run.sh quit_member_cnt
+[2020-01-08 11:11:55.373] 
+[2020-01-08 11:11:55.373] #SYSTEM_UNYOU_IRAI-4235_AHパスワード再設定数実績_インサート用
+[2020-01-08 11:11:55.373] 45 0 * * * sh /opt/batch/SYSTEM_UNYOU_IRAI-4235_insert/IRAI_4235.sh
+[2020-01-08 11:11:55.373] 
+[2020-01-08 11:11:55.373] #AHサイト会員_退会者数_日次集計
+[2020-01-08 11:11:55.373] 30 08 * * * sh /opt/batch/output_html_tool/sh/output_html_tool.sh AH_Unsubscriber
+[2020-01-08 11:11:55.373] 
+[2020-01-08 11:11:55.373] #SYSTEM_UNYOU_IRAI_4588
+[2020-01-08 11:11:55.373] #0 0 11 9 * sh /opt/batch/SYSTEM_UNYOU_IRAI_4588/run_SYSTEM_UNYOU_IRAI_4588.sh "2019/07/30_13:00:00" "2019/09/02_00:00:00"
+[2020-01-08 11:11:55.373] #0 0 16 9 * sh /opt/batch/SYSTEM_UNYOU_IRAI_4588/run_SYSTEM_UNYOU_IRAI_4588.sh "2019/09/02_00:00:00" "2019/09/16_00:00:00"
+[2020-01-08 11:11:55.388] #0 0 30 9 * sh /opt/batch/SYSTEM_UNYOU_IRAI_4588/run_SYSTEM_UNYOU_IRAI_4588.sh "2019/09/16_00:00:00" "2019/09/30_00:00:00"
+[2020-01-08 11:11:55.388] #0 0 14 10 * sh /opt/batch/SYSTEM_UNYOU_IRAI_4588/run_SYSTEM_UNYOU_IRAI_4588.sh "2019/09/30_00:00:00" "2019/10/14_00:00:00"
+[2020-01-08 11:11:55.388] #0 0 28 10 * sh /opt/batch/SYSTEM_UNYOU_IRAI_4588/run_SYSTEM_UNYOU_IRAI_4588.sh "2019/10/14_00:00:00" "2019/10/28_00:00:00"
+[2020-01-08 11:11:55.388] #0 0 11 11 * sh /opt/batch/SYSTEM_UNYOU_IRAI_4588/run_SYSTEM_UNYOU_IRAI_4588.sh "2019/10/28_00:00:00" "2019/11/11_00:00:00"
+[2020-01-08 11:11:55.388] #0 0 25 11 * sh /opt/batch/SYSTEM_UNYOU_IRAI_4588/run_SYSTEM_UNYOU_IRAI_4588.sh "2019/11/11_00:00:00" "2019/11/25_00:00:00"
+[2020-01-08 11:11:55.388] #0 0 1 12 * sh /opt/batch/SYSTEM_UNYOU_IRAI_4588/run_SYSTEM_UNYOU_IRAI_4588.sh "2019/11/25_00:00:00" "2019/12/01_00:00:00"
+[2020-01-08 11:11:55.388] 
+[2020-01-08 11:11:55.388] #comb雑誌取り置き抽出
+[2020-01-08 11:11:55.388] 00 06 * * * sh /opt/batch/tsuhoson/exec_sql/exec_sql.sh "/opt/batch/tsuhoson/exec_sql/sql/comb_magazine.sql" "/opt/batch/tsuhoson/exec_sql/property/db/iku.json" "tsv" "/opt/batch/tsuhoson/exec_sql/property/mail/tsuhoson.json"
+[2020-01-08 11:11:55.388] 
+[2020-01-08 11:11:55.388] #loft発注送信監視
+[2020-01-08 11:11:55.388] 00 2,5,6,7,10,11,13,15,16,18,19,20,21,23 * * * sh /opt/batch/loft_order_check/loft_order_check.sh 1 > /opt/batch/loft_order_check/log/loft_order_check.log
+[2020-01-08 11:11:55.388] 00 8 * * * sh /opt/batch/loft_order_check/loft_order_check.sh 0 > /opt/batch/loft_order_check/log/loft_order_check.log
+[2020-01-08 11:11:55.388] 
+[2020-01-08 11:11:55.388] #消費税対応発売日変更 毎日8:30に実行
+[2020-01-08 11:11:55.388] #30 8 * * * sh /opt/batch/output_csv_tool/job_run.sh upd_tax_saledy
+[2020-01-08 11:11:55.388] 
+[2020-01-08 11:11:55.388] #SYSTEM_UNYOU_IRAI-4387
+[2020-01-08 11:11:55.388] 30 01 * * 1 sh /opt/batch/SYSTEM_UNYOU_IRAI_4387/run_SYSTEM_UNYOU_IRAI_4387.sh
+[2020-01-08 11:11:55.388] 
+[2020-01-08 11:11:55.388] #20％還元CPnanacoギフト利用実績_8月分
+[2020-01-08 11:11:55.388] #30 5 * * 1 sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh 20CP_Gift_Use_Check_August
+[2020-01-08 11:11:55.388] 
+[2020-01-08 11:11:55.388] #【SEJギフト】抽出依頼（201911大満足フェア実績）
+[2020-01-08 11:11:55.388] 10 8 * * 1 sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh SEJ_GIFT
+[2020-01-08 11:11:55.388] 
+[2020-01-08 11:11:55.388] #SYSTEM_UNYOU_IRAI-5656 1128リリース案件の初回稼働確認依頼の件（案件0395　MAへの会員情報連携）
+[2020-01-08 11:11:55.420] 00 0-1 29 11 * /opt/batch/SYSTEM_UNYOU_IRAI_5656/SYSTEM_UNYOU_IRAI_5656.sh
+[2020-01-08 11:11:55.420] 
+[2020-01-08 11:11:55.420] #SYSTEM_UNYOU_IRAI-5858_抽出
+[2020-01-08 11:11:55.420] 0 8 * * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh SYSTEM_UNYOU_IRAI-5858
+[2020-01-08 11:11:55.420] 
+[2020-01-08 11:11:55.420] #OMNI_2019_TAX-392_抽出
+[2020-01-08 11:11:55.420] 0 11 * * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh OMNI_2019_TAX-392
+[2020-01-08 11:11:55.420] 
+[2020-01-08 11:11:55.420] #SYSTEM_UNYOU_IRAI-5721 【HD】7AF 単月100万超アフィリエイター有無について（2019年11月）
+[2020-01-08 11:11:55.420] 0 7 17 * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh Over1mill_AF_Check
+[2020-01-08 11:11:55.420] 
+[2020-01-08 11:11:55.420] #20％還元CPnanacoギフト利用実績
+[2020-01-08 11:11:55.420] 0 5 * * 1 sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh 20CP_Gift_Use_Check
+[2020-01-08 11:11:55.420] 
+[2020-01-08 11:11:55.420] #20％還元CPnanacoギフト利用実績_20200210
+[2020-01-08 11:11:55.420] 0 5 10 2 1 sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh 20CP_Gift_Use_Check_20200210
+[2020-01-08 11:11:55.420] 
+[2020-01-08 11:11:55.420] #7NSカテゴリー別日次売上
+[2020-01-08 11:11:55.420] 00 02 * * * sh /opt/batch/tsuhoson/7ns_daily_sales_by_category_db_202003/exec.sh  > /opt/batch/tsuhoson/7ns_daily_sales_by_category_db_202003/log/log.txt 2>&1
+[2020-01-08 11:11:55.420] [2020/01/08 11:11:54 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:11:56.201] [2020/01/08 11:11:56 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:11:56.341] [2020/01/08 11:11:56 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:11:56.498] [2020/01/08 11:11:56 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:11:56.685] [2020/01/08 11:11:56 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:11:56.888] [2020/01/08 11:11:56 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:11:57.123] [2020/01/08 11:11:56 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:11:57.232] [2020/01/08 11:11:57 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:11:57.731] [2020/01/08 11:11:57 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:11:57.763] [2020/01/08 11:11:57 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:11:57.794] [2020/01/08 11:11:57 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:11:57.841] [2020/01/08 11:11:57 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:11:57.856] [2020/01/08 11:11:57 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:11:57.888] [2020/01/08 11:11:57 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:11:57.919] [2020/01/08 11:11:57 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:11:57.950] [2020/01/08 11:11:57 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:11:57.982] [2020/01/08 11:11:57 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:11:58.028] [2020/01/08 11:11:57 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:11:58.075] [2020/01/08 11:11:57 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:11:58.107] [2020/01/08 11:11:57 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:11:58.122] [2020/01/08 11:11:57 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:11:58.153] [2020/01/08 11:11:57 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:11:58.185] [2020/01/08 11:11:58 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:11:58.216] [2020/01/08 11:11:58 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:11:58.262] [2020/01/08 11:11:58 jp1user01@ompsgbb001 ~]$ crontab -e
+[2020-01-08 11:12:03.405] "/tmp/crontab.dEgF5w" 405L, 19023C#2カテ別受注実績日次
+[2020-01-08 11:12:03.405] 00 10 * * * /opt/batch/2cate_syukei/2kate_syukei.sh > /opt/batch/2cate_syukei/log/2kate_syukei.log
+[2020-01-08 11:12:03.405] 
+[2020-01-08 11:12:03.405] ##アフィリエイト実績報告
+[2020-01-08 11:12:03.405] 00 08 * * * /opt/batch/Affi/sh/J_OSG0200_01.sh  >> /log/batch/affi.log
+[2020-01-08 11:12:03.405] 
+[2020-01-08 11:12:03.405] ##店舗端末アウトバウンドリスト抽出
+[2020-01-08 11:12:03.405] #15 08 * * * /opt/batch/outbound_shop_order/run_check_outbound_shop_order.sh
+[2020-01-08 11:12:03.405] 
+[2020-01-08 11:12:03.405] ##予約受注生成残一覧報告
+[2020-01-08 11:12:03.405] 00 11 * * * /opt/batch/reserve/sh/JNR_OMU_003.sh >> /log/batch/reserve.log
+[2020-01-08 11:12:03.405] 
+[2020-01-08 11:12:03.405] ##在庫受注実績報告
+[2020-01-08 11:12:03.405] 20 07 * * * sh /opt/batch/zaiko_result/sh/JNR_OMU_004.sh >> /log/batch/zaiko_result.log
+[2020-01-08 11:12:03.405] 
+[2020-01-08 11:12:03.405] ##日別単品動向
+[2020-01-08 11:12:03.405] 00 02 * * * sh /opt/batch/product/sh/JNR_OMU_005.sh >> /log/batch/product.log
+[2020-01-08 11:12:03.405] 
+[2020-01-08 11:12:03.405] ##SEJ納品予定データチェック
+[2020-01-08 11:12:03.405] 45 07 * * * /opt/batch/check_arvshparng_info/run_check_arvshparng_info.sh
+[2020-01-08 11:12:03.405] 
+[2020-01-08 11:12:03.405] ##SEJ納品数10注文以上店舗リスト
+[2020-01-08 11:12:03.405] 58 07 * * 1,5 /opt/batch/mss_dlv_shp_lst/run_mss_dlv_shp_lst.sh
+[2020-01-08 11:12:03.405] 
+[2020-01-08 11:12:03.405] ##SQLスケジュール起動
+[2020-01-08 11:12:03.405] 10 06 31 08 * /opt/batch/exec_scheduled_sql/run_exec_scheduled_sql.sh
+[2020-01-08 11:12:03.405] 00 09 01 09 * /opt/batch/exec_scheduled_sql/run_exec_scheduled_sql.sh
+[2020-01-08 11:12:03.405] 00 11 15 11 * /opt/batch/exec_scheduled_sql/run_exec_scheduled_sql.sh
+[2020-01-08 11:12:03.405] 00 11 17 11 * /opt/batch/exec_scheduled_sql/run_exec_scheduled_sql.sh
+[2020-01-08 11:12:03.405] 
+[2020-01-08 11:12:03.405] ##SQLスケジュール起動_2(同日で別SQLを実行させるため用)
+[2020-01-08 11:12:03.405] #30 06 31 12 * /opt/batch/exec_scheduled_sql_2/run_exec_scheduled_sql_2.sh
+[2020-01-08 11:12:03.405] ##SQLスケジュール起動_5
+[2020-01-08 11:12:03.405] #30 05 * 12 * sh /opt/batch/exec_scheduled_sql_5/run_exec_scheduled_sql_5.sh
+[2020-01-08 11:12:03.405] 
+[2020-01-08 11:12:03.405] ##お届けカレンダー補正
+[2020-01-08 11:12:06.960] 
+[2020-01-08 11:12:07.000] 
+[2020-01-08 11:12:07.020] 
+[2020-01-08 11:12:07.060] 
+[2020-01-08 11:12:07.100] 
+[2020-01-08 11:12:07.120] 
+[2020-01-08 11:12:07.160] 
+[2020-01-08 11:12:07.200] 
+[2020-01-08 11:12:07.220] 
+[2020-01-08 11:12:07.260] 
+[2020-01-08 11:12:07.300] 
+[2020-01-08 11:12:07.319] 
+[2020-01-08 11:12:07.360] 
+[2020-01-08 11:12:07.380] 
+[2020-01-08 11:12:07.420] 
+[2020-01-08 11:12:07.460] 
+[2020-01-08 11:12:07.480] 
+[2020-01-08 11:12:07.520] 
+[2020-01-08 11:12:07.560] 
+[2020-01-08 11:12:07.579] 
+[2020-01-08 11:12:07.620] 
+[2020-01-08 11:12:07.660] 
+[2020-01-08 11:12:07.680] 
+[2020-01-08 11:12:07.720] 
+[2020-01-08 11:12:07.760] 
+[2020-01-08 11:12:07.779] 
+[2020-01-08 11:12:07.820] 
+[2020-01-08 11:12:07.860] 
+[2020-01-08 11:12:07.880] 
+[2020-01-08 11:12:07.920] 
+[2020-01-08 11:12:07.959] 
+[2020-01-08 11:12:07.980] 
+[2020-01-08 11:12:08.020] 
+[2020-01-08 11:12:08.040] 
+[2020-01-08 11:12:08.080] 
+[2020-01-08 11:12:08.080] 00 22 * * * /opt/batch/mdfy_thn_clndr/run_mdfy_thn_clndr.sh
+[2020-01-08 11:12:08.120] 30 22 * * * /opt/batch/mdfy_thn_clndr_SP/run_mdfy_thn_clndr_SP.sh
+[2020-01-08 11:12:08.149] ##予約在庫状態修正
+[2020-01-08 11:12:08.180] 30 22 * * * /opt/batch/mdfy_thn_resv_stock/run_mdfy_thn_resv_stock.sh
+[2020-01-08 11:12:08.220] ##包装設定グループマスタ更新
+[2020-01-08 11:12:08.240] 00 08 19 03 * /opt/batch/exec_scheduled_sql_2/run_exec_scheduled_sql_2.sh
+[2020-01-08 11:12:08.320] 
+[2020-01-08 11:12:08.320] ##受取前管理票メール送信
+[2020-01-08 11:12:08.340] 10 08 * * * sh /opt/batch/uketorimae_7ns/sh/OMN_APR.sh > /opt/batch/uketorimae_7ns/log/OMN_APR.log
+[2020-01-08 11:12:08.420] 
+[2020-01-08 11:12:08.420] #注文ステータス：010チェック
+[2020-01-08 11:12:08.630] #03 06 * * * /opt/batch/ord_sta_010/run_ord_sta_010.sh
+[2020-01-08 11:12:16.129] ?\<30\>
+[2020-01-08 11:12:19.128] 
+[2020-01-08 11:12:19.128] #
+[2020-01-08 11:12:19.159] 0
+[2020-01-08 11:12:19.628] 3:qcrontab: no changes made to crontab
+[2020-01-08 11:12:25.947] [2020/01/08 11:12:25 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:12:26.672] [2020/01/08 11:12:26 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:12:26.812] [2020/01/08 11:12:26 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:12:26.968] [2020/01/08 11:12:26 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:12:27.484] [2020/01/08 11:12:27 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:12:27.500] [2020/01/08 11:12:27 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:12:27.531] [2020/01/08 11:12:27 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:12:27.562] [2020/01/08 11:12:27 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:12:27.594] [2020/01/08 11:12:27 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:12:27.625] [2020/01/08 11:12:27 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:12:27.656] [2020/01/08 11:12:27 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:12:27.687] [2020/01/08 11:12:27 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:12:27.734] [2020/01/08 11:12:27 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:12:27.765] [2020/01/08 11:12:27 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:12:27.797] [2020/01/08 11:12:27 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:12:27.843] [2020/01/08 11:12:27 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:12:27.859] [2020/01/08 11:12:27 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:12:27.890] [2020/01/08 11:12:27 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:12:27.937] [2020/01/08 11:12:27 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:12:27.953] [2020/01/08 11:12:27 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:12:27.984] [2020/01/08 11:12:27 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:12:28.015] [2020/01/08 11:12:27 jp1user01@ompsgbb001 ~]$ crontab -e
+[2020-01-08 11:12:29.124] "/tmp/crontab.P8a7Ld" 405L, 19023C#2カテ別受注実績日次
+[2020-01-08 11:12:29.124] 00 10 * * * /opt/batch/2cate_syukei/2kate_syukei.sh > /opt/batch/2cate_syukei/log/2kate_syukei.log
+[2020-01-08 11:12:29.124] 
+[2020-01-08 11:12:29.124] ##アフィリエイト実績報告
+[2020-01-08 11:12:29.124] 00 08 * * * /opt/batch/Affi/sh/J_OSG0200_01.sh  >> /log/batch/affi.log
+[2020-01-08 11:12:29.124] 
+[2020-01-08 11:12:29.124] ##店舗端末アウトバウンドリスト抽出
+[2020-01-08 11:12:29.124] #15 08 * * * /opt/batch/outbound_shop_order/run_check_outbound_shop_order.sh
+[2020-01-08 11:12:29.124] 
+[2020-01-08 11:12:29.124] ##予約受注生成残一覧報告
+[2020-01-08 11:12:29.124] 00 11 * * * /opt/batch/reserve/sh/JNR_OMU_003.sh >> /log/batch/reserve.log
+[2020-01-08 11:12:29.124] 
+[2020-01-08 11:12:29.124] ##在庫受注実績報告
+[2020-01-08 11:12:29.124] 20 07 * * * sh /opt/batch/zaiko_result/sh/JNR_OMU_004.sh >> /log/batch/zaiko_result.log
+[2020-01-08 11:12:29.124] 
+[2020-01-08 11:12:29.124] ##日別単品動向
+[2020-01-08 11:12:29.124] 00 02 * * * sh /opt/batch/product/sh/JNR_OMU_005.sh >> /log/batch/product.log
+[2020-01-08 11:12:29.124] 
+[2020-01-08 11:12:29.124] ##SEJ納品予定データチェック
+[2020-01-08 11:12:29.124] 45 07 * * * /opt/batch/check_arvshparng_info/run_check_arvshparng_info.sh
+[2020-01-08 11:12:29.124] 
+[2020-01-08 11:12:29.124] ##SEJ納品数10注文以上店舗リスト
+[2020-01-08 11:12:29.124] 58 07 * * 1,5 /opt/batch/mss_dlv_shp_lst/run_mss_dlv_shp_lst.sh
+[2020-01-08 11:12:29.124] 
+[2020-01-08 11:12:29.124] ##SQLスケジュール起動
+[2020-01-08 11:12:29.124] 10 06 31 08 * /opt/batch/exec_scheduled_sql/run_exec_scheduled_sql.sh
+[2020-01-08 11:12:29.124] 00 09 01 09 * /opt/batch/exec_scheduled_sql/run_exec_scheduled_sql.sh
+[2020-01-08 11:12:29.124] 00 11 15 11 * /opt/batch/exec_scheduled_sql/run_exec_scheduled_sql.sh
+[2020-01-08 11:12:29.124] 00 11 17 11 * /opt/batch/exec_scheduled_sql/run_exec_scheduled_sql.sh
+[2020-01-08 11:12:29.124] 
+[2020-01-08 11:12:29.124] ##SQLスケジュール起動_2(同日で別SQLを実行させるため用)
+[2020-01-08 11:12:29.124] #30 06 31 12 * /opt/batch/exec_scheduled_sql_2/run_exec_scheduled_sql_2.sh
+[2020-01-08 11:12:29.124] ##SQLスケジュール起動_5
+[2020-01-08 11:12:29.124] #30 05 * 12 * sh /opt/batch/exec_scheduled_sql_5/run_exec_scheduled_sql_5.sh
+[2020-01-08 11:12:29.124] 
+[2020-01-08 11:12:29.124] ##お届けカレンダー補正
+[2020-01-08 11:12:30.827] 
+[2020-01-08 11:12:30.858] 
+[2020-01-08 11:12:30.889] 
+[2020-01-08 11:12:30.920] 
+[2020-01-08 11:12:30.952] 
+[2020-01-08 11:12:30.983] 
+[2020-01-08 11:12:31.014] 
+[2020-01-08 11:12:31.045] 
+[2020-01-08 11:12:31.077] 
+[2020-01-08 11:12:31.124] 
+[2020-01-08 11:12:31.155] 
+[2020-01-08 11:12:31.186] 
+[2020-01-08 11:12:31.217] 
+[2020-01-08 11:12:31.249] 
+[2020-01-08 11:12:31.280] 
+[2020-01-08 11:12:31.311] 
+[2020-01-08 11:12:31.342] 
+[2020-01-08 11:12:31.374] 
+[2020-01-08 11:12:31.420] 
+[2020-01-08 11:12:31.452] 
+[2020-01-08 11:12:31.702] 
+[2020-01-08 11:12:32.201] 
+[2020-01-08 11:12:32.233] 
+[2020-01-08 11:12:32.264] 
+[2020-01-08 11:12:32.295] 
+[2020-01-08 11:12:32.326] 
+[2020-01-08 11:12:32.358] 
+[2020-01-08 11:12:32.389] 
+[2020-01-08 11:12:33.030] 
+[2020-01-08 11:12:33.530] 
+[2020-01-08 11:12:33.561] 
+[2020-01-08 11:12:33.592] 
+[2020-01-08 11:12:33.623] 
+[2020-01-08 11:12:33.654] 
+[2020-01-08 11:12:33.701] 
+[2020-01-08 11:12:33.701] 00 22 * * * /opt/batch/mdfy_thn_clndr/run_mdfy_thn_clndr.sh
+[2020-01-08 11:12:33.732] 30 22 * * * /opt/batch/mdfy_thn_clndr_SP/run_mdfy_thn_clndr_SP.sh
+[2020-01-08 11:12:34.045] ##予約在庫状態修正
+[2020-01-08 11:12:36.060] 
+[2020-01-08 11:12:36.060] -- INSERT --#30 22 * * * /opt/batch/mdfy_thn_clndr_SP/run_mdfy_thn_clndr_SP.sh#
+[2020-01-08 11:12:46.526] 
+[2020-01-08 11:12:46.526] :wq"/tmp/crontab.P8a7Ld" 405L, 19024C written
+[2020-01-08 11:12:50.009] crontab: installing new crontab
+[2020-01-08 11:12:50.009] [2020/01/08 11:12:49 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:12:50.743] [2020/01/08 11:12:50 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:12:50.868] [2020/01/08 11:12:50 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:12:50.993] [2020/01/08 11:12:50 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:12:51.134] [2020/01/08 11:12:50 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:12:51.259] [2020/01/08 11:12:51 jp1user01@ompsgbb001 ~]$ crontab -el
+[2020-01-08 11:12:52.587] #2カテ別受注実績日次
+[2020-01-08 11:12:52.587] 00 10 * * * /opt/batch/2cate_syukei/2kate_syukei.sh > /opt/batch/2cate_syukei/log/2kate_syukei.log
+[2020-01-08 11:12:52.587] 
+[2020-01-08 11:12:52.587] ##アフィリエイト実績報告
+[2020-01-08 11:12:52.587] 00 08 * * * /opt/batch/Affi/sh/J_OSG0200_01.sh  >> /log/batch/affi.log
+[2020-01-08 11:12:52.587] 
+[2020-01-08 11:12:52.587] ##店舗端末アウトバウンドリスト抽出
+[2020-01-08 11:12:52.587] #15 08 * * * /opt/batch/outbound_shop_order/run_check_outbound_shop_order.sh
+[2020-01-08 11:12:52.587] 
+[2020-01-08 11:12:52.587] ##予約受注生成残一覧報告
+[2020-01-08 11:12:52.587] 00 11 * * * /opt/batch/reserve/sh/JNR_OMU_003.sh >> /log/batch/reserve.log
+[2020-01-08 11:12:52.587] 
+[2020-01-08 11:12:52.587] ##在庫受注実績報告
+[2020-01-08 11:12:52.587] 20 07 * * * sh /opt/batch/zaiko_result/sh/JNR_OMU_004.sh >> /log/batch/zaiko_result.log
+[2020-01-08 11:12:52.587] 
+[2020-01-08 11:12:52.587] ##日別単品動向
+[2020-01-08 11:12:52.587] 00 02 * * * sh /opt/batch/product/sh/JNR_OMU_005.sh >> /log/batch/product.log
+[2020-01-08 11:12:52.587] 
+[2020-01-08 11:12:52.587] ##SEJ納品予定データチェック
+[2020-01-08 11:12:52.587] 45 07 * * * /opt/batch/check_arvshparng_info/run_check_arvshparng_info.sh
+[2020-01-08 11:12:52.587] 
+[2020-01-08 11:12:52.587] ##SEJ納品数10注文以上店舗リスト
+[2020-01-08 11:12:52.587] 58 07 * * 1,5 /opt/batch/mss_dlv_shp_lst/run_mss_dlv_shp_lst.sh
+[2020-01-08 11:12:52.587] 
+[2020-01-08 11:12:52.587] ##SQLスケジュール起動
+[2020-01-08 11:12:52.587] 10 06 31 08 * /opt/batch/exec_scheduled_sql/run_exec_scheduled_sql.sh
+[2020-01-08 11:12:52.602] 00 09 01 09 * /opt/batch/exec_scheduled_sql/run_exec_scheduled_sql.sh
+[2020-01-08 11:12:52.602] 00 11 15 11 * /opt/batch/exec_scheduled_sql/run_exec_scheduled_sql.sh
+[2020-01-08 11:12:52.602] 00 11 17 11 * /opt/batch/exec_scheduled_sql/run_exec_scheduled_sql.sh
+[2020-01-08 11:12:52.602] 
+[2020-01-08 11:12:52.602] ##SQLスケジュール起動_2(同日で別SQLを実行させるため用)
+[2020-01-08 11:12:52.602] #30 06 31 12 * /opt/batch/exec_scheduled_sql_2/run_exec_scheduled_sql_2.sh
+[2020-01-08 11:12:52.602] ##SQLスケジュール起動_5
+[2020-01-08 11:12:52.602] #30 05 * 12 * sh /opt/batch/exec_scheduled_sql_5/run_exec_scheduled_sql_5.sh
+[2020-01-08 11:12:52.602] 
+[2020-01-08 11:12:52.602] ##お届けカレンダー補正
+[2020-01-08 11:12:52.602] 00 22 * * * /opt/batch/mdfy_thn_clndr/run_mdfy_thn_clndr.sh
+[2020-01-08 11:12:52.602] #30 22 * * * /opt/batch/mdfy_thn_clndr_SP/run_mdfy_thn_clndr_SP.sh
+[2020-01-08 11:12:52.602] ##予約在庫状態修正
+[2020-01-08 11:12:52.602] 30 22 * * * /opt/batch/mdfy_thn_resv_stock/run_mdfy_thn_resv_stock.sh
+[2020-01-08 11:12:52.602] ##包装設定グループマスタ更新
+[2020-01-08 11:12:52.602] 00 08 19 03 * /opt/batch/exec_scheduled_sql_2/run_exec_scheduled_sql_2.sh
+[2020-01-08 11:12:52.602] 
+[2020-01-08 11:12:52.602] ##受取前管理票メール送信
+[2020-01-08 11:12:52.602] 10 08 * * * sh /opt/batch/uketorimae_7ns/sh/OMN_APR.sh > /opt/batch/uketorimae_7ns/log/OMN_APR.log
+[2020-01-08 11:12:52.602] 
+[2020-01-08 11:12:52.602] #注文ステータス：010チェック
+[2020-01-08 11:12:52.602] #03 06 * * * /opt/batch/ord_sta_010/run_ord_sta_010.sh
+[2020-01-08 11:12:52.602] #リアル在庫エラー件数チェック
+[2020-01-08 11:12:52.602] #01 06 * * * /opt/batch/real_stock_err/run_real_stock_err.sh
+[2020-01-08 11:12:52.602] 
+[2020-01-08 11:12:52.602] #前払い欠品チェック
+[2020-01-08 11:12:52.602] 00 09 * * 3 sh /opt/batch/chk_stckout_prpd_prd/run_chk_stckout_prpd_prd.sh
+[2020-01-08 11:12:52.602] 
+[2020-01-08 11:12:52.602] #SMSチャネル別受注実績報告
+[2020-01-08 11:12:52.602] 20 08 * * * sh /opt/batch/send_sms/sh/send_sms.sh > /log/batch/send_sms.log
+[2020-01-08 11:12:52.602] 
+[2020-01-08 11:12:52.602] ##日次_返金対象リスト抽出
+[2020-01-08 11:12:52.602] #25 08 * * * sh /opt/batch/refundTargetList/sh/OMN_refundTargetList.sh > /opt/batch/refundTargetList/log/log.txt
+[2020-01-08 11:12:52.602] 
+[2020-01-08 11:12:52.602] ##オムニ7トップ抽出(日別)
+[2020-01-08 11:12:52.602] 45 08 * * * sh /opt/batch/extractionOmni7Top/sh/OMN_extractionOmni7Top.sh > /opt/batch/extractionOmni7Top/log/log.txt
+[2020-01-08 11:12:52.602] 
+[2020-01-08 11:12:52.602] ##不正ログイン確認(CAFIS Brain)
+[2020-01-08 11:12:52.602] 00 09 * * * sh /opt/batch/cafisBrainFraudLogin/sh/fraudLogin.sh 17 > /opt/batch/cafisBrainFraudLogin/log/log.txt
+[2020-01-08 11:12:52.602] 00 13 * * * sh /opt/batch/cafisBrainFraudLogin/sh/fraudLogin.sh 09 > /opt/batch/cafisBrainFraudLogin/log/log.txt
+[2020-01-08 11:12:52.602] 00 17 * * * sh /opt/batch/cafisBrainFraudLogin/sh/fraudLogin.sh 13 > /opt/batch/cafisBrainFraudLogin/log/log.txt
+[2020-01-08 11:12:52.618] 
+[2020-01-08 11:12:52.618] ##不正ログイン確認マージ版(CAFIS Brain)
+[2020-01-08 11:12:52.618] 30 17 * * * sh /opt/batch/cafisBrainFraudLogin2/sh/fraudLogin.sh 17 > /opt/batch/cafisBrainFraudLogin2/log/log.txt
+[2020-01-08 11:12:52.618] 
+[2020-01-08 11:12:52.618] ##不正取引(CAFIS Brain)
+[2020-01-08 11:12:52.618] 35 08 * * * sh /opt/batch/chk_cafis_fraud_transaction/run_chk_cafis_fraud_transaction.sh SS LoFt
+[2020-01-08 11:12:52.618] 35 09 * * * sh /opt/batch/chk_cafis_fraud_transaction/run_chk_cafis_fraud_transaction.sh 7NS
+[2020-01-08 11:12:52.618] 35 10 * * * sh /opt/batch/chk_cafis_fraud_transaction/run_chk_cafis_fraud_transaction.sh IY
+[2020-01-08 11:12:52.618] 35 12 * * * sh /opt/batch/chk_cafis_fraud_transaction/run_chk_cafis_fraud_transaction.sh 7NS SS LoFt
+[2020-01-08 11:12:52.618] 35 14 * * * sh /opt/batch/chk_cafis_fraud_transaction/run_chk_cafis_fraud_transaction.sh 7NS
+[2020-01-08 11:12:52.618] 35 16 * * * sh /opt/batch/chk_cafis_fraud_transaction/run_chk_cafis_fraud_transaction.sh 7NS SS LoFt
+[2020-01-08 11:12:52.618] 
+[2020-01-08 11:12:52.618] #郵送による口座振替登録の不備発生時の対応 (週次)
+[2020-01-08 11:12:52.618] 57 10 * * 1 sh /opt/batch/chk_account_incomplete/run_chk_account_incomplete.sh 0
+[2020-01-08 11:12:52.634] 
+[2020-01-08 11:12:52.634] #郵送による口座振替登録の不備発生時の対応 (月次) 8月まで
+[2020-01-08 11:12:52.634] 47 10 30 4,6,9,11 * sh /opt/batch/chk_account_incomplete/run_chk_account_incomplete.sh 1
+[2020-01-08 11:12:52.634] 47 10 31 1,3,5,7,8,10,12 * sh /opt/batch/chk_account_incomplete/run_chk_account_incomplete.sh 1
+[2020-01-08 11:12:52.634] #2019年は2月28日まで
+[2020-01-08 11:12:52.634] 47 10 28 2 * sh /opt/batch/chk_account_incomplete/run_chk_account_incomplete.sh 1
+[2020-01-08 11:12:52.634] 
+[2020-01-08 11:12:52.634] # 週別COMBお勧め商品データ抽出
+[2020-01-08 11:12:52.634] 00 09 * * 5 sh /opt/batch/extract_recommend_item/run_extract_recommend_item.sh
+[2020-01-08 11:12:52.634] 
+[2020-01-08 11:12:52.634] # 日別COMBお勧め商品データ抽出
+[2020-01-08 11:12:52.634] 03 09 * * * sh /opt/batch/extract_recommend_item_daily/run_extract_recommend_item_daily.sh
+[2020-01-08 11:12:52.634] 
+[2020-01-08 11:12:52.634] # COMB限定７ネットショッピング受注状況
+[2020-01-08 11:12:52.634] 30 09 * * * sh /opt/batch/comb_order_7ns_daily/run_comb_order_7ns_daily.sh
+[2020-01-08 11:12:52.634] 
+[2020-01-08 11:12:52.634] # 特集データ送信
+[2020-01-08 11:12:52.634] 30 08 * * * sh /opt/batch/tokushuu_jisseki/run_tokushuu_jisseki.sh
+[2020-01-08 11:12:52.634] 
+[2020-01-08 11:12:52.634] # 7NS報酬率0％設定、報酬発生停止処理について
+[2020-01-08 11:12:52.634] 00 21 15 * * sh /opt/batch/update_af_0per_user/run_update_af_0per_user.sh
+[2020-01-08 11:12:52.649] 
+[2020-01-08 11:12:52.649] #21 17 * * * sh /opt/batch/big_query_select/sh/shell_20170301/t_order.sh > /opt/batch/big_query_select/bq.log
+[2020-01-08 11:12:52.649] 
+[2020-01-08 11:12:52.649] #SSリアルタイム在庫連携エラーチェック
+[2020-01-08 11:12:52.649] 05 08,13 * * * sh /opt/batch/chk_rltm_stck_err/run_chk_rltm_stck_err.sh
+[2020-01-08 11:12:52.649] 
+[2020-01-08 11:12:52.649] #予約在庫差異修正
+[2020-01-08 11:12:52.649] 53 * * * * sh /opt/batch/rcvry_rsv_stck/run_rcvry_rsv_stck.sh
+[2020-01-08 11:12:52.649] 
+[2020-01-08 11:12:52.649] ##代表バリエーションコードチェック
+[2020-01-08 11:12:52.649] 30 01 * * * sh /opt/batch/chk_variation/run_chk_variation.sh
+[2020-01-08 11:12:52.649] 
+[2020-01-08 11:12:52.649] # 二次開発以降の接客端末データ抽出
+[2020-01-08 11:12:52.649] #00 09 * * 5 sh /opt/batch/chk_customer_service_terminal_result/run_chk_customer_service_terminal_result.sh
+[2020-01-08 11:12:52.649] 
+[2020-01-08 11:12:52.649] ##COMB_顧客管理台帳抽出
+[2020-01-08 11:12:52.649] #00 07 * * 5 sh /opt/batch/comb_customer_list/run_comb_customer_list.sh
+[2020-01-08 11:12:52.649] 
+[2020-01-08 11:12:52.649] ##都道府県別活動会員数のご報告
+[2020-01-08 11:12:52.649] 00 10 1 * * sh /opt/batch/chk_member_ah/run_chk_member_ah.sh
+[2020-01-08 11:12:52.649] 
+[2020-01-08 11:12:52.649] #［日次］雑誌お取置き　検証データ抽出依頼
+[2020-01-08 11:12:52.649] 55 06 * * * sh /opt/batch/output_csv_tool/job_run.sh reserve_magazine_daily
+[2020-01-08 11:12:52.649] 
+[2020-01-08 11:12:52.649] #【週次】雑誌取り置き検証データ
+[2020-01-08 11:12:52.665] 30 06 * * 1 sh /opt/batch/output_csv_tool/job_run.sh reserve_magazine_weekly
+[2020-01-08 11:12:52.665] 
+[2020-01-08 11:12:52.665] #雑誌お取置きサービスの注文データ抽出
+[2020-01-08 11:12:52.665] #00 08 * * * sh /opt/batch/magazine_order_list/run_magazine_order_list.sh
+[2020-01-08 11:12:52.665] 
+[2020-01-08 11:12:52.665] #「SEJギフト」受注_週次データ抽出
+[2020-01-08 11:12:52.665] 50 06 * * 1 sh /opt/batch/sejgift/run_sejgift.sh
+[2020-01-08 11:12:52.665] 
+[2020-01-08 11:12:52.665] #「大相撲カレンダー」SEJ受注実績
+[2020-01-08 11:12:52.665] #00 08 * * 5 sh /opt/batch/comb_order_sej/run_comb_order_sej.sh
+[2020-01-08 11:12:52.665] 
+[2020-01-08 11:12:52.665] #「大相撲カレンダー」SEJ受注実績②
+[2020-01-08 11:12:52.665] #01 08 * * 5 sh /opt/batch/comb_order_sej_2/run_comb_order_sej.sh
+[2020-01-08 11:12:52.665] 
+[2020-01-08 11:12:52.665] #【月次】雑誌取り置き検証データ
+[2020-01-08 11:12:52.665] 00 07 01 * * sh /opt/batch/output_csv_tool/job_run.sh reserve_magazine_monthly
+[2020-01-08 11:12:52.665] 
+[2020-01-08 11:12:52.665] #雑誌お取置きサービス返送登録検証
+[2020-01-08 11:12:52.665] 20 06 * * 1 sh /opt/batch/reserve_magazine_mihikitori/run_reserve_magazine_mihikitori.sh
+[2020-01-08 11:12:52.665] 
+[2020-01-08 11:12:52.665] 00 00 26 12 * /opt/batch/exec_scheduled_sql/run_exec_scheduled_sql.sh
+[2020-01-08 11:12:52.665] 
+[2020-01-08 11:12:52.665] #COMBお知らせ情報抽出
+[2020-01-08 11:12:52.665] 10 12 * * * sh /opt/batch/send_tnpo_osrse/run_send_tnpo_osrse.sh
+[2020-01-08 11:12:52.665] 
+[2020-01-08 11:12:52.665] ##決済停止
+[2020-01-08 11:12:52.680] 00 01 13 02 * /opt/batch/exec_scheduled_sql_2/run_exec_scheduled_sql_2.sh
+[2020-01-08 11:12:52.680] 
+[2020-01-08 11:12:52.680] ##決済戻し
+[2020-01-08 11:12:52.680] 00 05 13 02 * /opt/batch/exec_scheduled_sql_3/run_exec_scheduled_sql_3.sh
+[2020-01-08 11:12:52.680] 
+[2020-01-08 11:12:52.680] ##OMNI_UNYOU_IRAI-5393 「現金受取サービス」開始に向けた問い合わせの件
+[2020-01-08 11:12:52.680] 30 14 * * * /opt/batch/cash_receipt_service/run_cash_receipt_service.sh
+[2020-01-08 11:12:52.680] 
+[2020-01-08 11:12:52.680] ##7NS RMA未受領リスト抽出
+[2020-01-08 11:12:52.680] 00 11 * * 1 /opt/batch/send_7ns_rmareport/sh/OMN_Send7nsRmaReport.sh > /opt/batch/send_7ns_rmareport/log/log.txt
+[2020-01-08 11:12:52.680] 
+[2020-01-08 11:12:52.680] #GoogleHome(SMS)データ抽出依頼
+[2020-01-08 11:12:52.680] 00 08 * * 4 sh /opt/batch/googlehome_sms/run_googlehome_sms.sh
+[2020-01-08 11:12:52.680] 
+[2020-01-08 11:12:52.680] #OMNI_UNYOU_IRAI-6080_出荷済注文リスト抽出
+[2020-01-08 11:12:52.680] 03 14 * * * sh /opt/batch/shipped_order_list/run_shipped_order_list.sh
+[2020-01-08 11:12:52.680] 
+[2020-01-08 11:12:52.680] #IRAI-3218 古い注文の基幹へのキャンセルデーターの連携
+[2020-01-08 11:12:52.680] 55 10 * * * sh /opt/batch/send_ord_upd_list/run_send_ord_upd_list.sh
+[2020-01-08 11:12:52.680] 
+[2020-01-08 11:12:52.680] #外部配信リスト監視
+[2020-01-08 11:12:52.680] 05 20 * * * sh /opt/batch/chk_external_distribution_list/run_chk_external_distribution_list.sh
+[2020-01-08 11:12:52.680] 
+[2020-01-08 11:12:52.680] ##2カテ経由実績内訳
+[2020-01-08 11:12:52.696] 00 12 * * 1 sh /opt/batch/7ns_secondclass_ctgry_order/run_7ns_secondclass_ctgry_order.sh
+[2020-01-08 11:12:52.696] 
+[2020-01-08 11:12:52.696] #引取期限切注文抽出
+[2020-01-08 11:12:52.696] 55 07 * * * sh /opt/batch/send_order_not_received/run_send_order_not_received.sh
+[2020-01-08 11:12:52.696] 
+[2020-01-08 11:12:52.696] #レビュー削除対象取得
+[2020-01-08 11:12:52.696] 00 05 01 * * sh /opt/batch/chkDeleteReview/sh/job_run.sh
+[2020-01-08 11:12:52.696] 
+[2020-01-08 11:12:52.696] #1カテ経由注文実績取得
+[2020-01-08 11:12:52.696] 00 12 * * * sh /opt/batch/first_ctgry_performance/run_first_ctgry_performance.sh
+[2020-01-08 11:12:52.696] 
+[2020-01-08 11:12:52.696] #nanacoポイント利用分・付与分の抽出依頼
+[2020-01-08 11:12:52.696] 30 09 01 * * sh /opt/batch/mthly_nanaco_aggr/run_mthly_nanaco_aggr.sh
+[2020-01-08 11:12:52.696] 
+[2020-01-08 11:12:52.696] #Yahooの請求書発行データ
+[2020-01-08 11:12:52.696] 10 09 01 * * sh /opt/batch/yahooIssueInvoice/sh/job_run.sh
+[2020-01-08 11:12:52.696] 
+[2020-01-08 11:12:52.696] #YahooID購入商品のリスト
+[2020-01-08 11:12:52.696] 20 09 01 * * sh /opt/batch/yid_purchase_products/run_yid_purchase_products.sh
+[2020-01-08 11:12:52.696] 
+[2020-01-08 11:12:52.696] #A8、バリューコマースの受注商品 抽出
+[2020-01-08 11:12:52.696] 10 10 01 * * sh /opt/batch/sel_a8_valuecommerce_rel_data/run_sel_a8_valuecommerce_rel_data.sh
+[2020-01-08 11:12:52.696] 
+[2020-01-08 11:12:52.696] #SYSTEM_UNYOU_IRAI-707
+[2020-01-08 11:12:52.696] 30 17 * * * sh /opt/batch/output_csv_tool/job_run.sh system_unyou_irai_707
+[2020-01-08 11:12:52.696] 
+[2020-01-08 11:12:52.696] #2カテ棚落ちチェック結果取得
+[2020-01-08 11:12:52.712] 45 08 * * * sh /opt/batch/2ct_shelfslip_data/sh/run_2ct_shelfslip_data.sh day
+[2020-01-08 11:12:52.712] 00 09 * * 1 sh /opt/batch/2ct_shelfslip_data/sh/run_2ct_shelfslip_data.sh week
+[2020-01-08 11:12:52.712] 
+[2020-01-08 11:12:52.712] #アフィリエイター審査用データ抽出
+[2020-01-08 11:12:52.712] 00 09 * * 1-5 sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh aff
+[2020-01-08 11:12:52.712] 
+[2020-01-08 11:12:52.712] #crm_sys_ope_87
+[2020-01-08 11:12:52.712] 30 * * * * sh /opt/batch/crm_sys_ope_87/run_crm_sys_ope_87.sh
+[2020-01-08 11:12:52.712] 50 * * * * sh /opt/batch/crm_sys_ope_87/run_crm_sys_ope_87.sh
+[2020-01-08 11:12:52.712] 
+[2020-01-08 11:12:52.712] #決済返金対象リスト
+[2020-01-08 11:12:52.712] 30 08 * * * /opt/batch/output_csv_tool/job_run.sh refundable_list
+[2020-01-08 11:12:52.712] 
+[2020-01-08 11:12:52.712] #ZETA処理確認
+[2020-01-08 11:12:52.712] 00 09,15,21 * * * /usr/bin/perl /opt/batch/send_report/send_mail.pl
+[2020-01-08 11:12:52.712] 
+[2020-01-08 11:12:52.712] #BIインポートファイル件数チェック
+[2020-01-08 11:12:52.712] #15 08 * * * sh /opt/batch/number_of_import_to_bi/run_number_of_import_to_bi.sh
+[2020-01-08 11:12:52.712] 
+[2020-01-08 11:12:52.712] #SEJ店舗受取払い電文変更エラー
+[2020-01-08 11:12:52.712] 00 11 * * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh denbun
+[2020-01-08 11:12:52.712] 
+[2020-01-08 11:12:52.712] #クレジットカード登録状況チェック
+[2020-01-08 11:12:52.712] #00 08,14,18 * * * sh /opt/batch/diplist_check/sh/diplist_check.sh Credit
+[2020-01-08 11:12:52.727] 
+[2020-01-08 11:12:52.727] #追跡対象DIプリントチェック
+[2020-01-08 11:12:52.727] 00 08 * * * sh /opt/batch/diplist_check/sh/diplist_check.sh Chase
+[2020-01-08 11:12:52.727] 
+[2020-01-08 11:12:52.727] #CRM_SYS_OPE-105
+[2020-01-08 11:12:52.727] #00,30 * * * * sh /opt/batch/CRM_SYS_OPE-105/run_CRM_SYS_OPE-105.sh
+[2020-01-08 11:12:52.727] 
+[2020-01-08 11:12:52.727] #開発依頼
+[2020-01-08 11:12:52.727] 55 08 * * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh zeta_item_chk
+[2020-01-08 11:12:52.727] 
+[2020-01-08 11:12:52.727] #CRM_SYS_OPE-105確認
+[2020-01-08 11:12:52.727] #00 10 * * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh OPE-105
+[2020-01-08 11:12:52.727] 
+[2020-01-08 11:12:52.727] #マタニティ登録実績
+[2020-01-08 11:12:52.727] 45 07 * * 1 /opt/batch/maternity_result/sh/run_maternity_result.sh
+[2020-01-08 11:12:52.727] 
+[2020-01-08 11:12:52.727] #クレジット決済一部欠品
+[2020-01-08 11:12:52.727] 00 11 * * 4 sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh Authori_Error_Check
+[2020-01-08 11:12:52.727] 
+[2020-01-08 11:12:52.727] #店舗引き取りのステータスのデータ抽出
+[2020-01-08 11:12:52.727] 00 10 * * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh Storepickup
+[2020-01-08 11:12:52.727] 
+[2020-01-08 11:12:52.727] #ZETAリカバリ
+[2020-01-08 11:12:52.727] 00 16 * * * sh /opt/batch/rcv_zeta/rcv_zeta.sh
+[2020-01-08 11:12:52.727] 00,30 0-15,17-23 * * * sh /opt/batch/rcv_zeta2/rcv_zeta.sh
+[2020-01-08 11:12:52.727] 
+[2020-01-08 11:12:52.727] #雑誌取置_決済要求エラー結果抽出ツール
+[2020-01-08 11:12:52.727] 05 7 * * * sh /opt/batch/magazine_alert_correspondence/sh/magazine_alert_correspondence.sh
+[2020-01-08 11:12:52.743] 
+[2020-01-08 11:12:52.743] #トランザクションメールの監視
+[2020-01-08 11:12:52.743] 50 * * * * sh /opt/batch/check_snddat_table/sh/check_snddat_table.sh check.sql 1000
+[2020-01-08 11:12:52.743] 
+[2020-01-08 11:12:52.743] #雑誌お取置きサービスの注文データ抽出
+[2020-01-08 11:12:52.743] 00 10 * * 6 sh /opt/batch/output_csv_tool/job_run.sh magazine_order_list
+[2020-01-08 11:12:52.743] 
+[2020-01-08 11:12:52.743] #SYSTEM_UNYOU_IRAI-843
+[2020-01-08 11:12:52.743] 45 6 * * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh RPJ_IRAI-843
+[2020-01-08 11:12:52.743] 00 13,18 * * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh RPJ_IRAI-843
+[2020-01-08 11:12:52.743] 
+[2020-01-08 11:12:52.743] #受注速報毎時
+[2020-01-08 11:12:52.743] 05 01 * * * sh /opt/batch/output_html_tool/sh/output_html_tool.sh orderList
+[2020-01-08 11:12:52.743] 01 00,02-23 * * * sh /opt/batch/output_html_tool/sh/output_html_tool.sh orderList
+[2020-01-08 11:12:52.743] 
+[2020-01-08 11:12:52.743] #PVUU速報毎時
+[2020-01-08 11:12:52.743] 53 00-22 * * * sh /opt/batch/output_html_tool/sh/output_html_tool.sh PVUU
+[2020-01-08 11:12:52.743] 59 23 * * * sh /opt/batch/output_html_tool/sh/output_html_tool.sh PVUU
+[2020-01-08 11:12:52.743] 
+[2020-01-08 11:12:52.743] #PVUU日次実績
+[2020-01-08 11:12:52.743] 00 03 * * * sh /opt/batch/output_html_tool/sh/output_html_tool.sh PVUU_day
+[2020-01-08 11:12:52.743] 
+[2020-01-08 11:12:52.743] #郵便番号チェック
+[2020-01-08 11:12:52.743] 00 15 01 * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh addrchk
+[2020-01-08 11:12:52.759] 
+[2020-01-08 11:12:52.759] #オムニモールチェック
+[2020-01-08 11:12:52.759] 00 15 31 * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh OMNIMALL_CHK
+[2020-01-08 11:12:52.759] 
+[2020-01-08 11:12:52.759] #2018-19福袋
+[2020-01-08 11:12:52.759] #30 7,9 29,30,31 12 * sh  /opt/batch/fukubukuro/job_run.sh today
+[2020-01-08 11:12:52.759] #30 5 29,30,31 12 * sh  /opt/batch/fukubukuro/job_run.sh yday
+[2020-01-08 11:12:52.759] #30 5 1 1 * sh /opt/batch/fukubukuro/job_run.sh yday
+[2020-01-08 11:12:52.759] 
+[2020-01-08 11:12:52.759] #キャッシュクリアによる不整合チェック(SYSTEM_UNYOU_IRAI-843)
+[2020-01-08 11:12:52.759] #00 06 * * * sh /opt/batch/cache_error_check/sh/cache_error_check.sh
+[2020-01-08 11:12:52.759] 
+[2020-01-08 11:12:52.759] #template
+[2020-01-08 11:12:52.759] #00 02 13 01 * sh /opt/batch/tsuhoson/template/sh/template.sh > /opt/batch/tsuhoson/template/log/`date "+\%Y\%m\%d\%H\%M\%S"`.log 2>&1
+[2020-01-08 11:12:52.759] 
+[2020-01-08 11:12:52.759] #nanacoポイント付与結果警告終了予報
+[2020-01-08 11:12:52.759] 00 09 * * * sh /opt/batch/tsuhoson/nanaco_null_omni/sh/nanaco_null_omni.sh
+[2020-01-08 11:12:52.759] 
+[2020-01-08 11:12:52.759] #住所コードマスタ抽出
+[2020-01-08 11:12:52.759] 00 11 1 * * sh /opt/batch/output_csv_tool/job_run.sh t_addr_cd_mst_1
+[2020-01-08 11:12:52.759] 01 11 1 * * sh /opt/batch/output_csv_tool/job_run.sh t_addr_cd_mst_2
+[2020-01-08 11:12:52.759] 02 11 1 * * sh /opt/batch/output_csv_tool/job_run.sh t_addr_cd_mst_3
+[2020-01-08 11:12:52.759] 03 11 1 * * sh /opt/batch/output_csv_tool/job_run.sh t_addr_cd_mst_4
+[2020-01-08 11:12:52.759] 
+[2020-01-08 11:12:52.759] #CRM_SYS_OPE-293 会員情報連携の生年月日が未来日付の対応
+[2020-01-08 11:12:52.759] #00 12 * * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh mirai_birth_not2807
+[2020-01-08 11:12:52.759] 
+[2020-01-08 11:12:52.759] #誕生日が未来日の会員(11時から17時)
+[2020-01-08 11:12:52.759] #00 11-17 * * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh mirai_birth_everyhour
+[2020-01-08 11:12:52.759] 
+[2020-01-08 11:12:52.759] #誕生日が未来日の会員(前日17時から翌10時)
+[2020-01-08 11:12:52.759] #00 10 * * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh mirai_birth_day
+[2020-01-08 11:12:52.759] 
+[2020-01-08 11:12:52.759] #YahooID購入商品のリスト(エクセル版)
+[2020-01-08 11:12:52.759] 20 09 01 * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh yid_purchase_products
+[2020-01-08 11:12:52.759] 
+[2020-01-08 11:12:52.759] #誕生日時刻混入_検知
+[2020-01-08 11:12:52.759] #30 09 * * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh bday_mixing_time
+[2020-01-08 11:12:52.759] 
+[2020-01-08 11:12:52.759] #開発依頼 - 会員登録日nullチェック(CRMSYSOPE-272)
+[2020-01-08 11:12:52.759] 50 08 * * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh cmn_mmbr_null_check
+[2020-01-08 11:12:52.759] 
+[2020-01-08 11:12:52.759] #クレジットカード登録状況チェック
+[2020-01-08 11:12:52.759] 00 08 * * * sh /opt/batch/tsuhoson/creditcard_check_backbatch/sh/join.sh 08 > /opt/batch/tsuhoson/creditcard_check_backbatch/log/`date "+\%Y\%m\%d\%H\%M\%S"`.log 2>&1
+[2020-01-08 11:12:52.774] 00 14 * * * sh /opt/batch/tsuhoson/creditcard_check_backbatch/sh/join.sh 14 > /opt/batch/tsuhoson/creditcard_check_backbatch/log/`date "+\%Y\%m\%d\%H\%M\%S"`.log 2>&1
+[2020-01-08 11:12:52.774] 00 18 * * * sh /opt/batch/tsuhoson/creditcard_check_backbatch/sh/join.sh 18 > /opt/batch/tsuhoson/creditcard_check_backbatch/log/`date "+\%Y\%m\%d\%H\%M\%S"`.log 2>&1
+[2020-01-08 11:12:52.774] 
+[2020-01-08 11:12:52.774] #SYSTEM_UNYOU_IRAI-3554 3月20％還元CPnanacoギフト利用実績抽出依頼
+[2020-01-08 11:12:52.774] #00 05 * * 01 sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh 20CP_Gift_Use_Check
+[2020-01-08 11:12:52.774] 
+[2020-01-08 11:12:52.774] #外部ID遮断漏れのネガ立て
+[2020-01-08 11:12:52.774] 10 22 * * * sh /opt/batch/update_mmbr_nega/run_update_mmbr_nega.sh
+[2020-01-08 11:12:52.774] 45 23 * * * sh /opt/batch/update_mmbr_nega/run_update_mmbr_nega.sh
+[2020-01-08 11:12:52.774] 
+[2020-01-08 11:12:52.774] #パスワードリセット後の会員情報取得の自動化
+[2020-01-08 11:12:52.774] 01 * * * * sh /opt/batch/output_csv_tool/job_run.sh 7pay_pwd_chk
+[2020-01-08 11:12:52.774] 
+[2020-01-08 11:12:52.774] #パスワードリセット後の会員情報取得の自動化
+[2020-01-08 11:12:52.790] #01 * * * * sh /opt/batch/output_csv_tool/job_run.sh 7pay_pwd_chk_1
+[2020-01-08 11:12:52.790] 
+[2020-01-08 11:12:52.790] #パスワードリマインダー配信会員数
+[2020-01-08 11:12:52.790] 03 * * * * sh /opt/batch/output_csv_tool/job_run.sh password_reminder_snd_cnt
+[2020-01-08 11:12:52.790] 
+[2020-01-08 11:12:52.790] #パスワードリセット後の会員情報取得(累計版)の自動化
+[2020-01-08 11:12:52.790] #01 * * * * sh /opt/batch/output_csv_tool/job_run.sh 7pay_pwd_chk_total
+[2020-01-08 11:12:52.790] 01 0 * * * sh /opt/batch/output_csv_tool/job_run.sh 7pay_pwd_chk_total
+[2020-01-08 11:12:52.790] 
+[2020-01-08 11:12:52.790] #退会者数の集計(試行中)
+[2020-01-08 11:12:52.790] #14 6 * * * /opt/batch/output_csv_tool/job_run.sh quit_member_cnt
+[2020-01-08 11:12:52.790] 
+[2020-01-08 11:12:52.790] #SYSTEM_UNYOU_IRAI-4235_AHパスワード再設定数実績_インサート用
+[2020-01-08 11:12:52.790] 45 0 * * * sh /opt/batch/SYSTEM_UNYOU_IRAI-4235_insert/IRAI_4235.sh
+[2020-01-08 11:12:52.790] 
+[2020-01-08 11:12:52.790] #AHサイト会員_退会者数_日次集計
+[2020-01-08 11:12:52.790] 30 08 * * * sh /opt/batch/output_html_tool/sh/output_html_tool.sh AH_Unsubscriber
+[2020-01-08 11:12:52.790] 
+[2020-01-08 11:12:52.790] #SYSTEM_UNYOU_IRAI_4588
+[2020-01-08 11:12:52.790] #0 0 11 9 * sh /opt/batch/SYSTEM_UNYOU_IRAI_4588/run_SYSTEM_UNYOU_IRAI_4588.sh "2019/07/30_13:00:00" "2019/09/02_00:00:00"
+[2020-01-08 11:12:52.790] #0 0 16 9 * sh /opt/batch/SYSTEM_UNYOU_IRAI_4588/run_SYSTEM_UNYOU_IRAI_4588.sh "2019/09/02_00:00:00" "2019/09/16_00:00:00"
+[2020-01-08 11:12:52.821] #0 0 30 9 * sh /opt/batch/SYSTEM_UNYOU_IRAI_4588/run_SYSTEM_UNYOU_IRAI_4588.sh "2019/09/16_00:00:00" "2019/09/30_00:00:00"
+[2020-01-08 11:12:52.821] #0 0 14 10 * sh /opt/batch/SYSTEM_UNYOU_IRAI_4588/run_SYSTEM_UNYOU_IRAI_4588.sh "2019/09/30_00:00:00" "2019/10/14_00:00:00"
+[2020-01-08 11:12:52.821] #0 0 28 10 * sh /opt/batch/SYSTEM_UNYOU_IRAI_4588/run_SYSTEM_UNYOU_IRAI_4588.sh "2019/10/14_00:00:00" "2019/10/28_00:00:00"
+[2020-01-08 11:12:52.821] #0 0 11 11 * sh /opt/batch/SYSTEM_UNYOU_IRAI_4588/run_SYSTEM_UNYOU_IRAI_4588.sh "2019/10/28_00:00:00" "2019/11/11_00:00:00"
+[2020-01-08 11:12:52.821] #0 0 25 11 * sh /opt/batch/SYSTEM_UNYOU_IRAI_4588/run_SYSTEM_UNYOU_IRAI_4588.sh "2019/11/11_00:00:00" "2019/11/25_00:00:00"
+[2020-01-08 11:12:52.821] #0 0 1 12 * sh /opt/batch/SYSTEM_UNYOU_IRAI_4588/run_SYSTEM_UNYOU_IRAI_4588.sh "2019/11/25_00:00:00" "2019/12/01_00:00:00"
+[2020-01-08 11:12:52.821] 
+[2020-01-08 11:12:52.821] #comb雑誌取り置き抽出
+[2020-01-08 11:12:52.821] 00 06 * * * sh /opt/batch/tsuhoson/exec_sql/exec_sql.sh "/opt/batch/tsuhoson/exec_sql/sql/comb_magazine.sql" "/opt/batch/tsuhoson/exec_sql/property/db/iku.json" "tsv" "/opt/batch/tsuhoson/exec_sql/property/mail/tsuhoson.json"
+[2020-01-08 11:12:52.821] 
+[2020-01-08 11:12:52.821] #loft発注送信監視
+[2020-01-08 11:12:52.821] 00 2,5,6,7,10,11,13,15,16,18,19,20,21,23 * * * sh /opt/batch/loft_order_check/loft_order_check.sh 1 > /opt/batch/loft_order_check/log/loft_order_check.log
+[2020-01-08 11:12:52.821] 00 8 * * * sh /opt/batch/loft_order_check/loft_order_check.sh 0 > /opt/batch/loft_order_check/log/loft_order_check.log
+[2020-01-08 11:12:52.821] 
+[2020-01-08 11:12:52.821] #消費税対応発売日変更 毎日8:30に実行
+[2020-01-08 11:12:52.821] #30 8 * * * sh /opt/batch/output_csv_tool/job_run.sh upd_tax_saledy
+[2020-01-08 11:12:52.821] 
+[2020-01-08 11:12:52.821] #SYSTEM_UNYOU_IRAI-4387
+[2020-01-08 11:12:52.821] 30 01 * * 1 sh /opt/batch/SYSTEM_UNYOU_IRAI_4387/run_SYSTEM_UNYOU_IRAI_4387.sh
+[2020-01-08 11:12:52.821] 
+[2020-01-08 11:12:52.821] #20％還元CPnanacoギフト利用実績_8月分
+[2020-01-08 11:12:52.821] #30 5 * * 1 sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh 20CP_Gift_Use_Check_August
+[2020-01-08 11:12:52.821] 
+[2020-01-08 11:12:52.821] #【SEJギフト】抽出依頼（201911大満足フェア実績）
+[2020-01-08 11:12:52.821] 10 8 * * 1 sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh SEJ_GIFT
+[2020-01-08 11:12:52.821] 
+[2020-01-08 11:12:52.821] #SYSTEM_UNYOU_IRAI-5656 1128リリース案件の初回稼働確認依頼の件（案件0395　MAへの会員情報連携）
+[2020-01-08 11:12:52.837] 00 0-1 29 11 * /opt/batch/SYSTEM_UNYOU_IRAI_5656/SYSTEM_UNYOU_IRAI_5656.sh
+[2020-01-08 11:12:52.837] 
+[2020-01-08 11:12:52.837] #SYSTEM_UNYOU_IRAI-5858_抽出
+[2020-01-08 11:12:52.837] 0 8 * * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh SYSTEM_UNYOU_IRAI-5858
+[2020-01-08 11:12:52.837] 
+[2020-01-08 11:12:52.837] #OMNI_2019_TAX-392_抽出
+[2020-01-08 11:12:52.837] 0 11 * * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh OMNI_2019_TAX-392
+[2020-01-08 11:12:52.837] 
+[2020-01-08 11:12:52.837] #SYSTEM_UNYOU_IRAI-5721 【HD】7AF 単月100万超アフィリエイター有無について（2019年11月）
+[2020-01-08 11:12:52.837] 0 7 17 * * sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh Over1mill_AF_Check
+[2020-01-08 11:12:52.837] 
+[2020-01-08 11:12:52.837] #20％還元CPnanacoギフト利用実績
+[2020-01-08 11:12:52.837] 0 5 * * 1 sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh 20CP_Gift_Use_Check
+[2020-01-08 11:12:52.837] 
+[2020-01-08 11:12:52.837] #20％還元CPnanacoギフト利用実績_20200210
+[2020-01-08 11:12:52.837] 0 5 10 2 1 sh /opt/batch/output_excel_tool/sh/output_excel_tool.sh 20CP_Gift_Use_Check_20200210
+[2020-01-08 11:12:52.837] 
+[2020-01-08 11:12:52.837] #7NSカテゴリー別日次売上
+[2020-01-08 11:12:52.837] 00 02 * * * sh /opt/batch/tsuhoson/7ns_daily_sales_by_category_db_202003/exec.sh  > /opt/batch/tsuhoson/7ns_daily_sales_by_category_db_202003/log/log.txt 2>&1
+[2020-01-08 11:12:52.837] [2020/01/08 11:12:52 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:13:27.832] [2020/01/08 11:13:27 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:13:28.191] [2020/01/08 11:13:28 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:13:28.691] [2020/01/08 11:13:28 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:13:28.722] [2020/01/08 11:13:28 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:13:28.753] [2020/01/08 11:13:28 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:13:28.785] [2020/01/08 11:13:28 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:13:28.816] [2020/01/08 11:13:28 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:13:28.847] [2020/01/08 11:13:28 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:13:28.894] [2020/01/08 11:13:28 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:13:28.910] [2020/01/08 11:13:28 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:13:28.956] [2020/01/08 11:13:28 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:13:29.003] [2020/01/08 11:13:28 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:13:29.019] [2020/01/08 11:13:28 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:13:29.050] [2020/01/08 11:13:28 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:13:29.097] [2020/01/08 11:13:28 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:13:29.129] [2020/01/08 11:13:28 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:13:29.159] [2020/01/08 11:13:28 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:14:09.690] [2020/01/08 11:14:09 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:14:10.190] [2020/01/08 11:14:10 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:14:10.221] [2020/01/08 11:14:10 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:14:10.252] [2020/01/08 11:14:10 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:14:10.283] [2020/01/08 11:14:10 jp1user01@ompsgbb001 ~]$ 
+[2020-01-08 11:14:10.315] [2020/01/08 11:14:10 jp1user01@ompsgbb001 ~]$ cd /opt/batch/mdfy_thn_clndr_SP/log
+[2020-01-08 11:14:23.540] [2020/01/08 11:14:23 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:14:24.336] [2020/01/08 11:14:24 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:14:24.492] [2020/01/08 11:14:24 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:14:24.602] [2020/01/08 11:14:24 jp1user01@ompsgbb001 log]$ ls -l
+[2020-01-08 11:14:25.579] 合計 1108
+[2020-01-08 11:14:25.579] -rw-rw-r-- 1 jp1user01 app 3293  8月  2 13:45 2019 mdfy_thn_clndr_SP_2017.tar.gz
+[2020-01-08 11:14:25.579] -rw-rw-r-- 1 jp1user01 app 6407  8月  2 13:48 2019 mdfy_thn_clndr_SP_2018.tar.gz
+[2020-01-08 11:14:25.579] -rw-r--r-- 1 jp1user01 app 1033  1月  1 22:30 2019 mdfy_thn_clndr_SP_20190101.log
+[2020-01-08 11:14:25.579] -rw-r--r-- 1 jp1user01 app 1033  1月  2 22:30 2019 mdfy_thn_clndr_SP_20190102.log
+[2020-01-08 11:14:25.579] -rw-r--r-- 1 jp1user01 app 1032  1月  3 22:30 2019 mdfy_thn_clndr_SP_20190103.log
+[2020-01-08 11:14:25.579] -rw-r--r-- 1 jp1user01 app 1028  1月  4 22:30 2019 mdfy_thn_clndr_SP_20190104.log
+[2020-01-08 11:14:25.579] -rw-r--r-- 1 jp1user01 app 1028  1月  5 22:30 2019 mdfy_thn_clndr_SP_20190105.log
+[2020-01-08 11:14:25.579] -rw-r--r-- 1 jp1user01 app 1028  1月  6 22:30 2019 mdfy_thn_clndr_SP_20190106.log
+[2020-01-08 11:14:25.579] -rw-r--r-- 1 jp1user01 app 1028  1月  7 22:30 2019 mdfy_thn_clndr_SP_20190107.log
+[2020-01-08 11:14:25.579] -rw-r--r-- 1 jp1user01 app 1028  1月  8 22:30 2019 mdfy_thn_clndr_SP_20190108.log
+[2020-01-08 11:14:25.579] -rw-r--r-- 1 jp1user01 app 1028  1月  9 22:30 2019 mdfy_thn_clndr_SP_20190109.log
+[2020-01-08 11:14:25.579] -rw-r--r-- 1 jp1user01 app 1029  1月 10 22:30 2019 mdfy_thn_clndr_SP_20190110.log
+[2020-01-08 11:14:25.595] -rw-r--r-- 1 jp1user01 app 1029  1月 11 22:30 2019 mdfy_thn_clndr_SP_20190111.log
+[2020-01-08 11:14:25.595] -rw-r--r-- 1 jp1user01 app 1029  1月 12 22:30 2019 mdfy_thn_clndr_SP_20190112.log
+[2020-01-08 11:14:25.595] -rw-r--r-- 1 jp1user01 app 1029  1月 13 22:30 2019 mdfy_thn_clndr_SP_20190113.log
+[2020-01-08 11:14:25.595] -rw-r--r-- 1 jp1user01 app 1029  1月 14 22:30 2019 mdfy_thn_clndr_SP_20190114.log
+[2020-01-08 11:14:25.595] -rw-r--r-- 1 jp1user01 app 1029  1月 15 22:30 2019 mdfy_thn_clndr_SP_20190115.log
+[2020-01-08 11:14:25.595] -rw-r--r-- 1 jp1user01 app 1029  1月 16 22:30 2019 mdfy_thn_clndr_SP_20190116.log
+[2020-01-08 11:14:25.595] -rw-r--r-- 1 jp1user01 app 1029  1月 17 22:30 2019 mdfy_thn_clndr_SP_20190117.log
+[2020-01-08 11:14:25.595] -rw-r--r-- 1 jp1user01 app 1029  1月 18 22:30 2019 mdfy_thn_clndr_SP_20190118.log
+[2020-01-08 11:14:25.595] -rw-r--r-- 1 jp1user01 app 1029  1月 19 22:30 2019 mdfy_thn_clndr_SP_20190119.log
+[2020-01-08 11:14:25.595] -rw-r--r-- 1 jp1user01 app 1029  1月 20 22:30 2019 mdfy_thn_clndr_SP_20190120.log
+[2020-01-08 11:14:25.595] -rw-r--r-- 1 jp1user01 app 1029  1月 21 22:30 2019 mdfy_thn_clndr_SP_20190121.log
+[2020-01-08 11:14:25.595] -rw-r--r-- 1 jp1user01 app 1029  1月 22 22:30 2019 mdfy_thn_clndr_SP_20190122.log
+[2020-01-08 11:14:25.610] -rw-r--r-- 1 jp1user01 app 1029  1月 23 22:30 2019 mdfy_thn_clndr_SP_20190123.log
+[2020-01-08 11:14:25.610] -rw-r--r-- 1 jp1user01 app 1029  1月 24 22:30 2019 mdfy_thn_clndr_SP_20190124.log
+[2020-01-08 11:14:25.610] -rw-r--r-- 1 jp1user01 app  999  4月 26 22:30 2019 mdfy_thn_clndr_SP_20190426.log
+[2020-01-08 11:14:25.610] -rw-r--r-- 1 jp1user01 app  999  4月 27 22:30 2019 mdfy_thn_clndr_SP_20190427.log
+[2020-01-08 11:14:25.610] -rw-r--r-- 1 jp1user01 app  999  4月 28 22:30 2019 mdfy_thn_clndr_SP_20190428.log
+[2020-01-08 11:14:25.610] -rw-r--r-- 1 jp1user01 app  999  4月 29 22:30 2019 mdfy_thn_clndr_SP_20190429.log
+[2020-01-08 11:14:25.610] -rw-r--r-- 1 jp1user01 app  998  4月 30 22:30 2019 mdfy_thn_clndr_SP_20190430.log
+[2020-01-08 11:14:25.610] -rw-r--r-- 1 jp1user01 app  997  5月  1 22:30 2019 mdfy_thn_clndr_SP_20190501.log
+[2020-01-08 11:14:25.610] -rw-r--r-- 1 jp1user01 app  997  5月  2 22:30 2019 mdfy_thn_clndr_SP_20190502.log
+[2020-01-08 11:14:25.610] -rw-r--r-- 1 jp1user01 app  994  5月  3 22:30 2019 mdfy_thn_clndr_SP_20190503.log
+[2020-01-08 11:14:25.610] -rw-r--r-- 1 jp1user01 app  994  5月  4 22:30 2019 mdfy_thn_clndr_SP_20190504.log
+[2020-01-08 11:14:25.610] -rw-r--r-- 1 jp1user01 app  994  5月  5 22:30 2019 mdfy_thn_clndr_SP_20190505.log
+[2020-01-08 11:14:25.610] -rw-r--r-- 1 jp1user01 app  994  5月  6 22:30 2019 mdfy_thn_clndr_SP_20190506.log
+[2020-01-08 11:14:25.626] -rw-r--r-- 1 jp1user01 app  994  5月  7 22:30 2019 mdfy_thn_clndr_SP_20190507.log
+[2020-01-08 11:14:25.626] -rw-r--r-- 1 jp1user01 app  994  5月  8 22:30 2019 mdfy_thn_clndr_SP_20190508.log
+[2020-01-08 11:14:25.626] -rw-r--r-- 1 jp1user01 app  994  5月  9 22:30 2019 mdfy_thn_clndr_SP_20190509.log
+[2020-01-08 11:14:25.626] -rw-r--r-- 1 jp1user01 app  995  5月 10 22:30 2019 mdfy_thn_clndr_SP_20190510.log
+[2020-01-08 11:14:25.626] -rw-r--r-- 1 jp1user01 app  995  5月 11 22:30 2019 mdfy_thn_clndr_SP_20190511.log
+[2020-01-08 11:14:25.626] -rw-r--r-- 1 jp1user01 app  995  5月 12 22:30 2019 mdfy_thn_clndr_SP_20190512.log
+[2020-01-08 11:14:25.626] -rw-r--r-- 1 jp1user01 app  995  5月 13 22:30 2019 mdfy_thn_clndr_SP_20190513.log
+[2020-01-08 11:14:25.626] -rw-r--r-- 1 jp1user01 app  995  5月 14 22:30 2019 mdfy_thn_clndr_SP_20190514.log
+[2020-01-08 11:14:25.626] -rw-r--r-- 1 jp1user01 app  995  5月 15 22:30 2019 mdfy_thn_clndr_SP_20190515.log
+[2020-01-08 11:14:25.626] -rw-r--r-- 1 jp1user01 app  995  5月 16 22:30 2019 mdfy_thn_clndr_SP_20190516.log
+[2020-01-08 11:14:25.626] -rw-r--r-- 1 jp1user01 app  995  5月 17 22:30 2019 mdfy_thn_clndr_SP_20190517.log
+[2020-01-08 11:14:25.626] -rw-r--r-- 1 jp1user01 app  995  5月 18 22:30 2019 mdfy_thn_clndr_SP_20190518.log
+[2020-01-08 11:14:25.626] -rw-r--r-- 1 jp1user01 app  995  5月 19 22:30 2019 mdfy_thn_clndr_SP_20190519.log
+[2020-01-08 11:14:25.626] -rw-r--r-- 1 jp1user01 app  995  5月 20 22:30 2019 mdfy_thn_clndr_SP_20190520.log
+[2020-01-08 11:14:25.626] -rw-r--r-- 1 jp1user01 app  995  5月 21 22:30 2019 mdfy_thn_clndr_SP_20190521.log
+[2020-01-08 11:14:25.626] -rw-r--r-- 1 jp1user01 app  995  5月 22 22:30 2019 mdfy_thn_clndr_SP_20190522.log
+[2020-01-08 11:14:25.626] -rw-r--r-- 1 jp1user01 app  995  5月 23 22:30 2019 mdfy_thn_clndr_SP_20190523.log
+[2020-01-08 11:14:25.626] -rw-r--r-- 1 jp1user01 app  995  5月 24 22:30 2019 mdfy_thn_clndr_SP_20190524.log
+[2020-01-08 11:14:25.626] -rw-r--r-- 1 jp1user01 app  995  5月 25 22:30 2019 mdfy_thn_clndr_SP_20190525.log
+[2020-01-08 11:14:25.626] -rw-r--r-- 1 jp1user01 app  995  5月 26 22:30 2019 mdfy_thn_clndr_SP_20190526.log
+[2020-01-08 11:14:25.626] -rw-r--r-- 1 jp1user01 app  995  5月 27 22:30 2019 mdfy_thn_clndr_SP_20190527.log
+[2020-01-08 11:14:25.626] -rw-r--r-- 1 jp1user01 app  995  5月 28 22:30 2019 mdfy_thn_clndr_SP_20190528.log
+[2020-01-08 11:14:25.626] -rw-r--r-- 1 jp1user01 app  995  5月 29 22:30 2019 mdfy_thn_clndr_SP_20190529.log
+[2020-01-08 11:14:25.626] -rw-r--r-- 1 jp1user01 app  995  5月 30 22:30 2019 mdfy_thn_clndr_SP_20190530.log
+[2020-01-08 11:14:25.642] -rw-r--r-- 1 jp1user01 app  995  5月 31 22:30 2019 mdfy_thn_clndr_SP_20190531.log
+[2020-01-08 11:14:25.642] -rw-r--r-- 1 jp1user01 app  994  6月  1 22:30 2019 mdfy_thn_clndr_SP_20190601.log
+[2020-01-08 11:14:25.642] -rw-r--r-- 1 jp1user01 app  994  6月  2 22:30 2019 mdfy_thn_clndr_SP_20190602.log
+[2020-01-08 11:14:25.642] -rw-r--r-- 1 jp1user01 app  994  6月  3 22:30 2019 mdfy_thn_clndr_SP_20190603.log
+[2020-01-08 11:14:25.642] -rw-r--r-- 1 jp1user01 app  994  6月  4 22:30 2019 mdfy_thn_clndr_SP_20190604.log
+[2020-01-08 11:14:25.642] -rw-r--r-- 1 jp1user01 app  994  6月  5 22:30 2019 mdfy_thn_clndr_SP_20190605.log
+[2020-01-08 11:14:25.642] -rw-r--r-- 1 jp1user01 app  994  6月  6 22:30 2019 mdfy_thn_clndr_SP_20190606.log
+[2020-01-08 11:14:25.642] -rw-r--r-- 1 jp1user01 app  994  6月  7 22:30 2019 mdfy_thn_clndr_SP_20190607.log
+[2020-01-08 11:14:25.642] -rw-r--r-- 1 jp1user01 app  994  6月  8 22:30 2019 mdfy_thn_clndr_SP_20190608.log
+[2020-01-08 11:14:25.642] -rw-r--r-- 1 jp1user01 app  994  6月  9 22:30 2019 mdfy_thn_clndr_SP_20190609.log
+[2020-01-08 11:14:25.642] -rw-r--r-- 1 jp1user01 app  995  6月 10 22:30 2019 mdfy_thn_clndr_SP_20190610.log
+[2020-01-08 11:14:25.642] -rw-r--r-- 1 jp1user01 app  995  6月 11 22:30 2019 mdfy_thn_clndr_SP_20190611.log
+[2020-01-08 11:14:25.657] -rw-r--r-- 1 jp1user01 app  995  6月 12 22:30 2019 mdfy_thn_clndr_SP_20190612.log
+[2020-01-08 11:14:25.657] -rw-r--r-- 1 jp1user01 app  995  6月 13 22:30 2019 mdfy_thn_clndr_SP_20190613.log
+[2020-01-08 11:14:25.657] -rw-r--r-- 1 jp1user01 app  995  6月 14 22:30 2019 mdfy_thn_clndr_SP_20190614.log
+[2020-01-08 11:14:25.657] -rw-r--r-- 1 jp1user01 app  995  6月 15 22:30 2019 mdfy_thn_clndr_SP_20190615.log
+[2020-01-08 11:14:25.657] -rw-r--r-- 1 jp1user01 app  995  6月 16 22:30 2019 mdfy_thn_clndr_SP_20190616.log
+[2020-01-08 11:14:25.657] -rw-r--r-- 1 jp1user01 app  995  6月 17 22:30 2019 mdfy_thn_clndr_SP_20190617.log
+[2020-01-08 11:14:25.657] -rw-r--r-- 1 jp1user01 app  995  6月 18 22:30 2019 mdfy_thn_clndr_SP_20190618.log
+[2020-01-08 11:14:25.657] -rw-r--r-- 1 jp1user01 app  995  6月 19 22:30 2019 mdfy_thn_clndr_SP_20190619.log
+[2020-01-08 11:14:25.657] -rw-r--r-- 1 jp1user01 app  995  6月 20 22:30 2019 mdfy_thn_clndr_SP_20190620.log
+[2020-01-08 11:14:25.657] -rw-r--r-- 1 jp1user01 app  995  6月 21 22:30 2019 mdfy_thn_clndr_SP_20190621.log
+[2020-01-08 11:14:25.657] -rw-r--r-- 1 jp1user01 app  995  6月 22 22:30 2019 mdfy_thn_clndr_SP_20190622.log
+[2020-01-08 11:14:25.657] -rw-r--r-- 1 jp1user01 app  995  6月 23 22:30 2019 mdfy_thn_clndr_SP_20190623.log
+[2020-01-08 11:14:25.673] -rw-r--r-- 1 jp1user01 app  995  6月 24 22:30 2019 mdfy_thn_clndr_SP_20190624.log
+[2020-01-08 11:14:25.673] -rw-r--r-- 1 jp1user01 app  995  6月 25 22:30 2019 mdfy_thn_clndr_SP_20190625.log
+[2020-01-08 11:14:25.673] -rw-r--r-- 1 jp1user01 app  995  6月 26 22:30 2019 mdfy_thn_clndr_SP_20190626.log
+[2020-01-08 11:14:25.673] -rw-r--r-- 1 jp1user01 app  995  6月 27 22:30 2019 mdfy_thn_clndr_SP_20190627.log
+[2020-01-08 11:14:25.673] -rw-r--r-- 1 jp1user01 app  995  6月 28 22:30 2019 mdfy_thn_clndr_SP_20190628.log
+[2020-01-08 11:14:25.673] -rw-r--r-- 1 jp1user01 app  995  6月 29 22:30 2019 mdfy_thn_clndr_SP_20190629.log
+[2020-01-08 11:14:25.673] -rw-r--r-- 1 jp1user01 app  995  6月 30 22:30 2019 mdfy_thn_clndr_SP_20190630.log
+[2020-01-08 11:14:25.673] -rw-r--r-- 1 jp1user01 app  994  7月  1 22:30 2019 mdfy_thn_clndr_SP_20190701.log
+[2020-01-08 11:14:25.673] -rw-r--r-- 1 jp1user01 app  994  7月  2 22:30 2019 mdfy_thn_clndr_SP_20190702.log
+[2020-01-08 11:14:25.673] -rw-r--r-- 1 jp1user01 app  994  7月  3 22:30 2019 mdfy_thn_clndr_SP_20190703.log
+[2020-01-08 11:14:25.673] -rw-r--r-- 1 jp1user01 app  994  7月  4 22:30 2019 mdfy_thn_clndr_SP_20190704.log
+[2020-01-08 11:14:25.673] -rw-r--r-- 1 jp1user01 app  994  7月  5 22:30 2019 mdfy_thn_clndr_SP_20190705.log
+[2020-01-08 11:14:25.673] -rw-r--r-- 1 jp1user01 app  994  7月  6 22:30 2019 mdfy_thn_clndr_SP_20190706.log
+[2020-01-08 11:14:25.688] -rw-r--r-- 1 jp1user01 app  994  7月  7 22:30 2019 mdfy_thn_clndr_SP_20190707.log
+[2020-01-08 11:14:25.688] -rw-r--r-- 1 jp1user01 app  994  7月  8 22:30 2019 mdfy_thn_clndr_SP_20190708.log
+[2020-01-08 11:14:25.688] -rw-r--r-- 1 jp1user01 app  994  7月  9 22:30 2019 mdfy_thn_clndr_SP_20190709.log
+[2020-01-08 11:14:25.688] -rw-r--r-- 1 jp1user01 app  995  7月 10 22:30 2019 mdfy_thn_clndr_SP_20190710.log
+[2020-01-08 11:14:25.688] -rw-r--r-- 1 jp1user01 app  995  7月 11 22:30 2019 mdfy_thn_clndr_SP_20190711.log
+[2020-01-08 11:14:25.688] -rw-r--r-- 1 jp1user01 app  995  7月 12 22:30 2019 mdfy_thn_clndr_SP_20190712.log
+[2020-01-08 11:14:25.688] -rw-r--r-- 1 jp1user01 app  995  7月 13 22:30 2019 mdfy_thn_clndr_SP_20190713.log
+[2020-01-08 11:14:25.688] -rw-r--r-- 1 jp1user01 app  995  7月 14 22:30 2019 mdfy_thn_clndr_SP_20190714.log
+[2020-01-08 11:14:25.688] -rw-r--r-- 1 jp1user01 app  995  7月 15 22:30 2019 mdfy_thn_clndr_SP_20190715.log
+[2020-01-08 11:14:25.688] -rw-r--r-- 1 jp1user01 app  995  7月 16 22:30 2019 mdfy_thn_clndr_SP_20190716.log
+[2020-01-08 11:14:25.688] -rw-r--r-- 1 jp1user01 app  995  7月 17 22:30 2019 mdfy_thn_clndr_SP_20190717.log
+[2020-01-08 11:14:25.688] -rw-r--r-- 1 jp1user01 app  995  7月 18 22:30 2019 mdfy_thn_clndr_SP_20190718.log
+[2020-01-08 11:14:25.704] -rw-r--r-- 1 jp1user01 app  995  7月 19 22:30 2019 mdfy_thn_clndr_SP_20190719.log
+[2020-01-08 11:14:25.704] -rw-r--r-- 1 jp1user01 app  995  7月 20 22:30 2019 mdfy_thn_clndr_SP_20190720.log
+[2020-01-08 11:14:25.704] -rw-r--r-- 1 jp1user01 app  995  7月 21 22:30 2019 mdfy_thn_clndr_SP_20190721.log
+[2020-01-08 11:14:25.704] -rw-r--r-- 1 jp1user01 app  995  7月 22 22:30 2019 mdfy_thn_clndr_SP_20190722.log
+[2020-01-08 11:14:25.704] -rw-r--r-- 1 jp1user01 app  995  7月 23 22:30 2019 mdfy_thn_clndr_SP_20190723.log
+[2020-01-08 11:14:25.704] -rw-r--r-- 1 jp1user01 app  995  7月 24 22:30 2019 mdfy_thn_clndr_SP_20190724.log
+[2020-01-08 11:14:25.704] -rw-r--r-- 1 jp1user01 app  995  7月 25 22:30 2019 mdfy_thn_clndr_SP_20190725.log
+[2020-01-08 11:14:25.704] -rw-r--r-- 1 jp1user01 app  995  7月 26 22:30 2019 mdfy_thn_clndr_SP_20190726.log
+[2020-01-08 11:14:25.704] -rw-r--r-- 1 jp1user01 app  995  7月 27 22:30 2019 mdfy_thn_clndr_SP_20190727.log
+[2020-01-08 11:14:25.704] -rw-r--r-- 1 jp1user01 app  995  7月 28 22:30 2019 mdfy_thn_clndr_SP_20190728.log
+[2020-01-08 11:14:25.704] -rw-r--r-- 1 jp1user01 app  995  7月 29 22:30 2019 mdfy_thn_clndr_SP_20190729.log
+[2020-01-08 11:14:25.704] -rw-r--r-- 1 jp1user01 app  995  7月 30 22:30 2019 mdfy_thn_clndr_SP_20190730.log
+[2020-01-08 11:14:25.704] -rw-r--r-- 1 jp1user01 app  995  7月 31 22:30 2019 mdfy_thn_clndr_SP_20190731.log
+[2020-01-08 11:14:25.704] -rw-r--r-- 1 jp1user01 app  994  8月  1 22:30 2019 mdfy_thn_clndr_SP_20190801.log
+[2020-01-08 11:14:25.704] -rw-r--r-- 1 jp1user01 app 2002  8月  9 22:31 2019 mdfy_thn_clndr_SP_20190809.log
+[2020-01-08 11:14:25.704] -rw-r--r-- 1 jp1user01 app 2003  8月 10 22:30 2019 mdfy_thn_clndr_SP_20190810.log
+[2020-01-08 11:14:25.704] -rw-r--r-- 1 jp1user01 app 2002  8月 11 22:30 2019 mdfy_thn_clndr_SP_20190811.log
+[2020-01-08 11:14:25.704] -rw-r--r-- 1 jp1user01 app 2002  8月 12 22:30 2019 mdfy_thn_clndr_SP_20190812.log
+[2020-01-08 11:14:25.704] -rw-r--r-- 1 jp1user01 app 2002  8月 13 22:30 2019 mdfy_thn_clndr_SP_20190813.log
+[2020-01-08 11:14:25.704] -rw-r--r-- 1 jp1user01 app 2001  8月 14 22:30 2019 mdfy_thn_clndr_SP_20190814.log
+[2020-01-08 11:14:25.704] -rw-r--r-- 1 jp1user01 app 1999  8月 15 22:30 2019 mdfy_thn_clndr_SP_20190815.log
+[2020-01-08 11:14:25.704] -rw-r--r-- 1 jp1user01 app 1999  8月 16 22:30 2019 mdfy_thn_clndr_SP_20190816.log
+[2020-01-08 11:14:25.704] -rw-r--r-- 1 jp1user01 app 1999  8月 17 22:30 2019 mdfy_thn_clndr_SP_20190817.log
+[2020-01-08 11:14:25.704] -rw-r--r-- 1 jp1user01 app 1999  8月 18 22:30 2019 mdfy_thn_clndr_SP_20190818.log
+[2020-01-08 11:14:25.720] -rw-r--r-- 1 jp1user01 app 1999  8月 19 22:30 2019 mdfy_thn_clndr_SP_20190819.log
+[2020-01-08 11:14:25.720] -rw-r--r-- 1 jp1user01 app 1999  8月 20 22:30 2019 mdfy_thn_clndr_SP_20190820.log
+[2020-01-08 11:14:25.720] -rw-r--r-- 1 jp1user01 app 1999  8月 21 22:30 2019 mdfy_thn_clndr_SP_20190821.log
+[2020-01-08 11:14:25.720] -rw-r--r-- 1 jp1user01 app 1999  8月 22 22:31 2019 mdfy_thn_clndr_SP_20190822.log
+[2020-01-08 11:14:25.720] -rw-r--r-- 1 jp1user01 app 1999  8月 23 22:30 2019 mdfy_thn_clndr_SP_20190823.log
+[2020-01-08 11:14:25.720] -rw-r--r-- 1 jp1user01 app 1999  8月 24 22:30 2019 mdfy_thn_clndr_SP_20190824.log
+[2020-01-08 11:14:25.720] -rw-r--r-- 1 jp1user01 app 1999  8月 25 22:30 2019 mdfy_thn_clndr_SP_20190825.log
+[2020-01-08 11:14:25.720] -rw-r--r-- 1 jp1user01 app 1999  8月 26 22:30 2019 mdfy_thn_clndr_SP_20190826.log
+[2020-01-08 11:14:25.720] -rw-r--r-- 1 jp1user01 app 1999  8月 27 22:30 2019 mdfy_thn_clndr_SP_20190827.log
+[2020-01-08 11:14:25.720] -rw-r--r-- 1 jp1user01 app 1999  8月 28 22:30 2019 mdfy_thn_clndr_SP_20190828.log
+[2020-01-08 11:14:25.720] -rw-r--r-- 1 jp1user01 app 1999  8月 29 22:30 2019 mdfy_thn_clndr_SP_20190829.log
+[2020-01-08 11:14:25.720] -rw-r--r-- 1 jp1user01 app 1999  8月 30 22:30 2019 mdfy_thn_clndr_SP_20190830.log
+[2020-01-08 11:14:25.735] -rw-r--r-- 1 jp1user01 app 1999  8月 31 22:30 2019 mdfy_thn_clndr_SP_20190831.log
+[2020-01-08 11:14:25.735] -rw-r--r-- 1 jp1user01 app 1998  9月  1 22:30 2019 mdfy_thn_clndr_SP_20190901.log
+[2020-01-08 11:14:25.735] -rw-r--r-- 1 jp1user01 app 1998  9月  2 22:30 2019 mdfy_thn_clndr_SP_20190902.log
+[2020-01-08 11:14:25.735] -rw-r--r-- 1 jp1user01 app 1998  9月  3 22:30 2019 mdfy_thn_clndr_SP_20190903.log
+[2020-01-08 11:14:25.735] -rw-r--r-- 1 jp1user01 app 1998  9月  4 22:30 2019 mdfy_thn_clndr_SP_20190904.log
+[2020-01-08 11:14:25.735] -rw-r--r-- 1 jp1user01 app 1998  9月  5 22:30 2019 mdfy_thn_clndr_SP_20190905.log
+[2020-01-08 11:14:25.735] -rw-r--r-- 1 jp1user01 app 1998  9月  6 22:30 2019 mdfy_thn_clndr_SP_20190906.log
+[2020-01-08 11:14:25.735] -rw-r--r-- 1 jp1user01 app 1998  9月  7 22:30 2019 mdfy_thn_clndr_SP_20190907.log
+[2020-01-08 11:14:25.735] -rw-r--r-- 1 jp1user01 app 1998  9月  8 22:30 2019 mdfy_thn_clndr_SP_20190908.log
+[2020-01-08 11:14:25.735] -rw-r--r-- 1 jp1user01 app 1998  9月  9 22:30 2019 mdfy_thn_clndr_SP_20190909.log
+[2020-01-08 11:14:25.735] -rw-r--r-- 1 jp1user01 app 1999  9月 10 22:30 2019 mdfy_thn_clndr_SP_20190910.log
+[2020-01-08 11:14:25.735] -rw-r--r-- 1 jp1user01 app 1999  9月 11 22:30 2019 mdfy_thn_clndr_SP_20190911.log
+[2020-01-08 11:14:25.735] -rw-r--r-- 1 jp1user01 app 1999  9月 12 22:30 2019 mdfy_thn_clndr_SP_20190912.log
+[2020-01-08 11:14:25.751] -rw-r--r-- 1 jp1user01 app 1999  9月 13 22:30 2019 mdfy_thn_clndr_SP_20190913.log
+[2020-01-08 11:14:25.751] -rw-r--r-- 1 jp1user01 app 1999  9月 14 22:30 2019 mdfy_thn_clndr_SP_20190914.log
+[2020-01-08 11:14:25.751] -rw-r--r-- 1 jp1user01 app 1999  9月 15 22:30 2019 mdfy_thn_clndr_SP_20190915.log
+[2020-01-08 11:14:25.751] -rw-r--r-- 1 jp1user01 app 1999  9月 16 22:30 2019 mdfy_thn_clndr_SP_20190916.log
+[2020-01-08 11:14:25.751] -rw-r--r-- 1 jp1user01 app 1999  9月 17 22:30 2019 mdfy_thn_clndr_SP_20190917.log
+[2020-01-08 11:14:25.751] -rw-r--r-- 1 jp1user01 app 1999  9月 18 22:30 2019 mdfy_thn_clndr_SP_20190918.log
+[2020-01-08 11:14:25.751] -rw-r--r-- 1 jp1user01 app 1999  9月 19 22:30 2019 mdfy_thn_clndr_SP_20190919.log
+[2020-01-08 11:14:25.751] -rw-r--r-- 1 jp1user01 app 1999  9月 20 22:30 2019 mdfy_thn_clndr_SP_20190920.log
+[2020-01-08 11:14:25.751] -rw-r--r-- 1 jp1user01 app 1999  9月 21 22:30 2019 mdfy_thn_clndr_SP_20190921.log
+[2020-01-08 11:14:25.751] -rw-r--r-- 1 jp1user01 app 1999  9月 22 22:30 2019 mdfy_thn_clndr_SP_20190922.log
+[2020-01-08 11:14:25.751] -rw-r--r-- 1 jp1user01 app 1999  9月 23 22:32 2019 mdfy_thn_clndr_SP_20190923.log
+[2020-01-08 11:14:25.751] -rw-r--r-- 1 jp1user01 app 1999  9月 24 22:30 2019 mdfy_thn_clndr_SP_20190924.log
+[2020-01-08 11:14:25.767] -rw-r--r-- 1 jp1user01 app 1999  9月 25 22:30 2019 mdfy_thn_clndr_SP_20190925.log
+[2020-01-08 11:14:25.767] -rw-r--r-- 1 jp1user01 app 1999  9月 26 22:30 2019 mdfy_thn_clndr_SP_20190926.log
+[2020-01-08 11:14:25.767] -rw-r--r-- 1 jp1user01 app 1999  9月 27 22:30 2019 mdfy_thn_clndr_SP_20190927.log
+[2020-01-08 11:14:25.767] -rw-r--r-- 1 jp1user01 app 1999  9月 28 22:30 2019 mdfy_thn_clndr_SP_20190928.log
+[2020-01-08 11:14:25.767] -rw-r--r-- 1 jp1user01 app 1999  9月 29 22:30 2019 mdfy_thn_clndr_SP_20190929.log
+[2020-01-08 11:14:25.767] -rw-r--r-- 1 jp1user01 app 1999  9月 30 22:30 2019 mdfy_thn_clndr_SP_20190930.log
+[2020-01-08 11:14:25.767] -rw-r--r-- 1 jp1user01 app 1999 10月  1 22:30 2019 mdfy_thn_clndr_SP_20191001.log
+[2020-01-08 11:14:25.767] -rw-r--r-- 1 jp1user01 app 1999 10月  2 22:30 2019 mdfy_thn_clndr_SP_20191002.log
+[2020-01-08 11:14:25.767] -rw-r--r-- 1 jp1user01 app 1999 10月  3 22:30 2019 mdfy_thn_clndr_SP_20191003.log
+[2020-01-08 11:14:25.767] -rw-r--r-- 1 jp1user01 app 1999 10月  4 22:30 2019 mdfy_thn_clndr_SP_20191004.log
+[2020-01-08 11:14:25.767] -rw-r--r-- 1 jp1user01 app 1999 10月  5 22:30 2019 mdfy_thn_clndr_SP_20191005.log
+[2020-01-08 11:14:25.767] -rw-r--r-- 1 jp1user01 app 1999 10月  6 22:30 2019 mdfy_thn_clndr_SP_20191006.log
+[2020-01-08 11:14:25.782] -rw-r--r-- 1 jp1user01 app 1999 10月  7 22:30 2019 mdfy_thn_clndr_SP_20191007.log
+[2020-01-08 11:14:25.782] -rw-r--r-- 1 jp1user01 app 1999 10月  8 22:30 2019 mdfy_thn_clndr_SP_20191008.log
+[2020-01-08 11:14:25.782] -rw-r--r-- 1 jp1user01 app 1999 10月  9 22:30 2019 mdfy_thn_clndr_SP_20191009.log
+[2020-01-08 11:14:25.782] -rw-r--r-- 1 jp1user01 app 2000 10月 10 22:30 2019 mdfy_thn_clndr_SP_20191010.log
+[2020-01-08 11:14:25.782] -rw-r--r-- 1 jp1user01 app 2000 10月 11 22:30 2019 mdfy_thn_clndr_SP_20191011.log
+[2020-01-08 11:14:25.782] -rw-r--r-- 1 jp1user01 app 2000 10月 12 22:30 2019 mdfy_thn_clndr_SP_20191012.log
+[2020-01-08 11:14:25.782] -rw-r--r-- 1 jp1user01 app 2000 10月 13 22:30 2019 mdfy_thn_clndr_SP_20191013.log
+[2020-01-08 11:14:25.782] -rw-r--r-- 1 jp1user01 app 2000 10月 14 22:30 2019 mdfy_thn_clndr_SP_20191014.log
+[2020-01-08 11:14:25.782] -rw-r--r-- 1 jp1user01 app 2000 10月 15 22:30 2019 mdfy_thn_clndr_SP_20191015.log
+[2020-01-08 11:14:25.782] -rw-r--r-- 1 jp1user01 app 2000 10月 16 22:30 2019 mdfy_thn_clndr_SP_20191016.log
+[2020-01-08 11:14:25.782] -rw-r--r-- 1 jp1user01 app 2000 10月 17 22:30 2019 mdfy_thn_clndr_SP_20191017.log
+[2020-01-08 11:14:25.782] -rw-r--r-- 1 jp1user01 app 2000 10月 18 22:30 2019 mdfy_thn_clndr_SP_20191018.log
+[2020-01-08 11:14:25.798] -rw-r--r-- 1 jp1user01 app 2000 10月 19 22:30 2019 mdfy_thn_clndr_SP_20191019.log
+[2020-01-08 11:14:25.798] -rw-r--r-- 1 jp1user01 app 2000 10月 20 22:30 2019 mdfy_thn_clndr_SP_20191020.log
+[2020-01-08 11:14:25.798] -rw-r--r-- 1 jp1user01 app 2000 10月 21 22:30 2019 mdfy_thn_clndr_SP_20191021.log
+[2020-01-08 11:14:25.798] -rw-r--r-- 1 jp1user01 app 2000 10月 22 22:30 2019 mdfy_thn_clndr_SP_20191022.log
+[2020-01-08 11:14:25.798] -rw-r--r-- 1 jp1user01 app 2000 10月 23 22:30 2019 mdfy_thn_clndr_SP_20191023.log
+[2020-01-08 11:14:25.798] -rw-r--r-- 1 jp1user01 app 2000 10月 24 22:30 2019 mdfy_thn_clndr_SP_20191024.log
+[2020-01-08 11:14:25.798] -rw-r--r-- 1 jp1user01 app 2000 10月 25 22:30 2019 mdfy_thn_clndr_SP_20191025.log
+[2020-01-08 11:14:25.798] -rw-r--r-- 1 jp1user01 app 2000 10月 26 22:30 2019 mdfy_thn_clndr_SP_20191026.log
+[2020-01-08 11:14:25.798] -rw-r--r-- 1 jp1user01 app 2000 10月 27 22:30 2019 mdfy_thn_clndr_SP_20191027.log
+[2020-01-08 11:14:25.798] -rw-r--r-- 1 jp1user01 app 2000 10月 28 22:30 2019 mdfy_thn_clndr_SP_20191028.log
+[2020-01-08 11:14:25.798] -rw-r--r-- 1 jp1user01 app 2000 10月 29 22:30 2019 mdfy_thn_clndr_SP_20191029.log
+[2020-01-08 11:14:25.798] -rw-r--r-- 1 jp1user01 app 2000 10月 30 22:30 2019 mdfy_thn_clndr_SP_20191030.log
+[2020-01-08 11:14:25.813] -rw-r--r-- 1 jp1user01 app 2000 10月 31 22:30 2019 mdfy_thn_clndr_SP_20191031.log
+[2020-01-08 11:14:25.813] -rw-r--r-- 1 jp1user01 app 1999 11月  1 22:30 2019 mdfy_thn_clndr_SP_20191101.log
+[2020-01-08 11:14:25.813] -rw-r--r-- 1 jp1user01 app 1999 11月  2 22:30 2019 mdfy_thn_clndr_SP_20191102.log
+[2020-01-08 11:14:25.813] -rw-r--r-- 1 jp1user01 app 1999 11月  3 22:30 2019 mdfy_thn_clndr_SP_20191103.log
+[2020-01-08 11:14:25.813] -rw-r--r-- 1 jp1user01 app 1999 11月  4 22:30 2019 mdfy_thn_clndr_SP_20191104.log
+[2020-01-08 11:14:25.813] -rw-r--r-- 1 jp1user01 app 1999 11月  5 22:30 2019 mdfy_thn_clndr_SP_20191105.log
+[2020-01-08 11:14:25.813] -rw-r--r-- 1 jp1user01 app 1999 11月  6 22:30 2019 mdfy_thn_clndr_SP_20191106.log
+[2020-01-08 11:14:25.813] -rw-r--r-- 1 jp1user01 app 1999 11月  7 22:30 2019 mdfy_thn_clndr_SP_20191107.log
+[2020-01-08 11:14:25.813] -rw-r--r-- 1 jp1user01 app 1999 11月  8 22:30 2019 mdfy_thn_clndr_SP_20191108.log
+[2020-01-08 11:14:25.813] -rw-r--r-- 1 jp1user01 app 1999 11月  9 22:30 2019 mdfy_thn_clndr_SP_20191109.log
+[2020-01-08 11:14:25.813] -rw-r--r-- 1 jp1user01 app 2000 11月 10 22:30 2019 mdfy_thn_clndr_SP_20191110.log
+[2020-01-08 11:14:25.813] -rw-r--r-- 1 jp1user01 app 2000 11月 11 22:30 2019 mdfy_thn_clndr_SP_20191111.log
+[2020-01-08 11:14:25.829] -rw-r--r-- 1 jp1user01 app 2000 11月 12 22:30 2019 mdfy_thn_clndr_SP_20191112.log
+[2020-01-08 11:14:25.829] -rw-r--r-- 1 jp1user01 app 2000 11月 13 22:30 2019 mdfy_thn_clndr_SP_20191113.log
+[2020-01-08 11:14:25.829] -rw-r--r-- 1 jp1user01 app 2000 11月 14 22:30 2019 mdfy_thn_clndr_SP_20191114.log
+[2020-01-08 11:14:25.829] -rw-r--r-- 1 jp1user01 app 2000 11月 15 22:30 2019 mdfy_thn_clndr_SP_20191115.log
+[2020-01-08 11:14:25.829] -rw-r--r-- 1 jp1user01 app 2000 11月 16 22:30 2019 mdfy_thn_clndr_SP_20191116.log
+[2020-01-08 11:14:25.829] -rw-r--r-- 1 jp1user01 app 2000 11月 17 22:30 2019 mdfy_thn_clndr_SP_20191117.log
+[2020-01-08 11:14:25.829] -rw-r--r-- 1 jp1user01 app 2000 11月 18 22:30 2019 mdfy_thn_clndr_SP_20191118.log
+[2020-01-08 11:14:25.829] -rw-r--r-- 1 jp1user01 app 2000 11月 19 22:30 2019 mdfy_thn_clndr_SP_20191119.log
+[2020-01-08 11:14:25.829] -rw-r--r-- 1 jp1user01 app 2000 11月 20 22:30 2019 mdfy_thn_clndr_SP_20191120.log
+[2020-01-08 11:14:25.829] -rw-r--r-- 1 jp1user01 app 2000 11月 21 22:30 2019 mdfy_thn_clndr_SP_20191121.log
+[2020-01-08 11:14:25.829] -rw-r--r-- 1 jp1user01 app 2000 11月 22 22:30 2019 mdfy_thn_clndr_SP_20191122.log
+[2020-01-08 11:14:25.829] -rw-r--r-- 1 jp1user01 app 2000 11月 23 22:30 2019 mdfy_thn_clndr_SP_20191123.log
+[2020-01-08 11:14:25.829] -rw-r--r-- 1 jp1user01 app 2000 11月 24 22:30 2019 mdfy_thn_clndr_SP_20191124.log
+[2020-01-08 11:14:25.845] -rw-r--r-- 1 jp1user01 app 2000 11月 25 22:30 2019 mdfy_thn_clndr_SP_20191125.log
+[2020-01-08 11:14:25.845] -rw-r--r-- 1 jp1user01 app 2000 11月 26 22:30 2019 mdfy_thn_clndr_SP_20191126.log
+[2020-01-08 11:14:25.845] -rw-r--r-- 1 jp1user01 app 2000 11月 27 22:30 2019 mdfy_thn_clndr_SP_20191127.log
+[2020-01-08 11:14:25.845] -rw-r--r-- 1 jp1user01 app 2000 11月 28 22:30 2019 mdfy_thn_clndr_SP_20191128.log
+[2020-01-08 11:14:25.845] -rw-r--r-- 1 jp1user01 app 2000 11月 29 22:30 2019 mdfy_thn_clndr_SP_20191129.log
+[2020-01-08 11:14:25.845] -rw-r--r-- 1 jp1user01 app 2000 11月 30 22:30 2019 mdfy_thn_clndr_SP_20191130.log
+[2020-01-08 11:14:25.845] -rw-r--r-- 1 jp1user01 app 1999 12月  1 22:30 2019 mdfy_thn_clndr_SP_20191201.log
+[2020-01-08 11:14:25.845] -rw-r--r-- 1 jp1user01 app 1999 12月  2 22:30 2019 mdfy_thn_clndr_SP_20191202.log
+[2020-01-08 11:14:25.845] -rw-r--r-- 1 jp1user01 app 1999 12月  3 22:30 2019 mdfy_thn_clndr_SP_20191203.log
+[2020-01-08 11:14:25.845] -rw-r--r-- 1 jp1user01 app 1999 12月  4 22:30 2019 mdfy_thn_clndr_SP_20191204.log
+[2020-01-08 11:14:25.845] -rw-r--r-- 1 jp1user01 app 1999 12月  5 22:30 2019 mdfy_thn_clndr_SP_20191205.log
+[2020-01-08 11:14:25.845] -rw-r--r-- 1 jp1user01 app 1999 12月  6 22:30 2019 mdfy_thn_clndr_SP_20191206.log
+[2020-01-08 11:14:25.860] -rw-r--r-- 1 jp1user01 app 1999 12月  7 22:30 2019 mdfy_thn_clndr_SP_20191207.log
+[2020-01-08 11:14:25.860] -rw-r--r-- 1 jp1user01 app 1999 12月  8 22:30 2019 mdfy_thn_clndr_SP_20191208.log
+[2020-01-08 11:14:25.860] -rw-r--r-- 1 jp1user01 app 1999 12月  9 22:30 2019 mdfy_thn_clndr_SP_20191209.log
+[2020-01-08 11:14:25.860] -rw-r--r-- 1 jp1user01 app 2000 12月 10 22:30 2019 mdfy_thn_clndr_SP_20191210.log
+[2020-01-08 11:14:25.860] -rw-r--r-- 1 jp1user01 app 2000 12月 11 22:30 2019 mdfy_thn_clndr_SP_20191211.log
+[2020-01-08 11:14:25.860] -rw-r--r-- 1 jp1user01 app 2000 12月 12 22:30 2019 mdfy_thn_clndr_SP_20191212.log
+[2020-01-08 11:14:25.860] -rw-r--r-- 1 jp1user01 app 2000 12月 13 22:30 2019 mdfy_thn_clndr_SP_20191213.log
+[2020-01-08 11:14:25.860] -rw-r--r-- 1 jp1user01 app 2000 12月 14 22:30 2019 mdfy_thn_clndr_SP_20191214.log
+[2020-01-08 11:14:25.860] -rw-r--r-- 1 jp1user01 app 2000 12月 15 22:30 2019 mdfy_thn_clndr_SP_20191215.log
+[2020-01-08 11:14:25.860] -rw-r--r-- 1 jp1user01 app 2000 12月 16 22:30 2019 mdfy_thn_clndr_SP_20191216.log
+[2020-01-08 11:14:25.860] -rw-r--r-- 1 jp1user01 app 2000 12月 17 22:30 2019 mdfy_thn_clndr_SP_20191217.log
+[2020-01-08 11:14:25.860] -rw-r--r-- 1 jp1user01 app 2000 12月 18 22:30 2019 mdfy_thn_clndr_SP_20191218.log
+[2020-01-08 11:14:25.876] -rw-r--r-- 1 jp1user01 app 1030 12月 19 22:30 2019 mdfy_thn_clndr_SP_20191219.log
+[2020-01-08 11:14:25.876] -rw-r--r-- 1 jp1user01 app 1030 12月 20 22:30 2019 mdfy_thn_clndr_SP_20191220.log
+[2020-01-08 11:14:25.876] -rw-r--r-- 1 jp1user01 app 1030 12月 21 22:30 2019 mdfy_thn_clndr_SP_20191221.log
+[2020-01-08 11:14:25.876] -rw-r--r-- 1 jp1user01 app 1035 12月 22 22:30 2019 mdfy_thn_clndr_SP_20191222.log
+[2020-01-08 11:14:25.876] -rw-r--r-- 1 jp1user01 app 1035 12月 23 22:30 2019 mdfy_thn_clndr_SP_20191223.log
+[2020-01-08 11:14:25.876] -rw-r--r-- 1 jp1user01 app 1037 12月 24 22:30 2019 mdfy_thn_clndr_SP_20191224.log
+[2020-01-08 11:14:25.876] -rw-r--r-- 1 jp1user01 app 1037 12月 25 22:30 2019 mdfy_thn_clndr_SP_20191225.log
+[2020-01-08 11:14:25.876] -rw-r--r-- 1 jp1user01 app 1037 12月 26 22:30 2019 mdfy_thn_clndr_SP_20191226.log
+[2020-01-08 11:14:25.876] -rw-r--r-- 1 jp1user01 app 1037 12月 27 22:30 2019 mdfy_thn_clndr_SP_20191227.log
+[2020-01-08 11:14:25.876] -rw-r--r-- 1 jp1user01 app 1037 12月 28 22:30 2019 mdfy_thn_clndr_SP_20191228.log
+[2020-01-08 11:14:25.876] -rw-r--r-- 1 jp1user01 app 1037 12月 29 22:30 2019 mdfy_thn_clndr_SP_20191229.log
+[2020-01-08 11:14:25.876] -rw-r--r-- 1 jp1user01 app 1037 12月 30 22:30 2019 mdfy_thn_clndr_SP_20191230.log
+[2020-01-08 11:14:25.892] -rw-r--r-- 1 jp1user01 app 1035 12月 31 22:30 2019 mdfy_thn_clndr_SP_20191231.log
+[2020-01-08 11:14:25.892] -rw-r--r-- 1 jp1user01 app 1033  1月  1 22:30 2020 mdfy_thn_clndr_SP_20200101.log
+[2020-01-08 11:14:25.892] -rw-r--r-- 1 jp1user01 app 1033  1月  2 22:30 2020 mdfy_thn_clndr_SP_20200102.log
+[2020-01-08 11:14:25.892] -rw-r--r-- 1 jp1user01 app 1028  1月  3 22:30 2020 mdfy_thn_clndr_SP_20200103.log
+[2020-01-08 11:14:25.892] -rw-r--r-- 1 jp1user01 app 1028  1月  4 22:30 2020 mdfy_thn_clndr_SP_20200104.log
+[2020-01-08 11:14:25.892] -rw-r--r-- 1 jp1user01 app 1028  1月  5 22:30 2020 mdfy_thn_clndr_SP_20200105.log
+[2020-01-08 11:14:25.892] -rw-r--r-- 1 jp1user01 app 1028  1月  6 22:30 2020 mdfy_thn_clndr_SP_20200106.log
+[2020-01-08 11:14:25.892] -rw-r--r-- 1 jp1user01 app 1028  1月  7 22:30 2020 mdfy_thn_clndr_SP_20200107.log
+[2020-01-08 11:14:25.892] [2020/01/08 11:14:25 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:14:48.183] [2020/01/08 11:14:48 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:14:48.698] [2020/01/08 11:14:48 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:14:48.730] [2020/01/08 11:14:48 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:14:48.761] [2020/01/08 11:14:48 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:14:48.792] [2020/01/08 11:14:48 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:14:48.823] [2020/01/08 11:14:48 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:14:48.855] [2020/01/08 11:14:48 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:14:48.886] [2020/01/08 11:14:48 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:14:48.928] [2020/01/08 11:14:48 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:14:48.959] [2020/01/08 11:14:48 jp1user01@ompsgbb001 log]$ tar czvf mdfy_thn_clndr_SP_2019.tar.gz mdfy_thn_clndr_SP_2019*.log
+[2020-01-08 11:15:37.346] mdfy_thn_clndr_SP_20190101.log
+[2020-01-08 11:15:37.346] mdfy_thn_clndr_SP_20190102.log
+[2020-01-08 11:15:37.361] mdfy_thn_clndr_SP_20190103.log
+[2020-01-08 11:15:37.361] mdfy_thn_clndr_SP_20190104.log
+[2020-01-08 11:15:37.361] mdfy_thn_clndr_SP_20190105.log
+[2020-01-08 11:15:37.361] mdfy_thn_clndr_SP_20190106.log
+[2020-01-08 11:15:37.361] mdfy_thn_clndr_SP_20190107.log
+[2020-01-08 11:15:37.377] mdfy_thn_clndr_SP_20190108.log
+[2020-01-08 11:15:37.377] mdfy_thn_clndr_SP_20190109.log
+[2020-01-08 11:15:37.377] mdfy_thn_clndr_SP_20190110.log
+[2020-01-08 11:15:37.377] mdfy_thn_clndr_SP_20190111.log
+[2020-01-08 11:15:37.393] mdfy_thn_clndr_SP_20190112.log
+[2020-01-08 11:15:37.393] mdfy_thn_clndr_SP_20190113.log
+[2020-01-08 11:15:37.393] mdfy_thn_clndr_SP_20190114.log
+[2020-01-08 11:15:37.393] mdfy_thn_clndr_SP_20190115.log
+[2020-01-08 11:15:37.408] mdfy_thn_clndr_SP_20190116.log
+[2020-01-08 11:15:37.408] mdfy_thn_clndr_SP_20190117.log
+[2020-01-08 11:15:37.408] mdfy_thn_clndr_SP_20190118.log
+[2020-01-08 11:15:37.424] mdfy_thn_clndr_SP_20190119.log
+[2020-01-08 11:15:37.424] mdfy_thn_clndr_SP_20190120.log
+[2020-01-08 11:15:37.424] mdfy_thn_clndr_SP_20190121.log
+[2020-01-08 11:15:37.439] mdfy_thn_clndr_SP_20190122.log
+[2020-01-08 11:15:37.439] mdfy_thn_clndr_SP_20190123.log
+[2020-01-08 11:15:37.439] mdfy_thn_clndr_SP_20190124.log
+[2020-01-08 11:15:37.439] mdfy_thn_clndr_SP_20190426.log
+[2020-01-08 11:15:37.455] mdfy_thn_clndr_SP_20190427.log
+[2020-01-08 11:15:37.455] mdfy_thn_clndr_SP_20190428.log
+[2020-01-08 11:15:37.455] mdfy_thn_clndr_SP_20190429.log
+[2020-01-08 11:15:37.455] mdfy_thn_clndr_SP_20190430.log
+[2020-01-08 11:15:37.455] mdfy_thn_clndr_SP_20190501.log
+[2020-01-08 11:15:37.455] mdfy_thn_clndr_SP_20190502.log
+[2020-01-08 11:15:37.471] mdfy_thn_clndr_SP_20190503.log
+[2020-01-08 11:15:37.471] mdfy_thn_clndr_SP_20190504.log
+[2020-01-08 11:15:37.471] mdfy_thn_clndr_SP_20190505.log
+[2020-01-08 11:15:37.486] mdfy_thn_clndr_SP_20190506.log
+[2020-01-08 11:15:37.486] mdfy_thn_clndr_SP_20190507.log
+[2020-01-08 11:15:37.486] mdfy_thn_clndr_SP_20190508.log
+[2020-01-08 11:15:37.486] mdfy_thn_clndr_SP_20190509.log
+[2020-01-08 11:15:37.486] mdfy_thn_clndr_SP_20190510.log
+[2020-01-08 11:15:37.486] mdfy_thn_clndr_SP_20190511.log
+[2020-01-08 11:15:37.486] mdfy_thn_clndr_SP_20190512.log
+[2020-01-08 11:15:37.502] mdfy_thn_clndr_SP_20190513.log
+[2020-01-08 11:15:37.502] mdfy_thn_clndr_SP_20190514.log
+[2020-01-08 11:15:37.502] mdfy_thn_clndr_SP_20190515.log
+[2020-01-08 11:15:37.502] mdfy_thn_clndr_SP_20190516.log
+[2020-01-08 11:15:37.502] mdfy_thn_clndr_SP_20190517.log
+[2020-01-08 11:15:37.502] mdfy_thn_clndr_SP_20190518.log
+[2020-01-08 11:15:37.518] mdfy_thn_clndr_SP_20190519.log
+[2020-01-08 11:15:37.518] mdfy_thn_clndr_SP_20190520.log
+[2020-01-08 11:15:37.518] mdfy_thn_clndr_SP_20190521.log
+[2020-01-08 11:15:37.518] mdfy_thn_clndr_SP_20190522.log
+[2020-01-08 11:15:37.518] mdfy_thn_clndr_SP_20190523.log
+[2020-01-08 11:15:37.518] mdfy_thn_clndr_SP_20190524.log
+[2020-01-08 11:15:37.533] mdfy_thn_clndr_SP_20190525.log
+[2020-01-08 11:15:37.533] mdfy_thn_clndr_SP_20190526.log
+[2020-01-08 11:15:37.533] mdfy_thn_clndr_SP_20190527.log
+[2020-01-08 11:15:37.533] mdfy_thn_clndr_SP_20190528.log
+[2020-01-08 11:15:37.533] mdfy_thn_clndr_SP_20190529.log
+[2020-01-08 11:15:37.533] mdfy_thn_clndr_SP_20190530.log
+[2020-01-08 11:15:37.533] mdfy_thn_clndr_SP_20190531.log
+[2020-01-08 11:15:37.533] mdfy_thn_clndr_SP_20190601.log
+[2020-01-08 11:15:37.533] mdfy_thn_clndr_SP_20190602.log
+[2020-01-08 11:15:37.533] mdfy_thn_clndr_SP_20190603.log
+[2020-01-08 11:15:37.533] mdfy_thn_clndr_SP_20190604.log
+[2020-01-08 11:15:37.533] mdfy_thn_clndr_SP_20190605.log
+[2020-01-08 11:15:37.549] mdfy_thn_clndr_SP_20190606.log
+[2020-01-08 11:15:37.549] mdfy_thn_clndr_SP_20190607.log
+[2020-01-08 11:15:37.549] mdfy_thn_clndr_SP_20190608.log
+[2020-01-08 11:15:37.549] mdfy_thn_clndr_SP_20190609.log
+[2020-01-08 11:15:37.549] mdfy_thn_clndr_SP_20190610.log
+[2020-01-08 11:15:37.549] mdfy_thn_clndr_SP_20190611.log
+[2020-01-08 11:15:37.549] mdfy_thn_clndr_SP_20190612.log
+[2020-01-08 11:15:37.549] mdfy_thn_clndr_SP_20190613.log
+[2020-01-08 11:15:37.565] mdfy_thn_clndr_SP_20190614.log
+[2020-01-08 11:15:37.565] mdfy_thn_clndr_SP_20190615.log
+[2020-01-08 11:15:37.565] mdfy_thn_clndr_SP_20190616.log
+[2020-01-08 11:15:37.565] mdfy_thn_clndr_SP_20190617.log
+[2020-01-08 11:15:37.565] mdfy_thn_clndr_SP_20190618.log
+[2020-01-08 11:15:37.565] mdfy_thn_clndr_SP_20190619.log
+[2020-01-08 11:15:37.565] mdfy_thn_clndr_SP_20190620.log
+[2020-01-08 11:15:37.565] mdfy_thn_clndr_SP_20190621.log
+[2020-01-08 11:15:37.565] mdfy_thn_clndr_SP_20190622.log
+[2020-01-08 11:15:37.580] mdfy_thn_clndr_SP_20190623.log
+[2020-01-08 11:15:37.580] mdfy_thn_clndr_SP_20190624.log
+[2020-01-08 11:15:37.580] mdfy_thn_clndr_SP_20190625.log
+[2020-01-08 11:15:37.596] mdfy_thn_clndr_SP_20190626.log
+[2020-01-08 11:15:37.596] mdfy_thn_clndr_SP_20190627.log
+[2020-01-08 11:15:37.611] mdfy_thn_clndr_SP_20190628.log
+[2020-01-08 11:15:37.611] mdfy_thn_clndr_SP_20190629.log
+[2020-01-08 11:15:37.611] mdfy_thn_clndr_SP_20190630.log
+[2020-01-08 11:15:37.611] mdfy_thn_clndr_SP_20190701.log
+[2020-01-08 11:15:37.627] mdfy_thn_clndr_SP_20190702.log
+[2020-01-08 11:15:37.627] mdfy_thn_clndr_SP_20190703.log
+[2020-01-08 11:15:37.627] mdfy_thn_clndr_SP_20190704.log
+[2020-01-08 11:15:37.643] mdfy_thn_clndr_SP_20190705.log
+[2020-01-08 11:15:37.643] mdfy_thn_clndr_SP_20190706.log
+[2020-01-08 11:15:37.658] mdfy_thn_clndr_SP_20190707.log
+[2020-01-08 11:15:37.658] mdfy_thn_clndr_SP_20190708.log
+[2020-01-08 11:15:37.658] mdfy_thn_clndr_SP_20190709.log
+[2020-01-08 11:15:37.658] mdfy_thn_clndr_SP_20190710.log
+[2020-01-08 11:15:37.674] mdfy_thn_clndr_SP_20190711.log
+[2020-01-08 11:15:37.674] mdfy_thn_clndr_SP_20190712.log
+[2020-01-08 11:15:37.674] mdfy_thn_clndr_SP_20190713.log
+[2020-01-08 11:15:37.674] mdfy_thn_clndr_SP_20190714.log
+[2020-01-08 11:15:37.689] mdfy_thn_clndr_SP_20190715.log
+[2020-01-08 11:15:37.689] mdfy_thn_clndr_SP_20190716.log
+[2020-01-08 11:15:37.689] mdfy_thn_clndr_SP_20190717.log
+[2020-01-08 11:15:37.705] mdfy_thn_clndr_SP_20190718.log
+[2020-01-08 11:15:37.705] mdfy_thn_clndr_SP_20190719.log
+[2020-01-08 11:15:37.705] mdfy_thn_clndr_SP_20190720.log
+[2020-01-08 11:15:37.721] mdfy_thn_clndr_SP_20190721.log
+[2020-01-08 11:15:37.721] mdfy_thn_clndr_SP_20190722.log
+[2020-01-08 11:15:37.721] mdfy_thn_clndr_SP_20190723.log
+[2020-01-08 11:15:37.721] mdfy_thn_clndr_SP_20190724.log
+[2020-01-08 11:15:37.721] mdfy_thn_clndr_SP_20190725.log
+[2020-01-08 11:15:37.736] mdfy_thn_clndr_SP_20190726.log
+[2020-01-08 11:15:37.736] mdfy_thn_clndr_SP_20190727.log
+[2020-01-08 11:15:37.736] mdfy_thn_clndr_SP_20190728.log
+[2020-01-08 11:15:37.752] mdfy_thn_clndr_SP_20190729.log
+[2020-01-08 11:15:37.752] mdfy_thn_clndr_SP_20190730.log
+[2020-01-08 11:15:37.752] mdfy_thn_clndr_SP_20190731.log
+[2020-01-08 11:15:37.768] mdfy_thn_clndr_SP_20190801.log
+[2020-01-08 11:15:37.768] mdfy_thn_clndr_SP_20190809.log
+[2020-01-08 11:15:37.768] mdfy_thn_clndr_SP_20190810.log
+[2020-01-08 11:15:37.783] mdfy_thn_clndr_SP_20190811.log
+[2020-01-08 11:15:37.783] mdfy_thn_clndr_SP_20190812.log
+[2020-01-08 11:15:37.783] mdfy_thn_clndr_SP_20190813.log
+[2020-01-08 11:15:37.783] mdfy_thn_clndr_SP_20190814.log
+[2020-01-08 11:15:37.799] mdfy_thn_clndr_SP_20190815.log
+[2020-01-08 11:15:37.799] mdfy_thn_clndr_SP_20190816.log
+[2020-01-08 11:15:37.799] mdfy_thn_clndr_SP_20190817.log
+[2020-01-08 11:15:37.814] mdfy_thn_clndr_SP_20190818.log
+[2020-01-08 11:15:37.814] mdfy_thn_clndr_SP_20190819.log
+[2020-01-08 11:15:37.814] mdfy_thn_clndr_SP_20190820.log
+[2020-01-08 11:15:37.814] mdfy_thn_clndr_SP_20190821.log
+[2020-01-08 11:15:37.830] mdfy_thn_clndr_SP_20190822.log
+[2020-01-08 11:15:37.830] mdfy_thn_clndr_SP_20190823.log
+[2020-01-08 11:15:37.830] mdfy_thn_clndr_SP_20190824.log
+[2020-01-08 11:15:37.846] mdfy_thn_clndr_SP_20190825.log
+[2020-01-08 11:15:37.846] mdfy_thn_clndr_SP_20190826.log
+[2020-01-08 11:15:37.846] mdfy_thn_clndr_SP_20190827.log
+[2020-01-08 11:15:37.862] mdfy_thn_clndr_SP_20190828.log
+[2020-01-08 11:15:37.862] mdfy_thn_clndr_SP_20190829.log
+[2020-01-08 11:15:37.862] mdfy_thn_clndr_SP_20190830.log
+[2020-01-08 11:15:37.877] mdfy_thn_clndr_SP_20190831.log
+[2020-01-08 11:15:37.877] mdfy_thn_clndr_SP_20190901.log
+[2020-01-08 11:15:37.877] mdfy_thn_clndr_SP_20190902.log
+[2020-01-08 11:15:37.892] mdfy_thn_clndr_SP_20190903.log
+[2020-01-08 11:15:37.892] mdfy_thn_clndr_SP_20190904.log
+[2020-01-08 11:15:37.892] mdfy_thn_clndr_SP_20190905.log
+[2020-01-08 11:15:37.908] mdfy_thn_clndr_SP_20190906.log
+[2020-01-08 11:15:37.908] mdfy_thn_clndr_SP_20190907.log
+[2020-01-08 11:15:37.908] mdfy_thn_clndr_SP_20190908.log
+[2020-01-08 11:15:37.924] mdfy_thn_clndr_SP_20190909.log
+[2020-01-08 11:15:37.924] mdfy_thn_clndr_SP_20190910.log
+[2020-01-08 11:15:37.924] mdfy_thn_clndr_SP_20190911.log
+[2020-01-08 11:15:37.940] mdfy_thn_clndr_SP_20190912.log
+[2020-01-08 11:15:37.940] mdfy_thn_clndr_SP_20190913.log
+[2020-01-08 11:15:37.940] mdfy_thn_clndr_SP_20190914.log
+[2020-01-08 11:15:37.955] mdfy_thn_clndr_SP_20190915.log
+[2020-01-08 11:15:37.955] mdfy_thn_clndr_SP_20190916.log
+[2020-01-08 11:15:37.971] mdfy_thn_clndr_SP_20190917.log
+[2020-01-08 11:15:37.971] mdfy_thn_clndr_SP_20190918.log
+[2020-01-08 11:15:37.971] mdfy_thn_clndr_SP_20190919.log
+[2020-01-08 11:15:37.971] mdfy_thn_clndr_SP_20190920.log
+[2020-01-08 11:15:37.986] mdfy_thn_clndr_SP_20190921.log
+[2020-01-08 11:15:37.986] mdfy_thn_clndr_SP_20190922.log
+[2020-01-08 11:15:38.002] mdfy_thn_clndr_SP_20190923.log
+[2020-01-08 11:15:38.080] mdfy_thn_clndr_SP_20190924.log
+[2020-01-08 11:15:38.080] mdfy_thn_clndr_SP_20190925.log
+[2020-01-08 11:15:38.080] mdfy_thn_clndr_SP_20190926.log
+[2020-01-08 11:15:38.080] mdfy_thn_clndr_SP_20190927.log
+[2020-01-08 11:15:38.096] mdfy_thn_clndr_SP_20190928.log
+[2020-01-08 11:15:38.096] mdfy_thn_clndr_SP_20190929.log
+[2020-01-08 11:15:38.096] mdfy_thn_clndr_SP_20190930.log
+[2020-01-08 11:15:38.111] mdfy_thn_clndr_SP_20191001.log
+[2020-01-08 11:15:38.111] mdfy_thn_clndr_SP_20191002.log
+[2020-01-08 11:15:38.111] mdfy_thn_clndr_SP_20191003.log
+[2020-01-08 11:15:38.111] mdfy_thn_clndr_SP_20191004.log
+[2020-01-08 11:15:38.111] mdfy_thn_clndr_SP_20191005.log
+[2020-01-08 11:15:38.127] mdfy_thn_clndr_SP_20191006.log
+[2020-01-08 11:15:38.127] mdfy_thn_clndr_SP_20191007.log
+[2020-01-08 11:15:38.127] mdfy_thn_clndr_SP_20191008.log
+[2020-01-08 11:15:38.142] mdfy_thn_clndr_SP_20191009.log
+[2020-01-08 11:15:38.142] mdfy_thn_clndr_SP_20191010.log
+[2020-01-08 11:15:38.142] mdfy_thn_clndr_SP_20191011.log
+[2020-01-08 11:15:38.142] mdfy_thn_clndr_SP_20191012.log
+[2020-01-08 11:15:38.158] mdfy_thn_clndr_SP_20191013.log
+[2020-01-08 11:15:38.158] mdfy_thn_clndr_SP_20191014.log
+[2020-01-08 11:15:38.158] mdfy_thn_clndr_SP_20191015.log
+[2020-01-08 11:15:38.158] mdfy_thn_clndr_SP_20191016.log
+[2020-01-08 11:15:38.158] mdfy_thn_clndr_SP_20191017.log
+[2020-01-08 11:15:38.174] mdfy_thn_clndr_SP_20191018.log
+[2020-01-08 11:15:38.174] mdfy_thn_clndr_SP_20191019.log
+[2020-01-08 11:15:38.174] mdfy_thn_clndr_SP_20191020.log
+[2020-01-08 11:15:38.174] mdfy_thn_clndr_SP_20191021.log
+[2020-01-08 11:15:38.189] mdfy_thn_clndr_SP_20191022.log
+[2020-01-08 11:15:38.189] mdfy_thn_clndr_SP_20191023.log
+[2020-01-08 11:15:38.189] mdfy_thn_clndr_SP_20191024.log
+[2020-01-08 11:15:38.189] mdfy_thn_clndr_SP_20191025.log
+[2020-01-08 11:15:38.205] mdfy_thn_clndr_SP_20191026.log
+[2020-01-08 11:15:38.205] mdfy_thn_clndr_SP_20191027.log
+[2020-01-08 11:15:38.205] mdfy_thn_clndr_SP_20191028.log
+[2020-01-08 11:15:38.205] mdfy_thn_clndr_SP_20191029.log
+[2020-01-08 11:15:38.221] mdfy_thn_clndr_SP_20191030.log
+[2020-01-08 11:15:38.221] mdfy_thn_clndr_SP_20191031.log
+[2020-01-08 11:15:38.221] mdfy_thn_clndr_SP_20191101.log
+[2020-01-08 11:15:38.221] mdfy_thn_clndr_SP_20191102.log
+[2020-01-08 11:15:38.236] mdfy_thn_clndr_SP_20191103.log
+[2020-01-08 11:15:38.236] mdfy_thn_clndr_SP_20191104.log
+[2020-01-08 11:15:38.236] mdfy_thn_clndr_SP_20191105.log
+[2020-01-08 11:15:38.252] mdfy_thn_clndr_SP_20191106.log
+[2020-01-08 11:15:38.252] mdfy_thn_clndr_SP_20191107.log
+[2020-01-08 11:15:38.252] mdfy_thn_clndr_SP_20191108.log
+[2020-01-08 11:15:38.267] mdfy_thn_clndr_SP_20191109.log
+[2020-01-08 11:15:38.267] mdfy_thn_clndr_SP_20191110.log
+[2020-01-08 11:15:38.267] mdfy_thn_clndr_SP_20191111.log
+[2020-01-08 11:15:38.267] mdfy_thn_clndr_SP_20191112.log
+[2020-01-08 11:15:38.283] mdfy_thn_clndr_SP_20191113.log
+[2020-01-08 11:15:38.299] mdfy_thn_clndr_SP_20191114.log
+[2020-01-08 11:15:38.299] mdfy_thn_clndr_SP_20191115.log
+[2020-01-08 11:15:38.299] mdfy_thn_clndr_SP_20191116.log
+[2020-01-08 11:15:38.314] mdfy_thn_clndr_SP_20191117.log
+[2020-01-08 11:15:38.314] mdfy_thn_clndr_SP_20191118.log
+[2020-01-08 11:15:38.314] mdfy_thn_clndr_SP_20191119.log
+[2020-01-08 11:15:38.330] mdfy_thn_clndr_SP_20191120.log
+[2020-01-08 11:15:38.330] mdfy_thn_clndr_SP_20191121.log
+[2020-01-08 11:15:38.330] mdfy_thn_clndr_SP_20191122.log
+[2020-01-08 11:15:38.330] mdfy_thn_clndr_SP_20191123.log
+[2020-01-08 11:15:38.345] mdfy_thn_clndr_SP_20191124.log
+[2020-01-08 11:15:38.345] mdfy_thn_clndr_SP_20191125.log
+[2020-01-08 11:15:38.345] mdfy_thn_clndr_SP_20191126.log
+[2020-01-08 11:15:38.345] mdfy_thn_clndr_SP_20191127.log
+[2020-01-08 11:15:38.361] mdfy_thn_clndr_SP_20191128.log
+[2020-01-08 11:15:38.361] mdfy_thn_clndr_SP_20191129.log
+[2020-01-08 11:15:38.361] mdfy_thn_clndr_SP_20191130.log
+[2020-01-08 11:15:38.377] mdfy_thn_clndr_SP_20191201.log
+[2020-01-08 11:15:38.377] mdfy_thn_clndr_SP_20191202.log
+[2020-01-08 11:15:38.377] mdfy_thn_clndr_SP_20191203.log
+[2020-01-08 11:15:38.377] mdfy_thn_clndr_SP_20191204.log
+[2020-01-08 11:15:38.393] mdfy_thn_clndr_SP_20191205.log
+[2020-01-08 11:15:38.393] mdfy_thn_clndr_SP_20191206.log
+[2020-01-08 11:15:38.393] mdfy_thn_clndr_SP_20191207.log
+[2020-01-08 11:15:38.393] mdfy_thn_clndr_SP_20191208.log
+[2020-01-08 11:15:38.408] mdfy_thn_clndr_SP_20191209.log
+[2020-01-08 11:15:38.408] mdfy_thn_clndr_SP_20191210.log
+[2020-01-08 11:15:38.408] mdfy_thn_clndr_SP_20191211.log
+[2020-01-08 11:15:38.408] mdfy_thn_clndr_SP_20191212.log
+[2020-01-08 11:15:38.424] mdfy_thn_clndr_SP_20191213.log
+[2020-01-08 11:15:38.424] mdfy_thn_clndr_SP_20191214.log
+[2020-01-08 11:15:38.424] mdfy_thn_clndr_SP_20191215.log
+[2020-01-08 11:15:38.439] mdfy_thn_clndr_SP_20191216.log
+[2020-01-08 11:15:38.439] mdfy_thn_clndr_SP_20191217.log
+[2020-01-08 11:15:38.439] mdfy_thn_clndr_SP_20191218.log
+[2020-01-08 11:15:38.439] mdfy_thn_clndr_SP_20191219.log
+[2020-01-08 11:15:38.455] mdfy_thn_clndr_SP_20191220.log
+[2020-01-08 11:15:38.455] mdfy_thn_clndr_SP_20191221.log
+[2020-01-08 11:15:38.455] mdfy_thn_clndr_SP_20191222.log
+[2020-01-08 11:15:38.455] mdfy_thn_clndr_SP_20191223.log
+[2020-01-08 11:15:38.455] mdfy_thn_clndr_SP_20191224.log
+[2020-01-08 11:15:38.471] mdfy_thn_clndr_SP_20191225.log
+[2020-01-08 11:15:38.471] mdfy_thn_clndr_SP_20191226.log
+[2020-01-08 11:15:38.471] mdfy_thn_clndr_SP_20191227.log
+[2020-01-08 11:15:38.471] mdfy_thn_clndr_SP_20191228.log
+[2020-01-08 11:15:38.471] mdfy_thn_clndr_SP_20191229.log
+[2020-01-08 11:15:38.486] mdfy_thn_clndr_SP_20191230.log
+[2020-01-08 11:15:38.486] mdfy_thn_clndr_SP_20191231.log
+[2020-01-08 11:15:38.486] [2020/01/08 11:15:38 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:15:41.626] [2020/01/08 11:15:41 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:15:41.766] [2020/01/08 11:15:41 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:15:41.923] [2020/01/08 11:15:41 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:15:42.017] [2020/01/08 11:15:41 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:15:42.141] [2020/01/08 11:15:41 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:15:42.282] [2020/01/08 11:15:42 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:15:49.890] [2020/01/08 11:15:49 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:15:50.050] [2020/01/08 11:15:49 jp1user01@ompsgbb001 log]$ ls -l
+[2020-01-08 11:15:51.580] 合計 1124
+[2020-01-08 11:15:51.580] -rw-rw-r-- 1 jp1user01 app  3293  8月  2 13:45 2019 mdfy_thn_clndr_SP_2017.tar.gz
+[2020-01-08 11:15:51.580] -rw-rw-r-- 1 jp1user01 app  6407  8月  2 13:48 2019 mdfy_thn_clndr_SP_2018.tar.gz
+[2020-01-08 11:15:51.580] -rw-rw-r-- 1 jp1user01 app 14607  1月  8 11:15 2020 mdfy_thn_clndr_SP_2019.tar.gz
+[2020-01-08 11:15:51.580] -rw-r--r-- 1 jp1user01 app  1033  1月  1 22:30 2019 mdfy_thn_clndr_SP_20190101.log
+[2020-01-08 11:15:51.580] -rw-r--r-- 1 jp1user01 app  1033  1月  2 22:30 2019 mdfy_thn_clndr_SP_20190102.log
+[2020-01-08 11:15:51.580] -rw-r--r-- 1 jp1user01 app  1032  1月  3 22:30 2019 mdfy_thn_clndr_SP_20190103.log
+[2020-01-08 11:15:51.580] -rw-r--r-- 1 jp1user01 app  1028  1月  4 22:30 2019 mdfy_thn_clndr_SP_20190104.log
+[2020-01-08 11:15:51.580] -rw-r--r-- 1 jp1user01 app  1028  1月  5 22:30 2019 mdfy_thn_clndr_SP_20190105.log
+[2020-01-08 11:15:51.580] -rw-r--r-- 1 jp1user01 app  1028  1月  6 22:30 2019 mdfy_thn_clndr_SP_20190106.log
+[2020-01-08 11:15:51.580] -rw-r--r-- 1 jp1user01 app  1028  1月  7 22:30 2019 mdfy_thn_clndr_SP_20190107.log
+[2020-01-08 11:15:51.580] -rw-r--r-- 1 jp1user01 app  1028  1月  8 22:30 2019 mdfy_thn_clndr_SP_20190108.log
+[2020-01-08 11:15:51.580] -rw-r--r-- 1 jp1user01 app  1028  1月  9 22:30 2019 mdfy_thn_clndr_SP_20190109.log
+[2020-01-08 11:15:51.590] -rw-r--r-- 1 jp1user01 app  1029  1月 10 22:30 2019 mdfy_thn_clndr_SP_20190110.log
+[2020-01-08 11:15:51.590] -rw-r--r-- 1 jp1user01 app  1029  1月 11 22:30 2019 mdfy_thn_clndr_SP_20190111.log
+[2020-01-08 11:15:51.590] -rw-r--r-- 1 jp1user01 app  1029  1月 12 22:30 2019 mdfy_thn_clndr_SP_20190112.log
+[2020-01-08 11:15:51.590] -rw-r--r-- 1 jp1user01 app  1029  1月 13 22:30 2019 mdfy_thn_clndr_SP_20190113.log
+[2020-01-08 11:15:51.590] -rw-r--r-- 1 jp1user01 app  1029  1月 14 22:30 2019 mdfy_thn_clndr_SP_20190114.log
+[2020-01-08 11:15:51.590] -rw-r--r-- 1 jp1user01 app  1029  1月 15 22:30 2019 mdfy_thn_clndr_SP_20190115.log
+[2020-01-08 11:15:51.590] -rw-r--r-- 1 jp1user01 app  1029  1月 16 22:30 2019 mdfy_thn_clndr_SP_20190116.log
+[2020-01-08 11:15:51.590] -rw-r--r-- 1 jp1user01 app  1029  1月 17 22:30 2019 mdfy_thn_clndr_SP_20190117.log
+[2020-01-08 11:15:51.590] -rw-r--r-- 1 jp1user01 app  1029  1月 18 22:30 2019 mdfy_thn_clndr_SP_20190118.log
+[2020-01-08 11:15:51.590] -rw-r--r-- 1 jp1user01 app  1029  1月 19 22:30 2019 mdfy_thn_clndr_SP_20190119.log
+[2020-01-08 11:15:51.590] -rw-r--r-- 1 jp1user01 app  1029  1月 20 22:30 2019 mdfy_thn_clndr_SP_20190120.log
+[2020-01-08 11:15:51.590] -rw-r--r-- 1 jp1user01 app  1029  1月 21 22:30 2019 mdfy_thn_clndr_SP_20190121.log
+[2020-01-08 11:15:51.610] -rw-r--r-- 1 jp1user01 app  1029  1月 22 22:30 2019 mdfy_thn_clndr_SP_20190122.log
+[2020-01-08 11:15:51.610] -rw-r--r-- 1 jp1user01 app  1029  1月 23 22:30 2019 mdfy_thn_clndr_SP_20190123.log
+[2020-01-08 11:15:51.610] -rw-r--r-- 1 jp1user01 app  1029  1月 24 22:30 2019 mdfy_thn_clndr_SP_20190124.log
+[2020-01-08 11:15:51.610] -rw-r--r-- 1 jp1user01 app   999  4月 26 22:30 2019 mdfy_thn_clndr_SP_20190426.log
+[2020-01-08 11:15:51.610] -rw-r--r-- 1 jp1user01 app   999  4月 27 22:30 2019 mdfy_thn_clndr_SP_20190427.log
+[2020-01-08 11:15:51.610] -rw-r--r-- 1 jp1user01 app   999  4月 28 22:30 2019 mdfy_thn_clndr_SP_20190428.log
+[2020-01-08 11:15:51.610] -rw-r--r-- 1 jp1user01 app   999  4月 29 22:30 2019 mdfy_thn_clndr_SP_20190429.log
+[2020-01-08 11:15:51.610] -rw-r--r-- 1 jp1user01 app   998  4月 30 22:30 2019 mdfy_thn_clndr_SP_20190430.log
+[2020-01-08 11:15:51.610] -rw-r--r-- 1 jp1user01 app   997  5月  1 22:30 2019 mdfy_thn_clndr_SP_20190501.log
+[2020-01-08 11:15:51.610] -rw-r--r-- 1 jp1user01 app   997  5月  2 22:30 2019 mdfy_thn_clndr_SP_20190502.log
+[2020-01-08 11:15:51.610] -rw-r--r-- 1 jp1user01 app   994  5月  3 22:30 2019 mdfy_thn_clndr_SP_20190503.log
+[2020-01-08 11:15:51.610] -rw-r--r-- 1 jp1user01 app   994  5月  4 22:30 2019 mdfy_thn_clndr_SP_20190504.log
+[2020-01-08 11:15:51.625] -rw-r--r-- 1 jp1user01 app   994  5月  5 22:30 2019 mdfy_thn_clndr_SP_20190505.log
+[2020-01-08 11:15:51.625] -rw-r--r-- 1 jp1user01 app   994  5月  6 22:30 2019 mdfy_thn_clndr_SP_20190506.log
+[2020-01-08 11:15:51.625] -rw-r--r-- 1 jp1user01 app   994  5月  7 22:30 2019 mdfy_thn_clndr_SP_20190507.log
+[2020-01-08 11:15:51.625] -rw-r--r-- 1 jp1user01 app   994  5月  8 22:30 2019 mdfy_thn_clndr_SP_20190508.log
+[2020-01-08 11:15:51.625] -rw-r--r-- 1 jp1user01 app   994  5月  9 22:30 2019 mdfy_thn_clndr_SP_20190509.log
+[2020-01-08 11:15:51.625] -rw-r--r-- 1 jp1user01 app   995  5月 10 22:30 2019 mdfy_thn_clndr_SP_20190510.log
+[2020-01-08 11:15:51.625] -rw-r--r-- 1 jp1user01 app   995  5月 11 22:30 2019 mdfy_thn_clndr_SP_20190511.log
+[2020-01-08 11:15:51.625] -rw-r--r-- 1 jp1user01 app   995  5月 12 22:30 2019 mdfy_thn_clndr_SP_20190512.log
+[2020-01-08 11:15:51.625] -rw-r--r-- 1 jp1user01 app   995  5月 13 22:30 2019 mdfy_thn_clndr_SP_20190513.log
+[2020-01-08 11:15:51.625] -rw-r--r-- 1 jp1user01 app   995  5月 14 22:30 2019 mdfy_thn_clndr_SP_20190514.log
+[2020-01-08 11:15:51.625] -rw-r--r-- 1 jp1user01 app   995  5月 15 22:30 2019 mdfy_thn_clndr_SP_20190515.log
+[2020-01-08 11:15:51.625] -rw-r--r-- 1 jp1user01 app   995  5月 16 22:30 2019 mdfy_thn_clndr_SP_20190516.log
+[2020-01-08 11:15:51.635] -rw-r--r-- 1 jp1user01 app   995  5月 17 22:30 2019 mdfy_thn_clndr_SP_20190517.log
+[2020-01-08 11:15:51.635] -rw-r--r-- 1 jp1user01 app   995  5月 18 22:30 2019 mdfy_thn_clndr_SP_20190518.log
+[2020-01-08 11:15:51.635] -rw-r--r-- 1 jp1user01 app   995  5月 19 22:30 2019 mdfy_thn_clndr_SP_20190519.log
+[2020-01-08 11:15:51.635] -rw-r--r-- 1 jp1user01 app   995  5月 20 22:30 2019 mdfy_thn_clndr_SP_20190520.log
+[2020-01-08 11:15:51.635] -rw-r--r-- 1 jp1user01 app   995  5月 21 22:30 2019 mdfy_thn_clndr_SP_20190521.log
+[2020-01-08 11:15:51.635] -rw-r--r-- 1 jp1user01 app   995  5月 22 22:30 2019 mdfy_thn_clndr_SP_20190522.log
+[2020-01-08 11:15:51.635] -rw-r--r-- 1 jp1user01 app   995  5月 23 22:30 2019 mdfy_thn_clndr_SP_20190523.log
+[2020-01-08 11:15:51.635] -rw-r--r-- 1 jp1user01 app   995  5月 24 22:30 2019 mdfy_thn_clndr_SP_20190524.log
+[2020-01-08 11:15:51.635] -rw-r--r-- 1 jp1user01 app   995  5月 25 22:30 2019 mdfy_thn_clndr_SP_20190525.log
+[2020-01-08 11:15:51.635] -rw-r--r-- 1 jp1user01 app   995  5月 26 22:30 2019 mdfy_thn_clndr_SP_20190526.log
+[2020-01-08 11:15:51.635] -rw-r--r-- 1 jp1user01 app   995  5月 27 22:30 2019 mdfy_thn_clndr_SP_20190527.log
+[2020-01-08 11:15:51.635] -rw-r--r-- 1 jp1user01 app   995  5月 28 22:30 2019 mdfy_thn_clndr_SP_20190528.log
+[2020-01-08 11:15:51.650] -rw-r--r-- 1 jp1user01 app   995  5月 29 22:30 2019 mdfy_thn_clndr_SP_20190529.log
+[2020-01-08 11:15:51.650] -rw-r--r-- 1 jp1user01 app   995  5月 30 22:30 2019 mdfy_thn_clndr_SP_20190530.log
+[2020-01-08 11:15:51.650] -rw-r--r-- 1 jp1user01 app   995  5月 31 22:30 2019 mdfy_thn_clndr_SP_20190531.log
+[2020-01-08 11:15:51.650] -rw-r--r-- 1 jp1user01 app   994  6月  1 22:30 2019 mdfy_thn_clndr_SP_20190601.log
+[2020-01-08 11:15:51.650] -rw-r--r-- 1 jp1user01 app   994  6月  2 22:30 2019 mdfy_thn_clndr_SP_20190602.log
+[2020-01-08 11:15:51.650] -rw-r--r-- 1 jp1user01 app   994  6月  3 22:30 2019 mdfy_thn_clndr_SP_20190603.log
+[2020-01-08 11:15:51.650] -rw-r--r-- 1 jp1user01 app   994  6月  4 22:30 2019 mdfy_thn_clndr_SP_20190604.log
+[2020-01-08 11:15:51.650] -rw-r--r-- 1 jp1user01 app   994  6月  5 22:30 2019 mdfy_thn_clndr_SP_20190605.log
+[2020-01-08 11:15:51.650] -rw-r--r-- 1 jp1user01 app   994  6月  6 22:30 2019 mdfy_thn_clndr_SP_20190606.log
+[2020-01-08 11:15:51.650] -rw-r--r-- 1 jp1user01 app   994  6月  7 22:30 2019 mdfy_thn_clndr_SP_20190607.log
+[2020-01-08 11:15:51.650] -rw-r--r-- 1 jp1user01 app   994  6月  8 22:30 2019 mdfy_thn_clndr_SP_20190608.log
+[2020-01-08 11:15:51.650] -rw-r--r-- 1 jp1user01 app   994  6月  9 22:30 2019 mdfy_thn_clndr_SP_20190609.log
+[2020-01-08 11:15:51.660] -rw-r--r-- 1 jp1user01 app   995  6月 10 22:30 2019 mdfy_thn_clndr_SP_20190610.log
+[2020-01-08 11:15:51.660] -rw-r--r-- 1 jp1user01 app   995  6月 11 22:30 2019 mdfy_thn_clndr_SP_20190611.log
+[2020-01-08 11:15:51.660] -rw-r--r-- 1 jp1user01 app   995  6月 12 22:30 2019 mdfy_thn_clndr_SP_20190612.log
+[2020-01-08 11:15:51.660] -rw-r--r-- 1 jp1user01 app   995  6月 13 22:30 2019 mdfy_thn_clndr_SP_20190613.log
+[2020-01-08 11:15:51.660] -rw-r--r-- 1 jp1user01 app   995  6月 14 22:30 2019 mdfy_thn_clndr_SP_20190614.log
+[2020-01-08 11:15:51.660] -rw-r--r-- 1 jp1user01 app   995  6月 15 22:30 2019 mdfy_thn_clndr_SP_20190615.log
+[2020-01-08 11:15:51.660] -rw-r--r-- 1 jp1user01 app   995  6月 16 22:30 2019 mdfy_thn_clndr_SP_20190616.log
+[2020-01-08 11:15:51.660] -rw-r--r-- 1 jp1user01 app   995  6月 17 22:30 2019 mdfy_thn_clndr_SP_20190617.log
+[2020-01-08 11:15:51.660] -rw-r--r-- 1 jp1user01 app   995  6月 18 22:30 2019 mdfy_thn_clndr_SP_20190618.log
+[2020-01-08 11:15:51.660] -rw-r--r-- 1 jp1user01 app   995  6月 19 22:30 2019 mdfy_thn_clndr_SP_20190619.log
+[2020-01-08 11:15:51.660] -rw-r--r-- 1 jp1user01 app   995  6月 20 22:30 2019 mdfy_thn_clndr_SP_20190620.log
+[2020-01-08 11:15:51.660] -rw-r--r-- 1 jp1user01 app   995  6月 21 22:30 2019 mdfy_thn_clndr_SP_20190621.log
+[2020-01-08 11:15:51.675] -rw-r--r-- 1 jp1user01 app   995  6月 22 22:30 2019 mdfy_thn_clndr_SP_20190622.log
+[2020-01-08 11:15:51.675] -rw-r--r-- 1 jp1user01 app   995  6月 23 22:30 2019 mdfy_thn_clndr_SP_20190623.log
+[2020-01-08 11:15:51.675] -rw-r--r-- 1 jp1user01 app   995  6月 24 22:30 2019 mdfy_thn_clndr_SP_20190624.log
+[2020-01-08 11:15:51.675] -rw-r--r-- 1 jp1user01 app   995  6月 25 22:30 2019 mdfy_thn_clndr_SP_20190625.log
+[2020-01-08 11:15:51.675] -rw-r--r-- 1 jp1user01 app   995  6月 26 22:30 2019 mdfy_thn_clndr_SP_20190626.log
+[2020-01-08 11:15:51.675] -rw-r--r-- 1 jp1user01 app   995  6月 27 22:30 2019 mdfy_thn_clndr_SP_20190627.log
+[2020-01-08 11:15:51.675] -rw-r--r-- 1 jp1user01 app   995  6月 28 22:30 2019 mdfy_thn_clndr_SP_20190628.log
+[2020-01-08 11:15:51.675] -rw-r--r-- 1 jp1user01 app   995  6月 29 22:30 2019 mdfy_thn_clndr_SP_20190629.log
+[2020-01-08 11:15:51.675] -rw-r--r-- 1 jp1user01 app   995  6月 30 22:30 2019 mdfy_thn_clndr_SP_20190630.log
+[2020-01-08 11:15:51.675] -rw-r--r-- 1 jp1user01 app   994  7月  1 22:30 2019 mdfy_thn_clndr_SP_20190701.log
+[2020-01-08 11:15:51.675] -rw-r--r-- 1 jp1user01 app   994  7月  2 22:30 2019 mdfy_thn_clndr_SP_20190702.log
+[2020-01-08 11:15:51.675] -rw-r--r-- 1 jp1user01 app   994  7月  3 22:30 2019 mdfy_thn_clndr_SP_20190703.log
+[2020-01-08 11:15:51.690] -rw-r--r-- 1 jp1user01 app   994  7月  4 22:30 2019 mdfy_thn_clndr_SP_20190704.log
+[2020-01-08 11:15:51.690] -rw-r--r-- 1 jp1user01 app   994  7月  5 22:30 2019 mdfy_thn_clndr_SP_20190705.log
+[2020-01-08 11:15:51.690] -rw-r--r-- 1 jp1user01 app   994  7月  6 22:30 2019 mdfy_thn_clndr_SP_20190706.log
+[2020-01-08 11:15:51.690] -rw-r--r-- 1 jp1user01 app   994  7月  7 22:30 2019 mdfy_thn_clndr_SP_20190707.log
+[2020-01-08 11:15:51.690] -rw-r--r-- 1 jp1user01 app   994  7月  8 22:30 2019 mdfy_thn_clndr_SP_20190708.log
+[2020-01-08 11:15:51.690] -rw-r--r-- 1 jp1user01 app   994  7月  9 22:30 2019 mdfy_thn_clndr_SP_20190709.log
+[2020-01-08 11:15:51.690] -rw-r--r-- 1 jp1user01 app   995  7月 10 22:30 2019 mdfy_thn_clndr_SP_20190710.log
+[2020-01-08 11:15:51.690] -rw-r--r-- 1 jp1user01 app   995  7月 11 22:30 2019 mdfy_thn_clndr_SP_20190711.log
+[2020-01-08 11:15:51.690] -rw-r--r-- 1 jp1user01 app   995  7月 12 22:30 2019 mdfy_thn_clndr_SP_20190712.log
+[2020-01-08 11:15:51.690] -rw-r--r-- 1 jp1user01 app   995  7月 13 22:30 2019 mdfy_thn_clndr_SP_20190713.log
+[2020-01-08 11:15:51.690] -rw-r--r-- 1 jp1user01 app   995  7月 14 22:30 2019 mdfy_thn_clndr_SP_20190714.log
+[2020-01-08 11:15:51.690] -rw-r--r-- 1 jp1user01 app   995  7月 15 22:30 2019 mdfy_thn_clndr_SP_20190715.log
+[2020-01-08 11:15:51.700] -rw-r--r-- 1 jp1user01 app   995  7月 16 22:30 2019 mdfy_thn_clndr_SP_20190716.log
+[2020-01-08 11:15:51.700] -rw-r--r-- 1 jp1user01 app   995  7月 17 22:30 2019 mdfy_thn_clndr_SP_20190717.log
+[2020-01-08 11:15:51.700] -rw-r--r-- 1 jp1user01 app   995  7月 18 22:30 2019 mdfy_thn_clndr_SP_20190718.log
+[2020-01-08 11:15:51.700] -rw-r--r-- 1 jp1user01 app   995  7月 19 22:30 2019 mdfy_thn_clndr_SP_20190719.log
+[2020-01-08 11:15:51.700] -rw-r--r-- 1 jp1user01 app   995  7月 20 22:30 2019 mdfy_thn_clndr_SP_20190720.log
+[2020-01-08 11:15:51.700] -rw-r--r-- 1 jp1user01 app   995  7月 21 22:30 2019 mdfy_thn_clndr_SP_20190721.log
+[2020-01-08 11:15:51.700] -rw-r--r-- 1 jp1user01 app   995  7月 22 22:30 2019 mdfy_thn_clndr_SP_20190722.log
+[2020-01-08 11:15:51.700] -rw-r--r-- 1 jp1user01 app   995  7月 23 22:30 2019 mdfy_thn_clndr_SP_20190723.log
+[2020-01-08 11:15:51.700] -rw-r--r-- 1 jp1user01 app   995  7月 24 22:30 2019 mdfy_thn_clndr_SP_20190724.log
+[2020-01-08 11:15:51.700] -rw-r--r-- 1 jp1user01 app   995  7月 25 22:30 2019 mdfy_thn_clndr_SP_20190725.log
+[2020-01-08 11:15:51.700] -rw-r--r-- 1 jp1user01 app   995  7月 26 22:30 2019 mdfy_thn_clndr_SP_20190726.log
+[2020-01-08 11:15:51.700] -rw-r--r-- 1 jp1user01 app   995  7月 27 22:30 2019 mdfy_thn_clndr_SP_20190727.log
+[2020-01-08 11:15:51.710] -rw-r--r-- 1 jp1user01 app   995  7月 28 22:30 2019 mdfy_thn_clndr_SP_20190728.log
+[2020-01-08 11:15:51.710] -rw-r--r-- 1 jp1user01 app   995  7月 29 22:30 2019 mdfy_thn_clndr_SP_20190729.log
+[2020-01-08 11:15:51.710] -rw-r--r-- 1 jp1user01 app   995  7月 30 22:30 2019 mdfy_thn_clndr_SP_20190730.log
+[2020-01-08 11:15:51.710] -rw-r--r-- 1 jp1user01 app   995  7月 31 22:30 2019 mdfy_thn_clndr_SP_20190731.log
+[2020-01-08 11:15:51.710] -rw-r--r-- 1 jp1user01 app   994  8月  1 22:30 2019 mdfy_thn_clndr_SP_20190801.log
+[2020-01-08 11:15:51.710] -rw-r--r-- 1 jp1user01 app  2002  8月  9 22:31 2019 mdfy_thn_clndr_SP_20190809.log
+[2020-01-08 11:15:51.710] -rw-r--r-- 1 jp1user01 app  2003  8月 10 22:30 2019 mdfy_thn_clndr_SP_20190810.log
+[2020-01-08 11:15:51.710] -rw-r--r-- 1 jp1user01 app  2002  8月 11 22:30 2019 mdfy_thn_clndr_SP_20190811.log
+[2020-01-08 11:15:51.710] -rw-r--r-- 1 jp1user01 app  2002  8月 12 22:30 2019 mdfy_thn_clndr_SP_20190812.log
+[2020-01-08 11:15:51.710] -rw-r--r-- 1 jp1user01 app  2002  8月 13 22:30 2019 mdfy_thn_clndr_SP_20190813.log
+[2020-01-08 11:15:51.710] -rw-r--r-- 1 jp1user01 app  2001  8月 14 22:30 2019 mdfy_thn_clndr_SP_20190814.log
+[2020-01-08 11:15:51.710] -rw-r--r-- 1 jp1user01 app  1999  8月 15 22:30 2019 mdfy_thn_clndr_SP_20190815.log
+[2020-01-08 11:15:51.725] -rw-r--r-- 1 jp1user01 app  1999  8月 16 22:30 2019 mdfy_thn_clndr_SP_20190816.log
+[2020-01-08 11:15:51.725] -rw-r--r-- 1 jp1user01 app  1999  8月 17 22:30 2019 mdfy_thn_clndr_SP_20190817.log
+[2020-01-08 11:15:51.725] -rw-r--r-- 1 jp1user01 app  1999  8月 18 22:30 2019 mdfy_thn_clndr_SP_20190818.log
+[2020-01-08 11:15:51.725] -rw-r--r-- 1 jp1user01 app  1999  8月 19 22:30 2019 mdfy_thn_clndr_SP_20190819.log
+[2020-01-08 11:15:51.725] -rw-r--r-- 1 jp1user01 app  1999  8月 20 22:30 2019 mdfy_thn_clndr_SP_20190820.log
+[2020-01-08 11:15:51.725] -rw-r--r-- 1 jp1user01 app  1999  8月 21 22:30 2019 mdfy_thn_clndr_SP_20190821.log
+[2020-01-08 11:15:51.725] -rw-r--r-- 1 jp1user01 app  1999  8月 22 22:31 2019 mdfy_thn_clndr_SP_20190822.log
+[2020-01-08 11:15:51.725] -rw-r--r-- 1 jp1user01 app  1999  8月 23 22:30 2019 mdfy_thn_clndr_SP_20190823.log
+[2020-01-08 11:15:51.725] -rw-r--r-- 1 jp1user01 app  1999  8月 24 22:30 2019 mdfy_thn_clndr_SP_20190824.log
+[2020-01-08 11:15:51.725] -rw-r--r-- 1 jp1user01 app  1999  8月 25 22:30 2019 mdfy_thn_clndr_SP_20190825.log
+[2020-01-08 11:15:51.725] -rw-r--r-- 1 jp1user01 app  1999  8月 26 22:30 2019 mdfy_thn_clndr_SP_20190826.log
+[2020-01-08 11:15:51.725] -rw-r--r-- 1 jp1user01 app  1999  8月 27 22:30 2019 mdfy_thn_clndr_SP_20190827.log
+[2020-01-08 11:15:51.740] -rw-r--r-- 1 jp1user01 app  1999  8月 28 22:30 2019 mdfy_thn_clndr_SP_20190828.log
+[2020-01-08 11:15:51.740] -rw-r--r-- 1 jp1user01 app  1999  8月 29 22:30 2019 mdfy_thn_clndr_SP_20190829.log
+[2020-01-08 11:15:51.740] -rw-r--r-- 1 jp1user01 app  1999  8月 30 22:30 2019 mdfy_thn_clndr_SP_20190830.log
+[2020-01-08 11:15:51.740] -rw-r--r-- 1 jp1user01 app  1999  8月 31 22:30 2019 mdfy_thn_clndr_SP_20190831.log
+[2020-01-08 11:15:51.740] -rw-r--r-- 1 jp1user01 app  1998  9月  1 22:30 2019 mdfy_thn_clndr_SP_20190901.log
+[2020-01-08 11:15:51.740] -rw-r--r-- 1 jp1user01 app  1998  9月  2 22:30 2019 mdfy_thn_clndr_SP_20190902.log
+[2020-01-08 11:15:51.740] -rw-r--r-- 1 jp1user01 app  1998  9月  3 22:30 2019 mdfy_thn_clndr_SP_20190903.log
+[2020-01-08 11:15:51.740] -rw-r--r-- 1 jp1user01 app  1998  9月  4 22:30 2019 mdfy_thn_clndr_SP_20190904.log
+[2020-01-08 11:15:51.740] -rw-r--r-- 1 jp1user01 app  1998  9月  5 22:30 2019 mdfy_thn_clndr_SP_20190905.log
+[2020-01-08 11:15:51.740] -rw-r--r-- 1 jp1user01 app  1998  9月  6 22:30 2019 mdfy_thn_clndr_SP_20190906.log
+[2020-01-08 11:15:51.740] -rw-r--r-- 1 jp1user01 app  1998  9月  7 22:30 2019 mdfy_thn_clndr_SP_20190907.log
+[2020-01-08 11:15:51.740] -rw-r--r-- 1 jp1user01 app  1998  9月  8 22:30 2019 mdfy_thn_clndr_SP_20190908.log
+[2020-01-08 11:15:51.740] -rw-r--r-- 1 jp1user01 app  1998  9月  9 22:30 2019 mdfy_thn_clndr_SP_20190909.log
+[2020-01-08 11:15:51.750] -rw-r--r-- 1 jp1user01 app  1999  9月 10 22:30 2019 mdfy_thn_clndr_SP_20190910.log
+[2020-01-08 11:15:51.750] -rw-r--r-- 1 jp1user01 app  1999  9月 11 22:30 2019 mdfy_thn_clndr_SP_20190911.log
+[2020-01-08 11:15:51.750] -rw-r--r-- 1 jp1user01 app  1999  9月 12 22:30 2019 mdfy_thn_clndr_SP_20190912.log
+[2020-01-08 11:15:51.750] -rw-r--r-- 1 jp1user01 app  1999  9月 13 22:30 2019 mdfy_thn_clndr_SP_20190913.log
+[2020-01-08 11:15:51.750] -rw-r--r-- 1 jp1user01 app  1999  9月 14 22:30 2019 mdfy_thn_clndr_SP_20190914.log
+[2020-01-08 11:15:51.750] -rw-r--r-- 1 jp1user01 app  1999  9月 15 22:30 2019 mdfy_thn_clndr_SP_20190915.log
+[2020-01-08 11:15:51.750] -rw-r--r-- 1 jp1user01 app  1999  9月 16 22:30 2019 mdfy_thn_clndr_SP_20190916.log
+[2020-01-08 11:15:51.750] -rw-r--r-- 1 jp1user01 app  1999  9月 17 22:30 2019 mdfy_thn_clndr_SP_20190917.log
+[2020-01-08 11:15:51.750] -rw-r--r-- 1 jp1user01 app  1999  9月 18 22:30 2019 mdfy_thn_clndr_SP_20190918.log
+[2020-01-08 11:15:51.750] -rw-r--r-- 1 jp1user01 app  1999  9月 19 22:30 2019 mdfy_thn_clndr_SP_20190919.log
+[2020-01-08 11:15:51.750] -rw-r--r-- 1 jp1user01 app  1999  9月 20 22:30 2019 mdfy_thn_clndr_SP_20190920.log
+[2020-01-08 11:15:51.750] -rw-r--r-- 1 jp1user01 app  1999  9月 21 22:30 2019 mdfy_thn_clndr_SP_20190921.log
+[2020-01-08 11:15:51.760] -rw-r--r-- 1 jp1user01 app  1999  9月 22 22:30 2019 mdfy_thn_clndr_SP_20190922.log
+[2020-01-08 11:15:51.760] -rw-r--r-- 1 jp1user01 app  1999  9月 23 22:32 2019 mdfy_thn_clndr_SP_20190923.log
+[2020-01-08 11:15:51.760] -rw-r--r-- 1 jp1user01 app  1999  9月 24 22:30 2019 mdfy_thn_clndr_SP_20190924.log
+[2020-01-08 11:15:51.760] -rw-r--r-- 1 jp1user01 app  1999  9月 25 22:30 2019 mdfy_thn_clndr_SP_20190925.log
+[2020-01-08 11:15:51.760] -rw-r--r-- 1 jp1user01 app  1999  9月 26 22:30 2019 mdfy_thn_clndr_SP_20190926.log
+[2020-01-08 11:15:51.760] -rw-r--r-- 1 jp1user01 app  1999  9月 27 22:30 2019 mdfy_thn_clndr_SP_20190927.log
+[2020-01-08 11:15:51.760] -rw-r--r-- 1 jp1user01 app  1999  9月 28 22:30 2019 mdfy_thn_clndr_SP_20190928.log
+[2020-01-08 11:15:51.760] -rw-r--r-- 1 jp1user01 app  1999  9月 29 22:30 2019 mdfy_thn_clndr_SP_20190929.log
+[2020-01-08 11:15:51.760] -rw-r--r-- 1 jp1user01 app  1999  9月 30 22:30 2019 mdfy_thn_clndr_SP_20190930.log
+[2020-01-08 11:15:51.760] -rw-r--r-- 1 jp1user01 app  1999 10月  1 22:30 2019 mdfy_thn_clndr_SP_20191001.log
+[2020-01-08 11:15:51.760] -rw-r--r-- 1 jp1user01 app  1999 10月  2 22:30 2019 mdfy_thn_clndr_SP_20191002.log
+[2020-01-08 11:15:51.760] -rw-r--r-- 1 jp1user01 app  1999 10月  3 22:30 2019 mdfy_thn_clndr_SP_20191003.log
+[2020-01-08 11:15:51.780] -rw-r--r-- 1 jp1user01 app  1999 10月  4 22:30 2019 mdfy_thn_clndr_SP_20191004.log
+[2020-01-08 11:15:51.780] -rw-r--r-- 1 jp1user01 app  1999 10月  5 22:30 2019 mdfy_thn_clndr_SP_20191005.log
+[2020-01-08 11:15:51.780] -rw-r--r-- 1 jp1user01 app  1999 10月  6 22:30 2019 mdfy_thn_clndr_SP_20191006.log
+[2020-01-08 11:15:51.780] -rw-r--r-- 1 jp1user01 app  1999 10月  7 22:30 2019 mdfy_thn_clndr_SP_20191007.log
+[2020-01-08 11:15:51.780] -rw-r--r-- 1 jp1user01 app  1999 10月  8 22:30 2019 mdfy_thn_clndr_SP_20191008.log
+[2020-01-08 11:15:51.780] -rw-r--r-- 1 jp1user01 app  1999 10月  9 22:30 2019 mdfy_thn_clndr_SP_20191009.log
+[2020-01-08 11:15:51.780] -rw-r--r-- 1 jp1user01 app  2000 10月 10 22:30 2019 mdfy_thn_clndr_SP_20191010.log
+[2020-01-08 11:15:51.780] -rw-r--r-- 1 jp1user01 app  2000 10月 11 22:30 2019 mdfy_thn_clndr_SP_20191011.log
+[2020-01-08 11:15:51.780] -rw-r--r-- 1 jp1user01 app  2000 10月 12 22:30 2019 mdfy_thn_clndr_SP_20191012.log
+[2020-01-08 11:15:51.780] -rw-r--r-- 1 jp1user01 app  2000 10月 13 22:30 2019 mdfy_thn_clndr_SP_20191013.log
+[2020-01-08 11:15:51.780] -rw-r--r-- 1 jp1user01 app  2000 10月 14 22:30 2019 mdfy_thn_clndr_SP_20191014.log
+[2020-01-08 11:15:51.780] -rw-r--r-- 1 jp1user01 app  2000 10月 15 22:30 2019 mdfy_thn_clndr_SP_20191015.log
+[2020-01-08 11:15:51.790] -rw-r--r-- 1 jp1user01 app  2000 10月 16 22:30 2019 mdfy_thn_clndr_SP_20191016.log
+[2020-01-08 11:15:51.790] -rw-r--r-- 1 jp1user01 app  2000 10月 17 22:30 2019 mdfy_thn_clndr_SP_20191017.log
+[2020-01-08 11:15:51.790] -rw-r--r-- 1 jp1user01 app  2000 10月 18 22:30 2019 mdfy_thn_clndr_SP_20191018.log
+[2020-01-08 11:15:51.790] -rw-r--r-- 1 jp1user01 app  2000 10月 19 22:30 2019 mdfy_thn_clndr_SP_20191019.log
+[2020-01-08 11:15:51.790] -rw-r--r-- 1 jp1user01 app  2000 10月 20 22:30 2019 mdfy_thn_clndr_SP_20191020.log
+[2020-01-08 11:15:51.790] -rw-r--r-- 1 jp1user01 app  2000 10月 21 22:30 2019 mdfy_thn_clndr_SP_20191021.log
+[2020-01-08 11:15:51.790] -rw-r--r-- 1 jp1user01 app  2000 10月 22 22:30 2019 mdfy_thn_clndr_SP_20191022.log
+[2020-01-08 11:15:51.790] -rw-r--r-- 1 jp1user01 app  2000 10月 23 22:30 2019 mdfy_thn_clndr_SP_20191023.log
+[2020-01-08 11:15:51.790] -rw-r--r-- 1 jp1user01 app  2000 10月 24 22:30 2019 mdfy_thn_clndr_SP_20191024.log
+[2020-01-08 11:15:51.790] -rw-r--r-- 1 jp1user01 app  2000 10月 25 22:30 2019 mdfy_thn_clndr_SP_20191025.log
+[2020-01-08 11:15:51.790] -rw-r--r-- 1 jp1user01 app  2000 10月 26 22:30 2019 mdfy_thn_clndr_SP_20191026.log
+[2020-01-08 11:15:51.790] -rw-r--r-- 1 jp1user01 app  2000 10月 27 22:30 2019 mdfy_thn_clndr_SP_20191027.log
+[2020-01-08 11:15:51.800] -rw-r--r-- 1 jp1user01 app  2000 10月 28 22:30 2019 mdfy_thn_clndr_SP_20191028.log
+[2020-01-08 11:15:51.800] -rw-r--r-- 1 jp1user01 app  2000 10月 29 22:30 2019 mdfy_thn_clndr_SP_20191029.log
+[2020-01-08 11:15:51.800] -rw-r--r-- 1 jp1user01 app  2000 10月 30 22:30 2019 mdfy_thn_clndr_SP_20191030.log
+[2020-01-08 11:15:51.800] -rw-r--r-- 1 jp1user01 app  2000 10月 31 22:30 2019 mdfy_thn_clndr_SP_20191031.log
+[2020-01-08 11:15:51.800] -rw-r--r-- 1 jp1user01 app  1999 11月  1 22:30 2019 mdfy_thn_clndr_SP_20191101.log
+[2020-01-08 11:15:51.800] -rw-r--r-- 1 jp1user01 app  1999 11月  2 22:30 2019 mdfy_thn_clndr_SP_20191102.log
+[2020-01-08 11:15:51.800] -rw-r--r-- 1 jp1user01 app  1999 11月  3 22:30 2019 mdfy_thn_clndr_SP_20191103.log
+[2020-01-08 11:15:51.800] -rw-r--r-- 1 jp1user01 app  1999 11月  4 22:30 2019 mdfy_thn_clndr_SP_20191104.log
+[2020-01-08 11:15:51.800] -rw-r--r-- 1 jp1user01 app  1999 11月  5 22:30 2019 mdfy_thn_clndr_SP_20191105.log
+[2020-01-08 11:15:51.800] -rw-r--r-- 1 jp1user01 app  1999 11月  6 22:30 2019 mdfy_thn_clndr_SP_20191106.log
+[2020-01-08 11:15:51.800] -rw-r--r-- 1 jp1user01 app  1999 11月  7 22:30 2019 mdfy_thn_clndr_SP_20191107.log
+[2020-01-08 11:15:51.800] -rw-r--r-- 1 jp1user01 app  1999 11月  8 22:30 2019 mdfy_thn_clndr_SP_20191108.log
+[2020-01-08 11:15:51.820] -rw-r--r-- 1 jp1user01 app  1999 11月  9 22:30 2019 mdfy_thn_clndr_SP_20191109.log
+[2020-01-08 11:15:51.820] -rw-r--r-- 1 jp1user01 app  2000 11月 10 22:30 2019 mdfy_thn_clndr_SP_20191110.log
+[2020-01-08 11:15:51.820] -rw-r--r-- 1 jp1user01 app  2000 11月 11 22:30 2019 mdfy_thn_clndr_SP_20191111.log
+[2020-01-08 11:15:51.820] -rw-r--r-- 1 jp1user01 app  2000 11月 12 22:30 2019 mdfy_thn_clndr_SP_20191112.log
+[2020-01-08 11:15:51.820] -rw-r--r-- 1 jp1user01 app  2000 11月 13 22:30 2019 mdfy_thn_clndr_SP_20191113.log
+[2020-01-08 11:15:51.820] -rw-r--r-- 1 jp1user01 app  2000 11月 14 22:30 2019 mdfy_thn_clndr_SP_20191114.log
+[2020-01-08 11:15:51.820] -rw-r--r-- 1 jp1user01 app  2000 11月 15 22:30 2019 mdfy_thn_clndr_SP_20191115.log
+[2020-01-08 11:15:51.820] -rw-r--r-- 1 jp1user01 app  2000 11月 16 22:30 2019 mdfy_thn_clndr_SP_20191116.log
+[2020-01-08 11:15:51.820] -rw-r--r-- 1 jp1user01 app  2000 11月 17 22:30 2019 mdfy_thn_clndr_SP_20191117.log
+[2020-01-08 11:15:51.820] -rw-r--r-- 1 jp1user01 app  2000 11月 18 22:30 2019 mdfy_thn_clndr_SP_20191118.log
+[2020-01-08 11:15:51.820] -rw-r--r-- 1 jp1user01 app  2000 11月 19 22:30 2019 mdfy_thn_clndr_SP_20191119.log
+[2020-01-08 11:15:51.820] -rw-r--r-- 1 jp1user01 app  2000 11月 20 22:30 2019 mdfy_thn_clndr_SP_20191120.log
+[2020-01-08 11:15:51.830] -rw-r--r-- 1 jp1user01 app  2000 11月 21 22:30 2019 mdfy_thn_clndr_SP_20191121.log
+[2020-01-08 11:15:51.830] -rw-r--r-- 1 jp1user01 app  2000 11月 22 22:30 2019 mdfy_thn_clndr_SP_20191122.log
+[2020-01-08 11:15:51.830] -rw-r--r-- 1 jp1user01 app  2000 11月 23 22:30 2019 mdfy_thn_clndr_SP_20191123.log
+[2020-01-08 11:15:51.830] -rw-r--r-- 1 jp1user01 app  2000 11月 24 22:30 2019 mdfy_thn_clndr_SP_20191124.log
+[2020-01-08 11:15:51.830] -rw-r--r-- 1 jp1user01 app  2000 11月 25 22:30 2019 mdfy_thn_clndr_SP_20191125.log
+[2020-01-08 11:15:51.830] -rw-r--r-- 1 jp1user01 app  2000 11月 26 22:30 2019 mdfy_thn_clndr_SP_20191126.log
+[2020-01-08 11:15:51.830] -rw-r--r-- 1 jp1user01 app  2000 11月 27 22:30 2019 mdfy_thn_clndr_SP_20191127.log
+[2020-01-08 11:15:51.830] -rw-r--r-- 1 jp1user01 app  2000 11月 28 22:30 2019 mdfy_thn_clndr_SP_20191128.log
+[2020-01-08 11:15:51.830] -rw-r--r-- 1 jp1user01 app  2000 11月 29 22:30 2019 mdfy_thn_clndr_SP_20191129.log
+[2020-01-08 11:15:51.830] -rw-r--r-- 1 jp1user01 app  2000 11月 30 22:30 2019 mdfy_thn_clndr_SP_20191130.log
+[2020-01-08 11:15:51.830] -rw-r--r-- 1 jp1user01 app  1999 12月  1 22:30 2019 mdfy_thn_clndr_SP_20191201.log
+[2020-01-08 11:15:51.830] -rw-r--r-- 1 jp1user01 app  1999 12月  2 22:30 2019 mdfy_thn_clndr_SP_20191202.log
+[2020-01-08 11:15:51.845] -rw-r--r-- 1 jp1user01 app  1999 12月  3 22:30 2019 mdfy_thn_clndr_SP_20191203.log
+[2020-01-08 11:15:51.845] -rw-r--r-- 1 jp1user01 app  1999 12月  4 22:30 2019 mdfy_thn_clndr_SP_20191204.log
+[2020-01-08 11:15:51.845] -rw-r--r-- 1 jp1user01 app  1999 12月  5 22:30 2019 mdfy_thn_clndr_SP_20191205.log
+[2020-01-08 11:15:51.845] -rw-r--r-- 1 jp1user01 app  1999 12月  6 22:30 2019 mdfy_thn_clndr_SP_20191206.log
+[2020-01-08 11:15:51.845] -rw-r--r-- 1 jp1user01 app  1999 12月  7 22:30 2019 mdfy_thn_clndr_SP_20191207.log
+[2020-01-08 11:15:51.845] -rw-r--r-- 1 jp1user01 app  1999 12月  8 22:30 2019 mdfy_thn_clndr_SP_20191208.log
+[2020-01-08 11:15:51.845] -rw-r--r-- 1 jp1user01 app  1999 12月  9 22:30 2019 mdfy_thn_clndr_SP_20191209.log
+[2020-01-08 11:15:51.845] -rw-r--r-- 1 jp1user01 app  2000 12月 10 22:30 2019 mdfy_thn_clndr_SP_20191210.log
+[2020-01-08 11:15:51.845] -rw-r--r-- 1 jp1user01 app  2000 12月 11 22:30 2019 mdfy_thn_clndr_SP_20191211.log
+[2020-01-08 11:15:51.845] -rw-r--r-- 1 jp1user01 app  2000 12月 12 22:30 2019 mdfy_thn_clndr_SP_20191212.log
+[2020-01-08 11:15:51.845] -rw-r--r-- 1 jp1user01 app  2000 12月 13 22:30 2019 mdfy_thn_clndr_SP_20191213.log
+[2020-01-08 11:15:51.845] -rw-r--r-- 1 jp1user01 app  2000 12月 14 22:30 2019 mdfy_thn_clndr_SP_20191214.log
+[2020-01-08 11:15:51.850] -rw-r--r-- 1 jp1user01 app  2000 12月 15 22:30 2019 mdfy_thn_clndr_SP_20191215.log
+[2020-01-08 11:15:51.850] -rw-r--r-- 1 jp1user01 app  2000 12月 16 22:30 2019 mdfy_thn_clndr_SP_20191216.log
+[2020-01-08 11:15:51.850] -rw-r--r-- 1 jp1user01 app  2000 12月 17 22:30 2019 mdfy_thn_clndr_SP_20191217.log
+[2020-01-08 11:15:51.850] -rw-r--r-- 1 jp1user01 app  2000 12月 18 22:30 2019 mdfy_thn_clndr_SP_20191218.log
+[2020-01-08 11:15:51.850] -rw-r--r-- 1 jp1user01 app  1030 12月 19 22:30 2019 mdfy_thn_clndr_SP_20191219.log
+[2020-01-08 11:15:51.850] -rw-r--r-- 1 jp1user01 app  1030 12月 20 22:30 2019 mdfy_thn_clndr_SP_20191220.log
+[2020-01-08 11:15:51.850] -rw-r--r-- 1 jp1user01 app  1030 12月 21 22:30 2019 mdfy_thn_clndr_SP_20191221.log
+[2020-01-08 11:15:51.850] -rw-r--r-- 1 jp1user01 app  1035 12月 22 22:30 2019 mdfy_thn_clndr_SP_20191222.log
+[2020-01-08 11:15:51.850] -rw-r--r-- 1 jp1user01 app  1035 12月 23 22:30 2019 mdfy_thn_clndr_SP_20191223.log
+[2020-01-08 11:15:51.850] -rw-r--r-- 1 jp1user01 app  1037 12月 24 22:30 2019 mdfy_thn_clndr_SP_20191224.log
+[2020-01-08 11:15:51.850] -rw-r--r-- 1 jp1user01 app  1037 12月 25 22:30 2019 mdfy_thn_clndr_SP_20191225.log
+[2020-01-08 11:15:51.850] -rw-r--r-- 1 jp1user01 app  1037 12月 26 22:30 2019 mdfy_thn_clndr_SP_20191226.log
+[2020-01-08 11:15:51.870] -rw-r--r-- 1 jp1user01 app  1037 12月 27 22:30 2019 mdfy_thn_clndr_SP_20191227.log
+[2020-01-08 11:15:51.870] -rw-r--r-- 1 jp1user01 app  1037 12月 28 22:30 2019 mdfy_thn_clndr_SP_20191228.log
+[2020-01-08 11:15:51.870] -rw-r--r-- 1 jp1user01 app  1037 12月 29 22:30 2019 mdfy_thn_clndr_SP_20191229.log
+[2020-01-08 11:15:51.870] -rw-r--r-- 1 jp1user01 app  1037 12月 30 22:30 2019 mdfy_thn_clndr_SP_20191230.log
+[2020-01-08 11:15:51.870] -rw-r--r-- 1 jp1user01 app  1035 12月 31 22:30 2019 mdfy_thn_clndr_SP_20191231.log
+[2020-01-08 11:15:51.870] -rw-r--r-- 1 jp1user01 app  1033  1月  1 22:30 2020 mdfy_thn_clndr_SP_20200101.log
+[2020-01-08 11:15:51.870] -rw-r--r-- 1 jp1user01 app  1033  1月  2 22:30 2020 mdfy_thn_clndr_SP_20200102.log
+[2020-01-08 11:15:51.870] -rw-r--r-- 1 jp1user01 app  1028  1月  3 22:30 2020 mdfy_thn_clndr_SP_20200103.log
+[2020-01-08 11:15:51.870] -rw-r--r-- 1 jp1user01 app  1028  1月  4 22:30 2020 mdfy_thn_clndr_SP_20200104.log
+[2020-01-08 11:15:51.870] -rw-r--r-- 1 jp1user01 app  1028  1月  5 22:30 2020 mdfy_thn_clndr_SP_20200105.log
+[2020-01-08 11:15:51.870] -rw-r--r-- 1 jp1user01 app  1028  1月  6 22:30 2020 mdfy_thn_clndr_SP_20200106.log
+[2020-01-08 11:15:51.870] -rw-r--r-- 1 jp1user01 app  1028  1月  7 22:30 2020 mdfy_thn_clndr_SP_20200107.log
+[2020-01-08 11:15:51.880] [2020/01/08 11:15:51 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:15:58.896] [2020/01/08 11:15:58 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:15:59.053] [2020/01/08 11:15:58 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:15:59.193] [2020/01/08 11:15:59 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:15:59.334] [2020/01/08 11:15:59 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:15:59.474] [2020/01/08 11:15:59 jp1user01@ompsgbb001 log]$ tar tzvf mdfy_thn_clndr_SP_2019.tar.gz
+[2020-01-08 11:16:08.706] -rw-r--r-- jp1user01/app  1033 2019-01-01 22:30 mdfy_thn_clndr_SP_20190101.log
+[2020-01-08 11:16:08.706] -rw-r--r-- jp1user01/app  1033 2019-01-02 22:30 mdfy_thn_clndr_SP_20190102.log
+[2020-01-08 11:16:08.706] -rw-r--r-- jp1user01/app  1032 2019-01-03 22:30 mdfy_thn_clndr_SP_20190103.log
+[2020-01-08 11:16:08.706] -rw-r--r-- jp1user01/app  1028 2019-01-04 22:30 mdfy_thn_clndr_SP_20190104.log
+[2020-01-08 11:16:08.706] -rw-r--r-- jp1user01/app  1028 2019-01-05 22:30 mdfy_thn_clndr_SP_20190105.log
+[2020-01-08 11:16:08.706] -rw-r--r-- jp1user01/app  1028 2019-01-06 22:30 mdfy_thn_clndr_SP_20190106.log
+[2020-01-08 11:16:08.706] -rw-r--r-- jp1user01/app  1028 2019-01-07 22:30 mdfy_thn_clndr_SP_20190107.log
+[2020-01-08 11:16:08.706] -rw-r--r-- jp1user01/app  1028 2019-01-08 22:30 mdfy_thn_clndr_SP_20190108.log
+[2020-01-08 11:16:08.706] -rw-r--r-- jp1user01/app  1028 2019-01-09 22:30 mdfy_thn_clndr_SP_20190109.log
+[2020-01-08 11:16:08.706] -rw-r--r-- jp1user01/app  1029 2019-01-10 22:30 mdfy_thn_clndr_SP_20190110.log
+[2020-01-08 11:16:08.706] -rw-r--r-- jp1user01/app  1029 2019-01-11 22:30 mdfy_thn_clndr_SP_20190111.log
+[2020-01-08 11:16:08.706] -rw-r--r-- jp1user01/app  1029 2019-01-12 22:30 mdfy_thn_clndr_SP_20190112.log
+[2020-01-08 11:16:08.706] -rw-r--r-- jp1user01/app  1029 2019-01-13 22:30 mdfy_thn_clndr_SP_20190113.log
+[2020-01-08 11:16:08.722] -rw-r--r-- jp1user01/app  1029 2019-01-14 22:30 mdfy_thn_clndr_SP_20190114.log
+[2020-01-08 11:16:08.722] -rw-r--r-- jp1user01/app  1029 2019-01-15 22:30 mdfy_thn_clndr_SP_20190115.log
+[2020-01-08 11:16:08.722] -rw-r--r-- jp1user01/app  1029 2019-01-16 22:30 mdfy_thn_clndr_SP_20190116.log
+[2020-01-08 11:16:08.722] -rw-r--r-- jp1user01/app  1029 2019-01-17 22:30 mdfy_thn_clndr_SP_20190117.log
+[2020-01-08 11:16:08.722] -rw-r--r-- jp1user01/app  1029 2019-01-18 22:30 mdfy_thn_clndr_SP_20190118.log
+[2020-01-08 11:16:08.722] -rw-r--r-- jp1user01/app  1029 2019-01-19 22:30 mdfy_thn_clndr_SP_20190119.log
+[2020-01-08 11:16:08.722] -rw-r--r-- jp1user01/app  1029 2019-01-20 22:30 mdfy_thn_clndr_SP_20190120.log
+[2020-01-08 11:16:08.722] -rw-r--r-- jp1user01/app  1029 2019-01-21 22:30 mdfy_thn_clndr_SP_20190121.log
+[2020-01-08 11:16:08.722] -rw-r--r-- jp1user01/app  1029 2019-01-22 22:30 mdfy_thn_clndr_SP_20190122.log
+[2020-01-08 11:16:08.722] -rw-r--r-- jp1user01/app  1029 2019-01-23 22:30 mdfy_thn_clndr_SP_20190123.log
+[2020-01-08 11:16:08.722] -rw-r--r-- jp1user01/app  1029 2019-01-24 22:30 mdfy_thn_clndr_SP_20190124.log
+[2020-01-08 11:16:08.722] -rw-r--r-- jp1user01/app   999 2019-04-26 22:30 mdfy_thn_clndr_SP_20190426.log
+[2020-01-08 11:16:08.722] -rw-r--r-- jp1user01/app   999 2019-04-27 22:30 mdfy_thn_clndr_SP_20190427.log
+[2020-01-08 11:16:08.738] -rw-r--r-- jp1user01/app   999 2019-04-28 22:30 mdfy_thn_clndr_SP_20190428.log
+[2020-01-08 11:16:08.738] -rw-r--r-- jp1user01/app   999 2019-04-29 22:30 mdfy_thn_clndr_SP_20190429.log
+[2020-01-08 11:16:08.738] -rw-r--r-- jp1user01/app   998 2019-04-30 22:30 mdfy_thn_clndr_SP_20190430.log
+[2020-01-08 11:16:08.738] -rw-r--r-- jp1user01/app   997 2019-05-01 22:30 mdfy_thn_clndr_SP_20190501.log
+[2020-01-08 11:16:08.738] -rw-r--r-- jp1user01/app   997 2019-05-02 22:30 mdfy_thn_clndr_SP_20190502.log
+[2020-01-08 11:16:08.738] -rw-r--r-- jp1user01/app   994 2019-05-03 22:30 mdfy_thn_clndr_SP_20190503.log
+[2020-01-08 11:16:08.738] -rw-r--r-- jp1user01/app   994 2019-05-04 22:30 mdfy_thn_clndr_SP_20190504.log
+[2020-01-08 11:16:08.738] -rw-r--r-- jp1user01/app   994 2019-05-05 22:30 mdfy_thn_clndr_SP_20190505.log
+[2020-01-08 11:16:08.738] -rw-r--r-- jp1user01/app   994 2019-05-06 22:30 mdfy_thn_clndr_SP_20190506.log
+[2020-01-08 11:16:08.738] -rw-r--r-- jp1user01/app   994 2019-05-07 22:30 mdfy_thn_clndr_SP_20190507.log
+[2020-01-08 11:16:08.738] -rw-r--r-- jp1user01/app   994 2019-05-08 22:30 mdfy_thn_clndr_SP_20190508.log
+[2020-01-08 11:16:08.738] -rw-r--r-- jp1user01/app   994 2019-05-09 22:30 mdfy_thn_clndr_SP_20190509.log
+[2020-01-08 11:16:08.738] -rw-r--r-- jp1user01/app   995 2019-05-10 22:30 mdfy_thn_clndr_SP_20190510.log
+[2020-01-08 11:16:08.753] -rw-r--r-- jp1user01/app   995 2019-05-11 22:30 mdfy_thn_clndr_SP_20190511.log
+[2020-01-08 11:16:08.753] -rw-r--r-- jp1user01/app   995 2019-05-12 22:30 mdfy_thn_clndr_SP_20190512.log
+[2020-01-08 11:16:08.753] -rw-r--r-- jp1user01/app   995 2019-05-13 22:30 mdfy_thn_clndr_SP_20190513.log
+[2020-01-08 11:16:08.753] -rw-r--r-- jp1user01/app   995 2019-05-14 22:30 mdfy_thn_clndr_SP_20190514.log
+[2020-01-08 11:16:08.753] -rw-r--r-- jp1user01/app   995 2019-05-15 22:30 mdfy_thn_clndr_SP_20190515.log
+[2020-01-08 11:16:08.753] -rw-r--r-- jp1user01/app   995 2019-05-16 22:30 mdfy_thn_clndr_SP_20190516.log
+[2020-01-08 11:16:08.753] -rw-r--r-- jp1user01/app   995 2019-05-17 22:30 mdfy_thn_clndr_SP_20190517.log
+[2020-01-08 11:16:08.753] -rw-r--r-- jp1user01/app   995 2019-05-18 22:30 mdfy_thn_clndr_SP_20190518.log
+[2020-01-08 11:16:08.753] -rw-r--r-- jp1user01/app   995 2019-05-19 22:30 mdfy_thn_clndr_SP_20190519.log
+[2020-01-08 11:16:08.753] -rw-r--r-- jp1user01/app   995 2019-05-20 22:30 mdfy_thn_clndr_SP_20190520.log
+[2020-01-08 11:16:08.753] -rw-r--r-- jp1user01/app   995 2019-05-21 22:30 mdfy_thn_clndr_SP_20190521.log
+[2020-01-08 11:16:08.753] -rw-r--r-- jp1user01/app   995 2019-05-22 22:30 mdfy_thn_clndr_SP_20190522.log
+[2020-01-08 11:16:08.769] -rw-r--r-- jp1user01/app   995 2019-05-23 22:30 mdfy_thn_clndr_SP_20190523.log
+[2020-01-08 11:16:08.769] -rw-r--r-- jp1user01/app   995 2019-05-24 22:30 mdfy_thn_clndr_SP_20190524.log
+[2020-01-08 11:16:08.769] -rw-r--r-- jp1user01/app   995 2019-05-25 22:30 mdfy_thn_clndr_SP_20190525.log
+[2020-01-08 11:16:08.769] -rw-r--r-- jp1user01/app   995 2019-05-26 22:30 mdfy_thn_clndr_SP_20190526.log
+[2020-01-08 11:16:08.769] -rw-r--r-- jp1user01/app   995 2019-05-27 22:30 mdfy_thn_clndr_SP_20190527.log
+[2020-01-08 11:16:08.769] -rw-r--r-- jp1user01/app   995 2019-05-28 22:30 mdfy_thn_clndr_SP_20190528.log
+[2020-01-08 11:16:08.769] -rw-r--r-- jp1user01/app   995 2019-05-29 22:30 mdfy_thn_clndr_SP_20190529.log
+[2020-01-08 11:16:08.769] -rw-r--r-- jp1user01/app   995 2019-05-30 22:30 mdfy_thn_clndr_SP_20190530.log
+[2020-01-08 11:16:08.769] -rw-r--r-- jp1user01/app   995 2019-05-31 22:30 mdfy_thn_clndr_SP_20190531.log
+[2020-01-08 11:16:08.769] -rw-r--r-- jp1user01/app   994 2019-06-01 22:30 mdfy_thn_clndr_SP_20190601.log
+[2020-01-08 11:16:08.769] -rw-r--r-- jp1user01/app   994 2019-06-02 22:30 mdfy_thn_clndr_SP_20190602.log
+[2020-01-08 11:16:08.769] -rw-r--r-- jp1user01/app   994 2019-06-03 22:30 mdfy_thn_clndr_SP_20190603.log
+[2020-01-08 11:16:08.769] -rw-r--r-- jp1user01/app   994 2019-06-04 22:30 mdfy_thn_clndr_SP_20190604.log
+[2020-01-08 11:16:08.784] -rw-r--r-- jp1user01/app   994 2019-06-05 22:30 mdfy_thn_clndr_SP_20190605.log
+[2020-01-08 11:16:08.784] -rw-r--r-- jp1user01/app   994 2019-06-06 22:30 mdfy_thn_clndr_SP_20190606.log
+[2020-01-08 11:16:08.784] -rw-r--r-- jp1user01/app   994 2019-06-07 22:30 mdfy_thn_clndr_SP_20190607.log
+[2020-01-08 11:16:08.784] -rw-r--r-- jp1user01/app   994 2019-06-08 22:30 mdfy_thn_clndr_SP_20190608.log
+[2020-01-08 11:16:08.784] -rw-r--r-- jp1user01/app   994 2019-06-09 22:30 mdfy_thn_clndr_SP_20190609.log
+[2020-01-08 11:16:08.784] -rw-r--r-- jp1user01/app   995 2019-06-10 22:30 mdfy_thn_clndr_SP_20190610.log
+[2020-01-08 11:16:08.784] -rw-r--r-- jp1user01/app   995 2019-06-11 22:30 mdfy_thn_clndr_SP_20190611.log
+[2020-01-08 11:16:08.784] -rw-r--r-- jp1user01/app   995 2019-06-12 22:30 mdfy_thn_clndr_SP_20190612.log
+[2020-01-08 11:16:08.784] -rw-r--r-- jp1user01/app   995 2019-06-13 22:30 mdfy_thn_clndr_SP_20190613.log
+[2020-01-08 11:16:08.784] -rw-r--r-- jp1user01/app   995 2019-06-14 22:30 mdfy_thn_clndr_SP_20190614.log
+[2020-01-08 11:16:08.784] -rw-r--r-- jp1user01/app   995 2019-06-15 22:30 mdfy_thn_clndr_SP_20190615.log
+[2020-01-08 11:16:08.784] -rw-r--r-- jp1user01/app   995 2019-06-16 22:30 mdfy_thn_clndr_SP_20190616.log
+[2020-01-08 11:16:08.784] -rw-r--r-- jp1user01/app   995 2019-06-17 22:30 mdfy_thn_clndr_SP_20190617.log
+[2020-01-08 11:16:08.800] -rw-r--r-- jp1user01/app   995 2019-06-18 22:30 mdfy_thn_clndr_SP_20190618.log
+[2020-01-08 11:16:08.800] -rw-r--r-- jp1user01/app   995 2019-06-19 22:30 mdfy_thn_clndr_SP_20190619.log
+[2020-01-08 11:16:08.800] -rw-r--r-- jp1user01/app   995 2019-06-20 22:30 mdfy_thn_clndr_SP_20190620.log
+[2020-01-08 11:16:08.800] -rw-r--r-- jp1user01/app   995 2019-06-21 22:30 mdfy_thn_clndr_SP_20190621.log
+[2020-01-08 11:16:08.800] -rw-r--r-- jp1user01/app   995 2019-06-22 22:30 mdfy_thn_clndr_SP_20190622.log
+[2020-01-08 11:16:08.800] -rw-r--r-- jp1user01/app   995 2019-06-23 22:30 mdfy_thn_clndr_SP_20190623.log
+[2020-01-08 11:16:08.800] -rw-r--r-- jp1user01/app   995 2019-06-24 22:30 mdfy_thn_clndr_SP_20190624.log
+[2020-01-08 11:16:08.800] -rw-r--r-- jp1user01/app   995 2019-06-25 22:30 mdfy_thn_clndr_SP_20190625.log
+[2020-01-08 11:16:08.800] -rw-r--r-- jp1user01/app   995 2019-06-26 22:30 mdfy_thn_clndr_SP_20190626.log
+[2020-01-08 11:16:08.800] -rw-r--r-- jp1user01/app   995 2019-06-27 22:30 mdfy_thn_clndr_SP_20190627.log
+[2020-01-08 11:16:08.800] -rw-r--r-- jp1user01/app   995 2019-06-28 22:30 mdfy_thn_clndr_SP_20190628.log
+[2020-01-08 11:16:08.800] -rw-r--r-- jp1user01/app   995 2019-06-29 22:30 mdfy_thn_clndr_SP_20190629.log
+[2020-01-08 11:16:08.815] -rw-r--r-- jp1user01/app   995 2019-06-30 22:30 mdfy_thn_clndr_SP_20190630.log
+[2020-01-08 11:16:08.815] -rw-r--r-- jp1user01/app   994 2019-07-01 22:30 mdfy_thn_clndr_SP_20190701.log
+[2020-01-08 11:16:08.815] -rw-r--r-- jp1user01/app   994 2019-07-02 22:30 mdfy_thn_clndr_SP_20190702.log
+[2020-01-08 11:16:08.815] -rw-r--r-- jp1user01/app   994 2019-07-03 22:30 mdfy_thn_clndr_SP_20190703.log
+[2020-01-08 11:16:08.815] -rw-r--r-- jp1user01/app   994 2019-07-04 22:30 mdfy_thn_clndr_SP_20190704.log
+[2020-01-08 11:16:08.815] -rw-r--r-- jp1user01/app   994 2019-07-05 22:30 mdfy_thn_clndr_SP_20190705.log
+[2020-01-08 11:16:08.815] -rw-r--r-- jp1user01/app   994 2019-07-06 22:30 mdfy_thn_clndr_SP_20190706.log
+[2020-01-08 11:16:08.815] -rw-r--r-- jp1user01/app   994 2019-07-07 22:30 mdfy_thn_clndr_SP_20190707.log
+[2020-01-08 11:16:08.815] -rw-r--r-- jp1user01/app   994 2019-07-08 22:30 mdfy_thn_clndr_SP_20190708.log
+[2020-01-08 11:16:08.815] -rw-r--r-- jp1user01/app   994 2019-07-09 22:30 mdfy_thn_clndr_SP_20190709.log
+[2020-01-08 11:16:08.815] -rw-r--r-- jp1user01/app   995 2019-07-10 22:30 mdfy_thn_clndr_SP_20190710.log
+[2020-01-08 11:16:08.815] -rw-r--r-- jp1user01/app   995 2019-07-11 22:30 mdfy_thn_clndr_SP_20190711.log
+[2020-01-08 11:16:08.815] -rw-r--r-- jp1user01/app   995 2019-07-12 22:30 mdfy_thn_clndr_SP_20190712.log
+[2020-01-08 11:16:08.831] -rw-r--r-- jp1user01/app   995 2019-07-13 22:30 mdfy_thn_clndr_SP_20190713.log
+[2020-01-08 11:16:08.831] -rw-r--r-- jp1user01/app   995 2019-07-14 22:30 mdfy_thn_clndr_SP_20190714.log
+[2020-01-08 11:16:08.831] -rw-r--r-- jp1user01/app   995 2019-07-15 22:30 mdfy_thn_clndr_SP_20190715.log
+[2020-01-08 11:16:08.831] -rw-r--r-- jp1user01/app   995 2019-07-16 22:30 mdfy_thn_clndr_SP_20190716.log
+[2020-01-08 11:16:08.831] -rw-r--r-- jp1user01/app   995 2019-07-17 22:30 mdfy_thn_clndr_SP_20190717.log
+[2020-01-08 11:16:08.831] -rw-r--r-- jp1user01/app   995 2019-07-18 22:30 mdfy_thn_clndr_SP_20190718.log
+[2020-01-08 11:16:08.831] -rw-r--r-- jp1user01/app   995 2019-07-19 22:30 mdfy_thn_clndr_SP_20190719.log
+[2020-01-08 11:16:08.831] -rw-r--r-- jp1user01/app   995 2019-07-20 22:30 mdfy_thn_clndr_SP_20190720.log
+[2020-01-08 11:16:08.831] -rw-r--r-- jp1user01/app   995 2019-07-21 22:30 mdfy_thn_clndr_SP_20190721.log
+[2020-01-08 11:16:08.831] -rw-r--r-- jp1user01/app   995 2019-07-22 22:30 mdfy_thn_clndr_SP_20190722.log
+[2020-01-08 11:16:08.831] -rw-r--r-- jp1user01/app   995 2019-07-23 22:30 mdfy_thn_clndr_SP_20190723.log
+[2020-01-08 11:16:08.831] -rw-r--r-- jp1user01/app   995 2019-07-24 22:30 mdfy_thn_clndr_SP_20190724.log
+[2020-01-08 11:16:08.831] -rw-r--r-- jp1user01/app   995 2019-07-25 22:30 mdfy_thn_clndr_SP_20190725.log
+[2020-01-08 11:16:08.847] -rw-r--r-- jp1user01/app   995 2019-07-26 22:30 mdfy_thn_clndr_SP_20190726.log
+[2020-01-08 11:16:08.847] -rw-r--r-- jp1user01/app   995 2019-07-27 22:30 mdfy_thn_clndr_SP_20190727.log
+[2020-01-08 11:16:08.847] -rw-r--r-- jp1user01/app   995 2019-07-28 22:30 mdfy_thn_clndr_SP_20190728.log
+[2020-01-08 11:16:08.847] -rw-r--r-- jp1user01/app   995 2019-07-29 22:30 mdfy_thn_clndr_SP_20190729.log
+[2020-01-08 11:16:08.847] -rw-r--r-- jp1user01/app   995 2019-07-30 22:30 mdfy_thn_clndr_SP_20190730.log
+[2020-01-08 11:16:08.847] -rw-r--r-- jp1user01/app   995 2019-07-31 22:30 mdfy_thn_clndr_SP_20190731.log
+[2020-01-08 11:16:08.847] -rw-r--r-- jp1user01/app   994 2019-08-01 22:30 mdfy_thn_clndr_SP_20190801.log
+[2020-01-08 11:16:08.847] -rw-r--r-- jp1user01/app  2002 2019-08-09 22:31 mdfy_thn_clndr_SP_20190809.log
+[2020-01-08 11:16:08.847] -rw-r--r-- jp1user01/app  2003 2019-08-10 22:30 mdfy_thn_clndr_SP_20190810.log
+[2020-01-08 11:16:08.847] -rw-r--r-- jp1user01/app  2002 2019-08-11 22:30 mdfy_thn_clndr_SP_20190811.log
+[2020-01-08 11:16:08.847] -rw-r--r-- jp1user01/app  2002 2019-08-12 22:30 mdfy_thn_clndr_SP_20190812.log
+[2020-01-08 11:16:08.847] -rw-r--r-- jp1user01/app  2002 2019-08-13 22:30 mdfy_thn_clndr_SP_20190813.log
+[2020-01-08 11:16:08.862] -rw-r--r-- jp1user01/app  2001 2019-08-14 22:30 mdfy_thn_clndr_SP_20190814.log
+[2020-01-08 11:16:08.862] -rw-r--r-- jp1user01/app  1999 2019-08-15 22:30 mdfy_thn_clndr_SP_20190815.log
+[2020-01-08 11:16:08.862] -rw-r--r-- jp1user01/app  1999 2019-08-16 22:30 mdfy_thn_clndr_SP_20190816.log
+[2020-01-08 11:16:08.862] -rw-r--r-- jp1user01/app  1999 2019-08-17 22:30 mdfy_thn_clndr_SP_20190817.log
+[2020-01-08 11:16:08.862] -rw-r--r-- jp1user01/app  1999 2019-08-18 22:30 mdfy_thn_clndr_SP_20190818.log
+[2020-01-08 11:16:08.862] -rw-r--r-- jp1user01/app  1999 2019-08-19 22:30 mdfy_thn_clndr_SP_20190819.log
+[2020-01-08 11:16:08.862] -rw-r--r-- jp1user01/app  1999 2019-08-20 22:30 mdfy_thn_clndr_SP_20190820.log
+[2020-01-08 11:16:08.862] -rw-r--r-- jp1user01/app  1999 2019-08-21 22:30 mdfy_thn_clndr_SP_20190821.log
+[2020-01-08 11:16:08.862] -rw-r--r-- jp1user01/app  1999 2019-08-22 22:31 mdfy_thn_clndr_SP_20190822.log
+[2020-01-08 11:16:08.862] -rw-r--r-- jp1user01/app  1999 2019-08-23 22:30 mdfy_thn_clndr_SP_20190823.log
+[2020-01-08 11:16:08.862] -rw-r--r-- jp1user01/app  1999 2019-08-24 22:30 mdfy_thn_clndr_SP_20190824.log
+[2020-01-08 11:16:08.862] -rw-r--r-- jp1user01/app  1999 2019-08-25 22:30 mdfy_thn_clndr_SP_20190825.log
+[2020-01-08 11:16:08.862] -rw-r--r-- jp1user01/app  1999 2019-08-26 22:30 mdfy_thn_clndr_SP_20190826.log
+[2020-01-08 11:16:08.878] -rw-r--r-- jp1user01/app  1999 2019-08-27 22:30 mdfy_thn_clndr_SP_20190827.log
+[2020-01-08 11:16:08.878] -rw-r--r-- jp1user01/app  1999 2019-08-28 22:30 mdfy_thn_clndr_SP_20190828.log
+[2020-01-08 11:16:08.878] -rw-r--r-- jp1user01/app  1999 2019-08-29 22:30 mdfy_thn_clndr_SP_20190829.log
+[2020-01-08 11:16:08.878] -rw-r--r-- jp1user01/app  1999 2019-08-30 22:30 mdfy_thn_clndr_SP_20190830.log
+[2020-01-08 11:16:08.878] -rw-r--r-- jp1user01/app  1999 2019-08-31 22:30 mdfy_thn_clndr_SP_20190831.log
+[2020-01-08 11:16:08.878] -rw-r--r-- jp1user01/app  1998 2019-09-01 22:30 mdfy_thn_clndr_SP_20190901.log
+[2020-01-08 11:16:08.878] -rw-r--r-- jp1user01/app  1998 2019-09-02 22:30 mdfy_thn_clndr_SP_20190902.log
+[2020-01-08 11:16:08.878] -rw-r--r-- jp1user01/app  1998 2019-09-03 22:30 mdfy_thn_clndr_SP_20190903.log
+[2020-01-08 11:16:08.878] -rw-r--r-- jp1user01/app  1998 2019-09-04 22:30 mdfy_thn_clndr_SP_20190904.log
+[2020-01-08 11:16:08.878] -rw-r--r-- jp1user01/app  1998 2019-09-05 22:30 mdfy_thn_clndr_SP_20190905.log
+[2020-01-08 11:16:08.878] -rw-r--r-- jp1user01/app  1998 2019-09-06 22:30 mdfy_thn_clndr_SP_20190906.log
+[2020-01-08 11:16:08.878] -rw-r--r-- jp1user01/app  1998 2019-09-07 22:30 mdfy_thn_clndr_SP_20190907.log
+[2020-01-08 11:16:08.878] -rw-r--r-- jp1user01/app  1998 2019-09-08 22:30 mdfy_thn_clndr_SP_20190908.log
+[2020-01-08 11:16:08.894] -rw-r--r-- jp1user01/app  1998 2019-09-09 22:30 mdfy_thn_clndr_SP_20190909.log
+[2020-01-08 11:16:08.894] -rw-r--r-- jp1user01/app  1999 2019-09-10 22:30 mdfy_thn_clndr_SP_20190910.log
+[2020-01-08 11:16:08.894] -rw-r--r-- jp1user01/app  1999 2019-09-11 22:30 mdfy_thn_clndr_SP_20190911.log
+[2020-01-08 11:16:08.894] -rw-r--r-- jp1user01/app  1999 2019-09-12 22:30 mdfy_thn_clndr_SP_20190912.log
+[2020-01-08 11:16:08.894] -rw-r--r-- jp1user01/app  1999 2019-09-13 22:30 mdfy_thn_clndr_SP_20190913.log
+[2020-01-08 11:16:08.894] -rw-r--r-- jp1user01/app  1999 2019-09-14 22:30 mdfy_thn_clndr_SP_20190914.log
+[2020-01-08 11:16:08.894] -rw-r--r-- jp1user01/app  1999 2019-09-15 22:30 mdfy_thn_clndr_SP_20190915.log
+[2020-01-08 11:16:08.894] -rw-r--r-- jp1user01/app  1999 2019-09-16 22:30 mdfy_thn_clndr_SP_20190916.log
+[2020-01-08 11:16:08.894] -rw-r--r-- jp1user01/app  1999 2019-09-17 22:30 mdfy_thn_clndr_SP_20190917.log
+[2020-01-08 11:16:08.894] -rw-r--r-- jp1user01/app  1999 2019-09-18 22:30 mdfy_thn_clndr_SP_20190918.log
+[2020-01-08 11:16:08.894] -rw-r--r-- jp1user01/app  1999 2019-09-19 22:30 mdfy_thn_clndr_SP_20190919.log
+[2020-01-08 11:16:08.894] -rw-r--r-- jp1user01/app  1999 2019-09-20 22:30 mdfy_thn_clndr_SP_20190920.log
+[2020-01-08 11:16:08.909] -rw-r--r-- jp1user01/app  1999 2019-09-21 22:30 mdfy_thn_clndr_SP_20190921.log
+[2020-01-08 11:16:08.909] -rw-r--r-- jp1user01/app  1999 2019-09-22 22:30 mdfy_thn_clndr_SP_20190922.log
+[2020-01-08 11:16:08.909] -rw-r--r-- jp1user01/app  1999 2019-09-23 22:32 mdfy_thn_clndr_SP_20190923.log
+[2020-01-08 11:16:08.909] -rw-r--r-- jp1user01/app  1999 2019-09-24 22:30 mdfy_thn_clndr_SP_20190924.log
+[2020-01-08 11:16:08.909] -rw-r--r-- jp1user01/app  1999 2019-09-25 22:30 mdfy_thn_clndr_SP_20190925.log
+[2020-01-08 11:16:08.909] -rw-r--r-- jp1user01/app  1999 2019-09-26 22:30 mdfy_thn_clndr_SP_20190926.log
+[2020-01-08 11:16:08.909] -rw-r--r-- jp1user01/app  1999 2019-09-27 22:30 mdfy_thn_clndr_SP_20190927.log
+[2020-01-08 11:16:08.909] -rw-r--r-- jp1user01/app  1999 2019-09-28 22:30 mdfy_thn_clndr_SP_20190928.log
+[2020-01-08 11:16:08.909] -rw-r--r-- jp1user01/app  1999 2019-09-29 22:30 mdfy_thn_clndr_SP_20190929.log
+[2020-01-08 11:16:08.909] -rw-r--r-- jp1user01/app  1999 2019-09-30 22:30 mdfy_thn_clndr_SP_20190930.log
+[2020-01-08 11:16:08.909] -rw-r--r-- jp1user01/app  1999 2019-10-01 22:30 mdfy_thn_clndr_SP_20191001.log
+[2020-01-08 11:16:08.909] -rw-r--r-- jp1user01/app  1999 2019-10-02 22:30 mdfy_thn_clndr_SP_20191002.log
+[2020-01-08 11:16:08.909] -rw-r--r-- jp1user01/app  1999 2019-10-03 22:30 mdfy_thn_clndr_SP_20191003.log
+[2020-01-08 11:16:08.925] -rw-r--r-- jp1user01/app  1999 2019-10-04 22:30 mdfy_thn_clndr_SP_20191004.log
+[2020-01-08 11:16:08.925] -rw-r--r-- jp1user01/app  1999 2019-10-05 22:30 mdfy_thn_clndr_SP_20191005.log
+[2020-01-08 11:16:08.925] -rw-r--r-- jp1user01/app  1999 2019-10-06 22:30 mdfy_thn_clndr_SP_20191006.log
+[2020-01-08 11:16:08.925] -rw-r--r-- jp1user01/app  1999 2019-10-07 22:30 mdfy_thn_clndr_SP_20191007.log
+[2020-01-08 11:16:08.925] -rw-r--r-- jp1user01/app  1999 2019-10-08 22:30 mdfy_thn_clndr_SP_20191008.log
+[2020-01-08 11:16:08.925] -rw-r--r-- jp1user01/app  1999 2019-10-09 22:30 mdfy_thn_clndr_SP_20191009.log
+[2020-01-08 11:16:08.925] -rw-r--r-- jp1user01/app  2000 2019-10-10 22:30 mdfy_thn_clndr_SP_20191010.log
+[2020-01-08 11:16:08.925] -rw-r--r-- jp1user01/app  2000 2019-10-11 22:30 mdfy_thn_clndr_SP_20191011.log
+[2020-01-08 11:16:08.925] -rw-r--r-- jp1user01/app  2000 2019-10-12 22:30 mdfy_thn_clndr_SP_20191012.log
+[2020-01-08 11:16:08.925] -rw-r--r-- jp1user01/app  2000 2019-10-13 22:30 mdfy_thn_clndr_SP_20191013.log
+[2020-01-08 11:16:08.925] -rw-r--r-- jp1user01/app  2000 2019-10-14 22:30 mdfy_thn_clndr_SP_20191014.log
+[2020-01-08 11:16:08.925] -rw-r--r-- jp1user01/app  2000 2019-10-15 22:30 mdfy_thn_clndr_SP_20191015.log
+[2020-01-08 11:16:08.925] -rw-r--r-- jp1user01/app  2000 2019-10-16 22:30 mdfy_thn_clndr_SP_20191016.log
+[2020-01-08 11:16:08.941] -rw-r--r-- jp1user01/app  2000 2019-10-17 22:30 mdfy_thn_clndr_SP_20191017.log
+[2020-01-08 11:16:08.941] -rw-r--r-- jp1user01/app  2000 2019-10-18 22:30 mdfy_thn_clndr_SP_20191018.log
+[2020-01-08 11:16:08.941] -rw-r--r-- jp1user01/app  2000 2019-10-19 22:30 mdfy_thn_clndr_SP_20191019.log
+[2020-01-08 11:16:08.941] -rw-r--r-- jp1user01/app  2000 2019-10-20 22:30 mdfy_thn_clndr_SP_20191020.log
+[2020-01-08 11:16:08.941] -rw-r--r-- jp1user01/app  2000 2019-10-21 22:30 mdfy_thn_clndr_SP_20191021.log
+[2020-01-08 11:16:08.941] -rw-r--r-- jp1user01/app  2000 2019-10-22 22:30 mdfy_thn_clndr_SP_20191022.log
+[2020-01-08 11:16:08.941] -rw-r--r-- jp1user01/app  2000 2019-10-23 22:30 mdfy_thn_clndr_SP_20191023.log
+[2020-01-08 11:16:08.941] -rw-r--r-- jp1user01/app  2000 2019-10-24 22:30 mdfy_thn_clndr_SP_20191024.log
+[2020-01-08 11:16:08.941] -rw-r--r-- jp1user01/app  2000 2019-10-25 22:30 mdfy_thn_clndr_SP_20191025.log
+[2020-01-08 11:16:08.941] -rw-r--r-- jp1user01/app  2000 2019-10-26 22:30 mdfy_thn_clndr_SP_20191026.log
+[2020-01-08 11:16:08.941] -rw-r--r-- jp1user01/app  2000 2019-10-27 22:30 mdfy_thn_clndr_SP_20191027.log
+[2020-01-08 11:16:08.941] -rw-r--r-- jp1user01/app  2000 2019-10-28 22:30 mdfy_thn_clndr_SP_20191028.log
+[2020-01-08 11:16:08.956] -rw-r--r-- jp1user01/app  2000 2019-10-29 22:30 mdfy_thn_clndr_SP_20191029.log
+[2020-01-08 11:16:08.956] -rw-r--r-- jp1user01/app  2000 2019-10-30 22:30 mdfy_thn_clndr_SP_20191030.log
+[2020-01-08 11:16:08.956] -rw-r--r-- jp1user01/app  2000 2019-10-31 22:30 mdfy_thn_clndr_SP_20191031.log
+[2020-01-08 11:16:08.956] -rw-r--r-- jp1user01/app  1999 2019-11-01 22:30 mdfy_thn_clndr_SP_20191101.log
+[2020-01-08 11:16:08.956] -rw-r--r-- jp1user01/app  1999 2019-11-02 22:30 mdfy_thn_clndr_SP_20191102.log
+[2020-01-08 11:16:08.956] -rw-r--r-- jp1user01/app  1999 2019-11-03 22:30 mdfy_thn_clndr_SP_20191103.log
+[2020-01-08 11:16:08.956] -rw-r--r-- jp1user01/app  1999 2019-11-04 22:30 mdfy_thn_clndr_SP_20191104.log
+[2020-01-08 11:16:08.956] -rw-r--r-- jp1user01/app  1999 2019-11-05 22:30 mdfy_thn_clndr_SP_20191105.log
+[2020-01-08 11:16:08.956] -rw-r--r-- jp1user01/app  1999 2019-11-06 22:30 mdfy_thn_clndr_SP_20191106.log
+[2020-01-08 11:16:08.956] -rw-r--r-- jp1user01/app  1999 2019-11-07 22:30 mdfy_thn_clndr_SP_20191107.log
+[2020-01-08 11:16:08.956] -rw-r--r-- jp1user01/app  1999 2019-11-08 22:30 mdfy_thn_clndr_SP_20191108.log
+[2020-01-08 11:16:08.956] -rw-r--r-- jp1user01/app  1999 2019-11-09 22:30 mdfy_thn_clndr_SP_20191109.log
+[2020-01-08 11:16:08.956] -rw-r--r-- jp1user01/app  2000 2019-11-10 22:30 mdfy_thn_clndr_SP_20191110.log
+[2020-01-08 11:16:08.972] -rw-r--r-- jp1user01/app  2000 2019-11-11 22:30 mdfy_thn_clndr_SP_20191111.log
+[2020-01-08 11:16:08.972] -rw-r--r-- jp1user01/app  2000 2019-11-12 22:30 mdfy_thn_clndr_SP_20191112.log
+[2020-01-08 11:16:08.972] -rw-r--r-- jp1user01/app  2000 2019-11-13 22:30 mdfy_thn_clndr_SP_20191113.log
+[2020-01-08 11:16:08.972] -rw-r--r-- jp1user01/app  2000 2019-11-14 22:30 mdfy_thn_clndr_SP_20191114.log
+[2020-01-08 11:16:08.972] -rw-r--r-- jp1user01/app  2000 2019-11-15 22:30 mdfy_thn_clndr_SP_20191115.log
+[2020-01-08 11:16:08.972] -rw-r--r-- jp1user01/app  2000 2019-11-16 22:30 mdfy_thn_clndr_SP_20191116.log
+[2020-01-08 11:16:08.972] -rw-r--r-- jp1user01/app  2000 2019-11-17 22:30 mdfy_thn_clndr_SP_20191117.log
+[2020-01-08 11:16:08.972] -rw-r--r-- jp1user01/app  2000 2019-11-18 22:30 mdfy_thn_clndr_SP_20191118.log
+[2020-01-08 11:16:08.972] -rw-r--r-- jp1user01/app  2000 2019-11-19 22:30 mdfy_thn_clndr_SP_20191119.log
+[2020-01-08 11:16:08.972] -rw-r--r-- jp1user01/app  2000 2019-11-20 22:30 mdfy_thn_clndr_SP_20191120.log
+[2020-01-08 11:16:08.972] -rw-r--r-- jp1user01/app  2000 2019-11-21 22:30 mdfy_thn_clndr_SP_20191121.log
+[2020-01-08 11:16:08.972] -rw-r--r-- jp1user01/app  2000 2019-11-22 22:30 mdfy_thn_clndr_SP_20191122.log
+[2020-01-08 11:16:08.972] -rw-r--r-- jp1user01/app  2000 2019-11-23 22:30 mdfy_thn_clndr_SP_20191123.log
+[2020-01-08 11:16:08.987] -rw-r--r-- jp1user01/app  2000 2019-11-24 22:30 mdfy_thn_clndr_SP_20191124.log
+[2020-01-08 11:16:08.987] -rw-r--r-- jp1user01/app  2000 2019-11-25 22:30 mdfy_thn_clndr_SP_20191125.log
+[2020-01-08 11:16:08.987] -rw-r--r-- jp1user01/app  2000 2019-11-26 22:30 mdfy_thn_clndr_SP_20191126.log
+[2020-01-08 11:16:08.987] -rw-r--r-- jp1user01/app  2000 2019-11-27 22:30 mdfy_thn_clndr_SP_20191127.log
+[2020-01-08 11:16:08.987] -rw-r--r-- jp1user01/app  2000 2019-11-28 22:30 mdfy_thn_clndr_SP_20191128.log
+[2020-01-08 11:16:08.987] -rw-r--r-- jp1user01/app  2000 2019-11-29 22:30 mdfy_thn_clndr_SP_20191129.log
+[2020-01-08 11:16:08.987] -rw-r--r-- jp1user01/app  2000 2019-11-30 22:30 mdfy_thn_clndr_SP_20191130.log
+[2020-01-08 11:16:08.987] -rw-r--r-- jp1user01/app  1999 2019-12-01 22:30 mdfy_thn_clndr_SP_20191201.log
+[2020-01-08 11:16:08.987] -rw-r--r-- jp1user01/app  1999 2019-12-02 22:30 mdfy_thn_clndr_SP_20191202.log
+[2020-01-08 11:16:08.987] -rw-r--r-- jp1user01/app  1999 2019-12-03 22:30 mdfy_thn_clndr_SP_20191203.log
+[2020-01-08 11:16:08.987] -rw-r--r-- jp1user01/app  1999 2019-12-04 22:30 mdfy_thn_clndr_SP_20191204.log
+[2020-01-08 11:16:08.987] -rw-r--r-- jp1user01/app  1999 2019-12-05 22:30 mdfy_thn_clndr_SP_20191205.log
+[2020-01-08 11:16:09.003] -rw-r--r-- jp1user01/app  1999 2019-12-06 22:30 mdfy_thn_clndr_SP_20191206.log
+[2020-01-08 11:16:09.003] -rw-r--r-- jp1user01/app  1999 2019-12-07 22:30 mdfy_thn_clndr_SP_20191207.log
+[2020-01-08 11:16:09.003] -rw-r--r-- jp1user01/app  1999 2019-12-08 22:30 mdfy_thn_clndr_SP_20191208.log
+[2020-01-08 11:16:09.003] -rw-r--r-- jp1user01/app  1999 2019-12-09 22:30 mdfy_thn_clndr_SP_20191209.log
+[2020-01-08 11:16:09.003] -rw-r--r-- jp1user01/app  2000 2019-12-10 22:30 mdfy_thn_clndr_SP_20191210.log
+[2020-01-08 11:16:09.003] -rw-r--r-- jp1user01/app  2000 2019-12-11 22:30 mdfy_thn_clndr_SP_20191211.log
+[2020-01-08 11:16:09.003] -rw-r--r-- jp1user01/app  2000 2019-12-12 22:30 mdfy_thn_clndr_SP_20191212.log
+[2020-01-08 11:16:09.003] -rw-r--r-- jp1user01/app  2000 2019-12-13 22:30 mdfy_thn_clndr_SP_20191213.log
+[2020-01-08 11:16:09.003] -rw-r--r-- jp1user01/app  2000 2019-12-14 22:30 mdfy_thn_clndr_SP_20191214.log
+[2020-01-08 11:16:09.003] -rw-r--r-- jp1user01/app  2000 2019-12-15 22:30 mdfy_thn_clndr_SP_20191215.log
+[2020-01-08 11:16:09.003] -rw-r--r-- jp1user01/app  2000 2019-12-16 22:30 mdfy_thn_clndr_SP_20191216.log
+[2020-01-08 11:16:09.003] -rw-r--r-- jp1user01/app  2000 2019-12-17 22:30 mdfy_thn_clndr_SP_20191217.log
+[2020-01-08 11:16:09.003] -rw-r--r-- jp1user01/app  2000 2019-12-18 22:30 mdfy_thn_clndr_SP_20191218.log
+[2020-01-08 11:16:09.019] -rw-r--r-- jp1user01/app  1030 2019-12-19 22:30 mdfy_thn_clndr_SP_20191219.log
+[2020-01-08 11:16:09.019] -rw-r--r-- jp1user01/app  1030 2019-12-20 22:30 mdfy_thn_clndr_SP_20191220.log
+[2020-01-08 11:16:09.019] -rw-r--r-- jp1user01/app  1030 2019-12-21 22:30 mdfy_thn_clndr_SP_20191221.log
+[2020-01-08 11:16:09.019] -rw-r--r-- jp1user01/app  1035 2019-12-22 22:30 mdfy_thn_clndr_SP_20191222.log
+[2020-01-08 11:16:09.019] -rw-r--r-- jp1user01/app  1035 2019-12-23 22:30 mdfy_thn_clndr_SP_20191223.log
+[2020-01-08 11:16:09.019] -rw-r--r-- jp1user01/app  1037 2019-12-24 22:30 mdfy_thn_clndr_SP_20191224.log
+[2020-01-08 11:16:09.019] -rw-r--r-- jp1user01/app  1037 2019-12-25 22:30 mdfy_thn_clndr_SP_20191225.log
+[2020-01-08 11:16:09.019] -rw-r--r-- jp1user01/app  1037 2019-12-26 22:30 mdfy_thn_clndr_SP_20191226.log
+[2020-01-08 11:16:09.019] -rw-r--r-- jp1user01/app  1037 2019-12-27 22:30 mdfy_thn_clndr_SP_20191227.log
+[2020-01-08 11:16:09.019] -rw-r--r-- jp1user01/app  1037 2019-12-28 22:30 mdfy_thn_clndr_SP_20191228.log
+[2020-01-08 11:16:09.019] -rw-r--r-- jp1user01/app  1037 2019-12-29 22:30 mdfy_thn_clndr_SP_20191229.log
+[2020-01-08 11:16:09.019] -rw-r--r-- jp1user01/app  1037 2019-12-30 22:30 mdfy_thn_clndr_SP_20191230.log
+[2020-01-08 11:16:09.019] -rw-r--r-- jp1user01/app  1035 2019-12-31 22:30 mdfy_thn_clndr_SP_20191231.log
+[2020-01-08 11:16:09.019] [2020/01/08 11:16:08 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:16:13.783] [2020/01/08 11:16:13 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:16:13.908] [2020/01/08 11:16:13 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:16:14.064] [2020/01/08 11:16:13 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:16:14.205] [2020/01/08 11:16:14 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:16:14.299] [2020/01/08 11:16:14 jp1user01@ompsgbb001 log]$ rm mdfy_thn_clndr_SP_2019*.log
+[2020-01-08 11:16:27.358] rm: remove 通常ファイル `mdfy_thn_clndr_SP_20190101.log'? ^C
+[2020-01-08 11:16:29.076] [2020/01/08 11:16:28 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:16:30.091] [2020/01/08 11:16:29 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:16:30.279] [2020/01/08 11:16:30 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:16:30.419] [2020/01/08 11:16:30 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:16:30.560] [2020/01/08 11:16:30 jp1user01@ompsgbb001 log]$ rm -f mdfy_thn_clndr_SP_2019*.log
+[2020-01-08 11:16:36.496] [2020/01/08 11:16:36 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:16:37.824] [2020/01/08 11:16:37 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:16:37.996] [2020/01/08 11:16:37 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:16:38.136] [2020/01/08 11:16:37 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:16:38.277] [2020/01/08 11:16:38 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:16:38.401] [2020/01/08 11:16:38 jp1user01@ompsgbb001 log]$ ls -l
+[2020-01-08 11:16:39.542] 合計 56
+[2020-01-08 11:16:39.542] -rw-rw-r-- 1 jp1user01 app  3293  8月  2 13:45 2019 mdfy_thn_clndr_SP_2017.tar.gz
+[2020-01-08 11:16:39.542] -rw-rw-r-- 1 jp1user01 app  6407  8月  2 13:48 2019 mdfy_thn_clndr_SP_2018.tar.gz
+[2020-01-08 11:16:39.542] -rw-rw-r-- 1 jp1user01 app 14607  1月  8 11:15 2020 mdfy_thn_clndr_SP_2019.tar.gz
+[2020-01-08 11:16:39.542] -rw-r--r-- 1 jp1user01 app  1033  1月  1 22:30 2020 mdfy_thn_clndr_SP_20200101.log
+[2020-01-08 11:16:39.542] -rw-r--r-- 1 jp1user01 app  1033  1月  2 22:30 2020 mdfy_thn_clndr_SP_20200102.log
+[2020-01-08 11:16:39.542] -rw-r--r-- 1 jp1user01 app  1028  1月  3 22:30 2020 mdfy_thn_clndr_SP_20200103.log
+[2020-01-08 11:16:39.542] -rw-r--r-- 1 jp1user01 app  1028  1月  4 22:30 2020 mdfy_thn_clndr_SP_20200104.log
+[2020-01-08 11:16:39.542] -rw-r--r-- 1 jp1user01 app  1028  1月  5 22:30 2020 mdfy_thn_clndr_SP_20200105.log
+[2020-01-08 11:16:39.542] -rw-r--r-- 1 jp1user01 app  1028  1月  6 22:30 2020 mdfy_thn_clndr_SP_20200106.log
+[2020-01-08 11:16:39.542] -rw-r--r-- 1 jp1user01 app  1028  1月  7 22:30 2020 mdfy_thn_clndr_SP_20200107.log
+[2020-01-08 11:16:39.542] [2020/01/08 11:16:39 jp1user01@ompsgbb001 log]$ ^C
+[2020-01-08 11:16:54.522] [2020/01/08 11:16:54 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:16:56.131] [2020/01/08 11:16:55 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:16:56.272] [2020/01/08 11:16:56 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:16:56.397] [2020/01/08 11:16:56 jp1user01@ompsgbb001 log]$ cat mdfy_thn_clndr_SP_20200102.log
+[2020-01-08 11:16:59.912] RUN /opt/batch/mdfy_thn_clndr_SP/sql/mdfy_thn_clndr_SP.sql START:2020-01-02 22:30:01...
+[2020-01-08 11:16:59.912] 
+[2020-01-08 11:16:59.912] SQL*Plus: Release 12.1.0.2.0 Production on 木 1月 2 22:30:01 2020
+[2020-01-08 11:16:59.912] 
+[2020-01-08 11:16:59.912] Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+[2020-01-08 11:16:59.912] 
+[2020-01-08 11:16:59.912] 最終正常ログイン時間: 木 1月  02 2020 22:30:00 +09:00
+[2020-01-08 11:16:59.912] 
+[2020-01-08 11:16:59.912] 
+[2020-01-08 11:16:59.912] Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+[2020-01-08 11:16:59.912] With the Partitioning, Real Application Clusters, Automatic Storage Management, Oracle Label Security,
+[2020-01-08 11:16:59.912] OLAP, Advanced Analytics, Oracle Database Vault and Real Application Testing options
+[2020-01-08 11:16:59.912] に接続されました。
+[2020-01-08 11:16:59.912] 
+[2020-01-08 11:16:59.912] 210行が更新されました。
+[2020-01-08 11:16:59.912] 
+[2020-01-08 11:16:59.912] 
+[2020-01-08 11:16:59.912] 3088行が更新されました。
+[2020-01-08 11:16:59.912] 
+[2020-01-08 11:16:59.912] 
+[2020-01-08 11:16:59.912] コミットが完了しました。
+[2020-01-08 11:16:59.912] 
+[2020-01-08 11:16:59.912] Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+[2020-01-08 11:16:59.912] With the Partitioning, Real Application Clusters, Automatic Storage Management, Oracle Label Security,
+[2020-01-08 11:16:59.912] OLAP, Advanced Analytics, Oracle Database Vault and Real Application Testing optionsとの接続が切断されました。
+[2020-01-08 11:16:59.912] ...END
+[2020-01-08 11:16:59.927] 2020-01-02 22:30:39
+[2020-01-08 11:16:59.927] exit_status:0
+[2020-01-08 11:16:59.927] [2020/01/08 11:16:59 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:17:07.269] [2020/01/08 11:17:07 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:17:07.425] [2020/01/08 11:17:07 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:17:07.550] [2020/01/08 11:17:07 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:17:07.675] [2020/01/08 11:17:07 jp1user01@ompsgbb001 log]$ cat mdfy_thn_clndr_SP_20200103.log
+[2020-01-08 11:17:09.222] RUN /opt/batch/mdfy_thn_clndr_SP/sql/mdfy_thn_clndr_SP.sql START:2020-01-03 22:30:02...
+[2020-01-08 11:17:09.222] 
+[2020-01-08 11:17:09.222] SQL*Plus: Release 12.1.0.2.0 Production on 金 1月 3 22:30:02 2020
+[2020-01-08 11:17:09.222] 
+[2020-01-08 11:17:09.222] Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+[2020-01-08 11:17:09.222] 
+[2020-01-08 11:17:09.222] 最終正常ログイン時間: 金 1月  03 2020 22:30:00 +09:00
+[2020-01-08 11:17:09.222] 
+[2020-01-08 11:17:09.222] 
+[2020-01-08 11:17:09.222] Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+[2020-01-08 11:17:09.222] With the Partitioning, Real Application Clusters, Automatic Storage Management, Oracle Label Security,
+[2020-01-08 11:17:09.222] OLAP, Advanced Analytics, Oracle Database Vault and Real Application Testing options
+[2020-01-08 11:17:09.222] に接続されました。
+[2020-01-08 11:17:09.222] 
+[2020-01-08 11:17:09.222] 0行が更新されました。
+[2020-01-08 11:17:09.222] 
+[2020-01-08 11:17:09.222] 
+[2020-01-08 11:17:09.222] 0行が更新されました。
+[2020-01-08 11:17:09.222] 
+[2020-01-08 11:17:09.222] 
+[2020-01-08 11:17:09.222] コミットが完了しました。
+[2020-01-08 11:17:09.222] 
+[2020-01-08 11:17:09.222] Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+[2020-01-08 11:17:09.222] With the Partitioning, Real Application Clusters, Automatic Storage Management, Oracle Label Security,
+[2020-01-08 11:17:09.222] OLAP, Advanced Analytics, Oracle Database Vault and Real Application Testing optionsとの接続が切断されました。
+[2020-01-08 11:17:09.222] ...END
+[2020-01-08 11:17:09.222] 2020-01-03 22:30:42
+[2020-01-08 11:17:09.237] exit_status:0
+[2020-01-08 11:17:09.237] [2020/01/08 11:17:09 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:17:21.812] [2020/01/08 11:17:21 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:17:21.937] [2020/01/08 11:17:21 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:17:22.078] [2020/01/08 11:17:21 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:17:22.172] [2020/01/08 11:17:22 jp1user01@ompsgbb001 log]$ cat mdfy_thn_clndr_SP_20200107.log
+[2020-01-08 11:17:24.765] RUN /opt/batch/mdfy_thn_clndr_SP/sql/mdfy_thn_clndr_SP.sql START:2020-01-07 22:30:01...
+[2020-01-08 11:17:24.765] 
+[2020-01-08 11:17:24.765] SQL*Plus: Release 12.1.0.2.0 Production on 火 1月 7 22:30:01 2020
+[2020-01-08 11:17:24.765] 
+[2020-01-08 11:17:24.765] Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+[2020-01-08 11:17:24.765] 
+[2020-01-08 11:17:24.765] 最終正常ログイン時間: 火 1月  07 2020 22:30:01 +09:00
+[2020-01-08 11:17:24.765] 
+[2020-01-08 11:17:24.765] 
+[2020-01-08 11:17:24.765] Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+[2020-01-08 11:17:24.765] With the Partitioning, Real Application Clusters, Automatic Storage Management, Oracle Label Security,
+[2020-01-08 11:17:24.765] OLAP, Advanced Analytics, Oracle Database Vault and Real Application Testing options
+[2020-01-08 11:17:24.765] に接続されました。
+[2020-01-08 11:17:24.765] 
+[2020-01-08 11:17:24.765] 0行が更新されました。
+[2020-01-08 11:17:24.765] 
+[2020-01-08 11:17:24.765] 
+[2020-01-08 11:17:24.765] 0行が更新されました。
+[2020-01-08 11:17:24.765] 
+[2020-01-08 11:17:24.765] 
+[2020-01-08 11:17:24.765] コミットが完了しました。
+[2020-01-08 11:17:24.765] 
+[2020-01-08 11:17:24.765] Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+[2020-01-08 11:17:24.765] With the Partitioning, Real Application Clusters, Automatic Storage Management, Oracle Label Security,
+[2020-01-08 11:17:24.765] OLAP, Advanced Analytics, Oracle Database Vault and Real Application Testing optionsとの接続が切断されました。
+[2020-01-08 11:17:24.765] ...END
+[2020-01-08 11:17:24.765] 2020-01-07 22:30:40
+[2020-01-08 11:17:24.780] exit_status:0
+[2020-01-08 11:17:24.780] [2020/01/08 11:17:24 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:17:25.936] [2020/01/08 11:17:25 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:17:26.092] [2020/01/08 11:17:25 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:17:26.249] [2020/01/08 11:17:26 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:17:26.452] [2020/01/08 11:17:26 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:17:26.670] [2020/01/08 11:17:26 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:17:34.528] [2020/01/08 11:17:34 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:17:34.684] [2020/01/08 11:17:34 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:17:34.809] [2020/01/08 11:17:34 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:17:34.965] [2020/01/08 11:17:34 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:17:35.121] [2020/01/08 11:17:34 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:17:35.246] [2020/01/08 11:17:35 jp1user01@ompsgbb001 log]$ uptime
+[2020-01-08 11:17:43.088]  11:17:42 up 1572 days, 13:56,  3 users,  load average: 0.42, 2.43, 2.61
+[2020-01-08 11:17:43.088] [2020/01/08 11:17:42 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:17:43.353] [2020/01/08 11:17:43 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:17:43.603] [2020/01/08 11:17:43 jp1user01@ompsgbb001 log]$ 
+[2020-01-08 11:17:43.838] [2020/01/08 11:17:43 jp1user01@ompsgbb001 log]$ logout
+[2020-01-08 11:17:44.681] [2020/01/08 11:17:44 p_dakameya@ompsgbb001 ~]$ exit
+[2020-01-08 11:17:45.525] Connection to ompsgbb001 closed.
+[2020-01-08 11:17:45.525] [2020/01/08 11:17:45 p_dakameya@ompkgfl001 ~]$ exit
